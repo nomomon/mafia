@@ -33,3 +33,18 @@ services:
     expose:
       - "80"
     restart: unless-stopped
+    # Dokploy's Traefik instance routes to containers over its own shared
+    # Docker network rather than a published host port — a container has to
+    # be attached to it to be reachable at all, or Traefik returns a Bad
+    # Gateway even though the container itself is healthy. Harmless outside
+    # Dokploy: `default` below keeps web<->server working locally too, and if
+    # `dokploy-network` doesn't exist (e.g. running this compose file outside
+    # Dokploy), just delete this network block and the `networks:` line above.
+    networks:
+      - default
+      - dokploy-network
+
+networks:
+  default: {}
+  dokploy-network:
+    external: true
