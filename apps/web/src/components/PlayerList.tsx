@@ -14,7 +14,8 @@ export function PlayerList(props: { players: PublicPlayer[] }) {
               {player.id === identity().playerId ? ` (${t("players.you")})` : ""}
             </span>
             <span class="row">
-              {player.isHost && <span class="badge">⭐ {t("players.host")}</span>}
+              {player.isHost && <span class="badge">⭐ {t("players.creator")}</span>}
+              {player.ready && <span class="badge">✅ {t("players.ready")}</span>}
               {!player.alive && <span class="badge">💀 {t("players.dead")}</span>}
               {!player.connected && <span class="badge">📴 {t("players.disconnected")}</span>}
             </span>

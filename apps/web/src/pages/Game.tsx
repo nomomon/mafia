@@ -10,10 +10,13 @@ import { emit } from "../socket";
 import { identity, roleRevealDismissed, setRoleRevealDismissed, setErrorMessage } from "../state/session";
 
 export function Game(props: { snapshot: RoomSnapshot }) {
-  async function continueAfterReveal() {
-    const res = await emit("continue_after_reveal", {
+  const iAmReady = () => props.snapshot.players.some((p) => p.id === identity().playerId && p.ready);
+
+  async function toggleReady() {
+    const res = await emit("set_ready", {
       roomCode: props.snapshot.code,
       playerId: identity().playerId,
+      ready: !iAmReady(),
     });
     if (!res.ok) setErrorMessage({ code: res.code, message: res.message });
   }
@@ -43,12 +46,13 @@ export function Game(props: { snapshot: RoomSnapshot }) {
       </Show>
 
       <Show when={props.snapshot.phase === "day_reveal"}>
-        <div class="card">
-          <Show when={props.snapshot.me.isHost}>
-            <button type="button" class="primary" onClick={continueAfterReveal}>
-              {t("common.submit")}
-            </button>
+        <div class="card stack">
+          <Show when={props.snapshot.ready}>
+            {(ready) => <p role="status">{t("lobby.readyCount", { count: ready().count, required: ready().required })}</p>}
           </Show>
+          <button type="button" class="primary" aria-pressed={iAmReady()} onClick={toggleReady}>
+            {iAmReady() ? t("lobby.cancelReady") : t("night.continueReady")}
+          </button>
         </div>
       </Show>
 

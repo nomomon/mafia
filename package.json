@@ -9,8 +9,8 @@
   "scripts": {
     "build": "pnpm -r --filter=./packages/* --filter=./apps/* run build",
     "typecheck": "pnpm -r run typecheck",
-    "test": "pnpm --filter server run test",
-    "dev:server": "pnpm --filter server run dev",
-    "dev:web": "pnpm --filter web run dev"
+    "test": "pnpm --filter @mafia/server run test",
+    "dev:server": "pnpm --filter @mafia/shared --filter @mafia/content run build && pnpm --filter @mafia/server run dev",
+    "dev:web": "pnpm --filter @mafia/web run dev"
   }
 }

@@ -43,7 +43,10 @@ export const PublicPlayerSchema = z.object({
   name: z.string(),
   alive: z.boolean(),
   connected: z.boolean(),
+  /** Cosmetic "created this room" badge only — carries no special permissions. */
   isHost: z.boolean(),
+  /** Has this player signaled "ready to move on" for the current phase-gate? */
+  ready: z.boolean(),
 });
 export type PublicPlayer = z.infer<typeof PublicPlayerSchema>;
 
@@ -87,5 +90,12 @@ export const RoomSnapshotSchema = z.object({
   /** Ids this player still needs to act on this phase (for showing "your turn"). */
   pendingActionFor: z.boolean(),
   winner: z.enum(["town", "mafia"]).nullable(),
+  /**
+   * Progress toward the majority needed to advance the current phase (start
+   * the game, skip a stuck night, move to a vote, continue past the morning
+   * reveal) — null when the current phase has no such gate (e.g. day_vote,
+   * which advances via cast_vote instead, or terminal phases).
+   */
+  ready: z.object({ count: z.number().int(), required: z.number().int() }).nullable(),
 });
 export type RoomSnapshot = z.infer<typeof RoomSnapshotSchema>;

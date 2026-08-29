@@ -13,7 +13,8 @@ export function Lobby(props: { snapshot: RoomSnapshot }) {
   const settings = () => props.snapshot.settings;
   const minPlayers = () => minPlayersForSettings(settings());
   const playerCount = () => props.snapshot.players.length;
-  const canStart = () => props.snapshot.me.isHost && playerCount() >= minPlayers();
+  const enoughPlayers = () => playerCount() >= minPlayers();
+  const iAmReady = () => props.snapshot.players.some((p) => p.id === identity().playerId && p.ready);
 
   async function updateSettings(patch: Partial<RoomSettings>) {
     setBusy(true);
@@ -26,9 +27,13 @@ export function Lobby(props: { snapshot: RoomSnapshot }) {
     if (!res.ok) setErrorMessage({ code: res.code, message: res.message });
   }
 
-  async function startGame() {
+  async function toggleReady() {
     setBusy(true);
-    const res = await emit("start_game", { roomCode: props.snapshot.code, playerId: identity().playerId });
+    const res = await emit("set_ready", {
+      roomCode: props.snapshot.code,
+      playerId: identity().playerId,
+      ready: !iAmReady(),
+    });
     setBusy(false);
     if (!res.ok) setErrorMessage({ code: res.code, message: res.message });
   }
@@ -64,78 +69,73 @@ export function Lobby(props: { snapshot: RoomSnapshot }) {
         <PlayerList players={props.snapshot.players} />
       </div>
 
-      <Show when={props.snapshot.me.isHost} fallback={<p class="text-muted">{t("lobby.waitingForHost")}</p>}>
-        <div class="card stack">
-          <p>{t("lobby.youHost")}</p>
-          <fieldset>
-            <legend>{t("lobby.settingsHeading")}</legend>
+      <div class="card stack">
+        <fieldset disabled={iAmReady() || busy()}>
+          <legend>{t("lobby.settingsHeading")}</legend>
 
-            <div class="stepper">
-              <span id="mafia-count-label">{t("lobby.mafiaCount")}</span>
-              <button
-                type="button"
-                aria-label={t("lobby.decreaseMafia")}
-                disabled={busy() || settings().mafiaCount <= 1}
-                onClick={() => updateSettings({ mafiaCount: settings().mafiaCount - 1 })}
-              >
-                −
-              </button>
-              <output aria-labelledby="mafia-count-label">{settings().mafiaCount}</output>
-              <button
-                type="button"
-                aria-label={t("lobby.increaseMafia")}
-                disabled={busy() || settings().mafiaCount >= 3}
-                onClick={() => updateSettings({ mafiaCount: settings().mafiaCount + 1 })}
-              >
-                +
-              </button>
-            </div>
+          <div class="stepper">
+            <span id="mafia-count-label">{t("lobby.mafiaCount")}</span>
+            <button
+              type="button"
+              aria-label={t("lobby.decreaseMafia")}
+              disabled={settings().mafiaCount <= 1}
+              onClick={() => updateSettings({ mafiaCount: settings().mafiaCount - 1 })}
+            >
+              −
+            </button>
+            <output aria-labelledby="mafia-count-label">{settings().mafiaCount}</output>
+            <button
+              type="button"
+              aria-label={t("lobby.increaseMafia")}
+              disabled={settings().mafiaCount >= 3}
+              onClick={() => updateSettings({ mafiaCount: settings().mafiaCount + 1 })}
+            >
+              +
+            </button>
+          </div>
 
-            <div class="toggle-row">
-              <label for="has-doctor">{t("lobby.hasDoctor")}</label>
-              <input
-                id="has-doctor"
-                type="checkbox"
-                checked={settings().hasDoctor}
-                disabled={busy()}
-                onChange={(e) => updateSettings({ hasDoctor: e.currentTarget.checked })}
-              />
-            </div>
+          <div class="toggle-row">
+            <label for="has-doctor">{t("lobby.hasDoctor")}</label>
+            <input
+              id="has-doctor"
+              type="checkbox"
+              checked={settings().hasDoctor}
+              onChange={(e) => updateSettings({ hasDoctor: e.currentTarget.checked })}
+            />
+          </div>
 
-            <div class="toggle-row">
-              <label for="has-sheriff">{t("lobby.hasSheriff")}</label>
-              <input
-                id="has-sheriff"
-                type="checkbox"
-                checked={settings().hasSheriff}
-                disabled={busy()}
-                onChange={(e) => updateSettings({ hasSheriff: e.currentTarget.checked })}
-              />
-            </div>
-          </fieldset>
+          <div class="toggle-row">
+            <label for="has-sheriff">{t("lobby.hasSheriff")}</label>
+            <input
+              id="has-sheriff"
+              type="checkbox"
+              checked={settings().hasSheriff}
+              onChange={(e) => updateSettings({ hasSheriff: e.currentTarget.checked })}
+            />
+          </div>
+        </fieldset>
 
-          <Show when={playerCount() < minPlayers()}>
-            <p class="field-error" role="alert">
-              {t("lobby.minPlayersWarning", { count: minPlayers(), have: playerCount() })}
-            </p>
-          </Show>
+        <Show when={!enoughPlayers()}>
+          <p class="field-error" role="alert">
+            {t("lobby.minPlayersWarning", { count: minPlayers(), have: playerCount() })}
+          </p>
+        </Show>
 
-          <button
-            type="button"
-            class="primary"
-            disabled={!canStart() || busy()}
-            aria-describedby={!canStart() ? "start-disabled-hint" : undefined}
-            onClick={startGame}
-          >
-            {t("lobby.startGame")}
-          </button>
-          <Show when={!canStart()}>
-            <p class="text-muted" id="start-disabled-hint">
-              {t("lobby.startGameDisabledHint")}
-            </p>
-          </Show>
-        </div>
-      </Show>
+        <p class="text-muted">{t("lobby.readyExplainer")}</p>
+        <Show when={props.snapshot.ready}>
+          {(ready) => <p role="status">{t("lobby.readyCount", { count: ready().count, required: ready().required })}</p>}
+        </Show>
+
+        <button
+          type="button"
+          class="primary"
+          disabled={!enoughPlayers() || busy()}
+          aria-pressed={iAmReady()}
+          onClick={toggleReady}
+        >
+          {iAmReady() ? t("lobby.cancelReady") : t("lobby.markReady")}
+        </button>
+      </div>
     </main>
   );
 }

@@ -10,7 +10,7 @@ export function VotePanel(props: { snapshot: RoomSnapshot }) {
 
   const alivePlayers = () => props.snapshot.players.filter((p) => p.alive);
   const targets = () => alivePlayers().filter((p) => p.id !== identity().playerId);
-  const isHost = () => props.snapshot.me.isHost;
+  const iAmReady = () => props.snapshot.players.some((p) => p.id === identity().playerId && p.ready);
 
   async function castVote(targetId: string) {
     setBusy(true);
@@ -24,32 +24,39 @@ export function VotePanel(props: { snapshot: RoomSnapshot }) {
     else setErrorMessage({ code: res.code, message: res.message });
   }
 
-  async function startVote() {
+  async function toggleReady() {
     setBusy(true);
-    const res = await emit("start_vote", { roomCode: props.snapshot.code, playerId: identity().playerId });
-    setBusy(false);
-    if (!res.ok) setErrorMessage({ code: res.code, message: res.message });
-  }
-
-  async function forceResolveNight() {
-    setBusy(true);
-    const res = await emit("force_resolve_night", { roomCode: props.snapshot.code, playerId: identity().playerId });
+    const res = await emit("set_ready", {
+      roomCode: props.snapshot.code,
+      playerId: identity().playerId,
+      ready: !iAmReady(),
+    });
     setBusy(false);
     if (!res.ok) setErrorMessage({ code: res.code, message: res.message });
   }
 
   return (
     <section aria-labelledby="vote-panel-heading" class="stack">
-      <Show when={props.snapshot.phase === "night" && isHost()}>
-        <button type="button" disabled={busy()} onClick={forceResolveNight}>
-          {t("night.forceResolve")}
-        </button>
+      <Show when={props.snapshot.phase === "night" && props.snapshot.ready}>
+        {(ready) => (
+          <div class="stack">
+            <p role="status">{t("lobby.readyCount", { count: ready().count, required: ready().required })}</p>
+            <button type="button" disabled={busy()} aria-pressed={iAmReady()} onClick={toggleReady}>
+              {iAmReady() ? t("lobby.cancelReady") : t("night.readyToSkip")}
+            </button>
+          </div>
+        )}
       </Show>
 
-      <Show when={props.snapshot.phase === "day_discussion" && isHost()}>
-        <button type="button" class="primary" disabled={busy()} onClick={startVote}>
-          {t("vote.startVote")}
-        </button>
+      <Show when={props.snapshot.phase === "day_discussion" && props.snapshot.ready}>
+        {(ready) => (
+          <div class="stack">
+            <p role="status">{t("lobby.readyCount", { count: ready().count, required: ready().required })}</p>
+            <button type="button" class="primary" disabled={busy()} aria-pressed={iAmReady()} onClick={toggleReady}>
+              {iAmReady() ? t("lobby.cancelReady") : t("vote.readyToVote")}
+            </button>
+          </div>
+        )}
       </Show>
 
       <Show when={props.snapshot.phase === "day_vote"}>

@@ -25,8 +25,6 @@ export const en = {
     copyCode: "Copy room code",
     codeCopied: "Room code copied!",
     players: "Players ({count})",
-    youHost: "You are the host",
-    waitingForHost: "Waiting for the host to start the game.",
     settingsHeading: "Game settings",
     mafiaCount: "Number of mafia",
     decreaseMafia: "Decrease mafia count",
@@ -34,8 +32,10 @@ export const en = {
     hasDoctor: "Include doctor",
     hasSheriff: "Include sheriff",
     minPlayersWarning: "Need at least {count} players for these settings ({have} joined).",
-    startGame: "Start game",
-    startGameDisabledHint: "Not enough players yet.",
+    readyExplainer: "Anyone can adjust the settings. The game starts once a majority of players mark themselves ready.",
+    readyCount: "{count} of {required} needed are ready.",
+    markReady: "I'm ready",
+    cancelReady: "Not ready yet",
   },
 
   role: {
@@ -73,7 +73,8 @@ export const en = {
     sheriffResultHeading: "Investigation result",
     sheriffResultMafia: "{name} is mafia!",
     sheriffResultInnocent: "{name} is not mafia.",
-    forceResolve: "Force resolve night",
+    readyToSkip: "Ready to move on without waiting",
+    continueReady: "Ready to continue",
   },
 
   vote: {
@@ -81,7 +82,7 @@ export const en = {
     prompt: "Vote for the player you think is mafia:",
     abstain: "Abstain",
     voteSubmitted: "Vote submitted. Waiting for others.",
-    startVote: "Start vote",
+    readyToVote: "Ready to start the vote",
     tally: "Votes: {count}",
   },
 
@@ -100,7 +101,8 @@ export const en = {
   players: {
     heading: "Players",
     you: "You",
-    host: "Host",
+    creator: "Room creator",
+    ready: "Ready",
     dead: "Eliminated",
     disconnected: "Disconnected",
   },

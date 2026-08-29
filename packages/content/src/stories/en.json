@@ -49,7 +49,7 @@
   { "id": "saved-015", "category": "saved", "template": "The doctor found {victim} halfway to the raffle booth and gently steered them back home." },
   { "id": "saved-016", "category": "saved", "template": "Right before {victim} could pet the mysterious llama, the doctor handed it a carrot and walked it away." },
   { "id": "saved-017", "category": "saved", "template": "{victim} was reaching for the treasure map when the doctor pointed out it was upside down and useless." },
-  { "id": "saved-018", "category": "saved", "template": "The doctor intercepted the \"wizard\" at the door and politely sent him packing." },
+  { "id": "saved-018", "category": "saved", "template": "The doctor intercepted the \"wizard\" at {victim}'s door and politely sent him packing." },
   { "id": "saved-019", "category": "saved", "template": "{victim} almost boarded the traveling circus, but the doctor offered to juggle instead, no thanks needed." },
   { "id": "saved-020", "category": "saved", "template": "The doctor arrived just as {victim} spotted the rubber duck trail and scooped up every duck first." },
   { "id": "saved-021", "category": "saved", "template": "{victim} was tempted by the bubble wrap offer, but the doctor produced an even bigger roll from their bag." },

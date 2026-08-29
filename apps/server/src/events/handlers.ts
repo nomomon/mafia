@@ -1,21 +1,17 @@
 import type { Server, Socket } from "socket.io";
 import {
   CastVotePayloadSchema,
-  ContinueAfterRevealPayloadSchema,
   CreateRoomPayloadSchema,
-  ForceResolveNightPayloadSchema,
   JoinRoomPayloadSchema,
   NightActionPayloadSchema,
   RejoinRoomPayloadSchema,
-  StartGamePayloadSchema,
-  StartVotePayloadSchema,
+  SetReadyPayloadSchema,
   UpdateSettingsPayloadSchema,
   type AckResponse,
   type ClientToServerEvents,
   type ServerToClientEvents,
 } from "@mafia/shared";
 import type { ZodType } from "zod";
-import { NotEnoughPlayersError } from "../game/roles.js";
 import type { RoomManager } from "../rooms/roomManager.js";
 
 type IoServer = Server<ClientToServerEvents, ServerToClientEvents>;
@@ -121,30 +117,10 @@ export function registerHandlers(io: IoServer, roomManager: RoomManager): void {
 
       const room = roomManager.get(roomCode);
       if (!room) return ack(fail("ROOM_NOT_FOUND", "No room with that code."));
-      if (!room.isHost(playerId)) return ack(fail("NOT_HOST", "Only the host can change settings."));
 
       const result = room.updateSettings(settings);
       ack(result);
       if (result.ok) broadcastRoom(room.code);
-    });
-
-    socket.on("start_game", (payload, ack) => {
-      const parsed = parse(StartGamePayloadSchema, payload);
-      if (!parsed.ok) return ack(parsed.ack);
-      const { playerId, roomCode } = parsed.value;
-
-      const room = roomManager.get(roomCode);
-      if (!room) return ack(fail("ROOM_NOT_FOUND", "No room with that code."));
-      if (!room.isHost(playerId)) return ack(fail("NOT_HOST", "Only the host can start the game."));
-
-      try {
-        const result = room.startGame();
-        ack(result);
-        if (result.ok) broadcastRoom(room.code);
-      } catch (err) {
-        if (err instanceof NotEnoughPlayersError) return ack(fail("NOT_ENOUGH_PLAYERS", err.message));
-        throw err;
-      }
     });
 
     socket.on("night_action", (payload, ack) => {
@@ -160,30 +136,15 @@ export function registerHandlers(io: IoServer, roomManager: RoomManager): void {
       if (result.ok) broadcastRoom(room.code);
     });
 
-    socket.on("force_resolve_night", (payload, ack) => {
-      const parsed = parse(ForceResolveNightPayloadSchema, payload);
+    socket.on("set_ready", (payload, ack) => {
+      const parsed = parse(SetReadyPayloadSchema, payload);
       if (!parsed.ok) return ack(parsed.ack);
-      const { playerId, roomCode } = parsed.value;
+      const { playerId, roomCode, ready } = parsed.value;
 
       const room = roomManager.get(roomCode);
       if (!room) return ack(fail("ROOM_NOT_FOUND", "No room with that code."));
-      if (!room.isHost(playerId)) return ack(fail("NOT_HOST", "Only the host can force-resolve the night."));
 
-      const result = room.resolveNight();
-      ack(result);
-      if (result.ok) broadcastRoom(room.code);
-    });
-
-    socket.on("start_vote", (payload, ack) => {
-      const parsed = parse(StartVotePayloadSchema, payload);
-      if (!parsed.ok) return ack(parsed.ack);
-      const { playerId, roomCode } = parsed.value;
-
-      const room = roomManager.get(roomCode);
-      if (!room) return ack(fail("ROOM_NOT_FOUND", "No room with that code."));
-      if (!room.isHost(playerId)) return ack(fail("NOT_HOST", "Only the host can start the vote."));
-
-      const result = room.startVote();
+      const result = room.setReady(playerId, ready);
       ack(result);
       if (result.ok) broadcastRoom(room.code);
     });
@@ -197,19 +158,6 @@ export function registerHandlers(io: IoServer, roomManager: RoomManager): void {
       if (!room) return ack(fail("ROOM_NOT_FOUND", "No room with that code."));
 
       const result = room.castVote(playerId, targetId);
-      ack(result);
-      if (result.ok) broadcastRoom(room.code);
-    });
-
-    socket.on("continue_after_reveal", (payload, ack) => {
-      const parsed = parse(ContinueAfterRevealPayloadSchema, payload);
-      if (!parsed.ok) return ack(parsed.ack);
-      const { roomCode } = parsed.value;
-
-      const room = roomManager.get(roomCode);
-      if (!room) return ack(fail("ROOM_NOT_FOUND", "No room with that code."));
-
-      const result = room.continueAfterReveal();
       ack(result);
       if (result.ok) broadcastRoom(room.code);
     });

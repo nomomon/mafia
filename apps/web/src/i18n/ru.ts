@@ -27,8 +27,6 @@ export const ru: TranslationDict = {
     copyCode: "Скопировать код комнаты",
     codeCopied: "Код комнаты скопирован!",
     players: "Игроки ({count})",
-    youHost: "Вы ведущий",
-    waitingForHost: "Ожидание, пока ведущий начнёт игру.",
     settingsHeading: "Настройки игры",
     mafiaCount: "Количество мафии",
     decreaseMafia: "Уменьшить количество мафии",
@@ -36,8 +34,10 @@ export const ru: TranslationDict = {
     hasDoctor: "Включить доктора",
     hasSheriff: "Включить шерифа",
     minPlayersWarning: "Для этих настроек нужно минимум {count} игроков (сейчас {have}).",
-    startGame: "Начать игру",
-    startGameDisabledHint: "Пока недостаточно игроков.",
+    readyExplainer: "Настройки может менять любой игрок. Игра начнётся, как только большинство игроков отметят готовность.",
+    readyCount: "Готовы {count} из {required} необходимых.",
+    markReady: "Я готов",
+    cancelReady: "Ещё не готов",
   },
 
   role: {
@@ -75,7 +75,8 @@ export const ru: TranslationDict = {
     sheriffResultHeading: "Результат проверки",
     sheriffResultMafia: "{name} - мафия!",
     sheriffResultInnocent: "{name} не мафия.",
-    forceResolve: "Завершить ночь принудительно",
+    readyToSkip: "Готов продолжить, не дожидаясь остальных",
+    continueReady: "Готов продолжить",
   },
 
   vote: {
@@ -83,7 +84,7 @@ export const ru: TranslationDict = {
     prompt: "Голосуйте за игрока, которого считаете мафией:",
     abstain: "Воздержаться",
     voteSubmitted: "Голос отправлен. Ожидание остальных.",
-    startVote: "Начать голосование",
+    readyToVote: "Готов начать голосование",
     tally: "Голосов: {count}",
   },
 
@@ -102,7 +103,8 @@ export const ru: TranslationDict = {
   players: {
     heading: "Игроки",
     you: "Вы",
-    host: "Ведущий",
+    creator: "Создатель комнаты",
+    ready: "Готов",
     dead: "Выбыл",
     disconnected: "Не в сети",
   },

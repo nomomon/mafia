@@ -19,6 +19,7 @@ export interface Player {
   role: Role | null;
   alive: boolean;
   connected: boolean;
+  /** Cosmetic "created this room" badge only — carries no special permissions. */
   isHost: boolean;
   socketId: string | null;
 }
@@ -50,6 +51,15 @@ export class Room {
 
   // Day vote state (reset at the start of every day_vote phase)
   private dayVotes = new Map<string, string>();
+
+  /**
+   * Players who signaled "ready to move on" for the current phase-gate
+   * (lobby -> night, night -> day_reveal, day_reveal -> day_discussion,
+   * day_discussion -> day_vote). There is no host: the app itself advances
+   * once a majority of the eligible players are ready. Reset whenever the
+   * phase changes or (in the lobby) whenever settings change.
+   */
+  private ready = new Set<string>();
 
   constructor(code: string, locale: RoomSettings["locale"]) {
     this.code = code;
@@ -89,33 +99,87 @@ export class Room {
     }
   }
 
-  isHost(playerId: string): boolean {
-    return this.players.get(playerId)?.isHost === true;
-  }
-
   updateSettings(settings: RoomSettings): ActionResult {
     if (this.phase !== "lobby") {
       return { ok: false, code: "GAME_IN_PROGRESS", message: "Can't change settings after the game has started." };
     }
     this.settings = settings;
+    // Settings changed underneath everyone's feet — make them re-confirm readiness.
+    this.ready.clear();
     return { ok: true, data: {} };
   }
 
-  // ---------- Game start ----------
+  // ---------- Readiness (no host: the app advances once a majority agree) ----------
 
-  startGame(): ActionResult {
-    if (this.phase !== "lobby") {
-      return { ok: false, code: "WRONG_PHASE", message: "Game already started." };
+  /**
+   * Toggles a player's "ready to move on" flag for whatever phase-gate is
+   * currently active, then advances the game the moment a strict majority of
+   * the eligible players are ready. No-op (but still acknowledged) outside of
+   * the four phases that have a readiness gate.
+   */
+  setReady(playerId: string, isReady: boolean): ActionResult {
+    if (!this.players.has(playerId)) {
+      return { ok: false, code: "PLAYER_NOT_FOUND", message: "You're not part of this room." };
     }
+    if (isReady) this.ready.add(playerId);
+    else this.ready.delete(playerId);
+
+    switch (this.phase) {
+      case "lobby":
+        this.maybeStartGame();
+        break;
+      case "night":
+        if (this.majorityReady(this.alivePlayers())) this.resolveNight();
+        break;
+      case "day_reveal":
+        if (this.majorityReady([...this.players.values()])) this.continueAfterReveal();
+        break;
+      case "day_discussion":
+        if (this.majorityReady(this.alivePlayers())) this.startVote();
+        break;
+      default:
+        break; // day_vote advances via cast_vote; other phases are transient/terminal.
+    }
+    return { ok: true, data: {} };
+  }
+
+  private alivePlayers(): Player[] {
+    return [...this.players.values()].filter((p) => p.alive);
+  }
+
+  private majorityReady(eligible: Player[]): boolean {
+    if (eligible.length === 0) return false;
+    const readyCount = eligible.filter((p) => this.ready.has(p.id)).length;
+    return readyCount > eligible.length / 2;
+  }
+
+  /** Exposes ready-gate progress for the snapshot; null when the current phase has no such gate. */
+  private readyInfo(): { count: number; required: number } | null {
+    let eligible: Player[];
+    switch (this.phase) {
+      case "lobby":
+      case "day_reveal":
+        eligible = [...this.players.values()];
+        break;
+      case "night":
+      case "day_discussion":
+        eligible = this.alivePlayers();
+        break;
+      default:
+        return null;
+    }
+    if (eligible.length === 0) return null;
+    return {
+      count: eligible.filter((p) => this.ready.has(p.id)).length,
+      required: Math.floor(eligible.length / 2) + 1,
+    };
+  }
+
+  private maybeStartGame(): void {
     const ids = [...this.players.keys()];
     const required = minPlayersForSettings(this.settings);
-    if (ids.length < required) {
-      return {
-        ok: false,
-        code: "NOT_ENOUGH_PLAYERS",
-        message: `Need at least ${required} players for these settings, have ${ids.length}.`,
-      };
-    }
+    if (ids.length < required) return; // not enough players yet — readiness alone can't start
+    if (!this.majorityReady([...this.players.values()])) return;
 
     const roles = assignRoles(ids, this.settings);
     for (const [id, role] of roles) {
@@ -124,11 +188,11 @@ export class Room {
     }
 
     this.beginNight();
-    return { ok: true, data: {} };
   }
 
   private beginNight(): void {
     this.phase = "night";
+    this.ready.clear();
     this.mafiaVotes.clear();
     this.doctorSave = null;
     this.sheriffPick = null;
@@ -175,8 +239,8 @@ export class Room {
     return true;
   }
 
-  /** Resolves the night with whatever actions were submitted so far (used both automatically and by force_resolve_night). */
-  resolveNight(): ActionResult {
+  /** Resolves the night with whatever actions were submitted so far (once everyone's acted, or a majority is ready to move on). */
+  private resolveNight(): ActionResult {
     if (this.phase !== "night") {
       return { ok: false, code: "WRONG_PHASE", message: "It's not night right now." };
     }
@@ -208,25 +272,28 @@ export class Room {
       );
     }
 
+    this.ready.clear();
     this.phase = "day_reveal";
     this.checkAndApplyWinner();
     return { ok: true, data: {} };
   }
 
-  continueAfterReveal(): ActionResult {
+  private continueAfterReveal(): ActionResult {
     if (this.phase !== "day_reveal") {
       return { ok: false, code: "WRONG_PHASE", message: "Nothing to continue from." };
     }
+    this.ready.clear();
     this.phase = "day_discussion";
     return { ok: true, data: {} };
   }
 
   // ---------- Day vote ----------
 
-  startVote(): ActionResult {
+  private startVote(): ActionResult {
     if (this.phase !== "day_discussion") {
       return { ok: false, code: "WRONG_PHASE", message: "Can't start a vote right now." };
     }
+    this.ready.clear();
     this.phase = "day_vote";
     this.dayVotes.clear();
     return { ok: true, data: {} };
@@ -307,6 +374,7 @@ export class Room {
       alive: p.alive,
       connected: p.connected,
       isHost: p.isHost,
+      ready: this.ready.has(p.id),
     }));
 
     return {
@@ -319,6 +387,7 @@ export class Room {
       lastSheriffResult: this.lastSheriffResult.get(playerId) ?? null,
       pendingActionFor: this.hasPendingAction(me),
       winner: this.winner,
+      ready: this.readyInfo(),
     };
   }
 
