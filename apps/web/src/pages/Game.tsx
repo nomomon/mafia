@@ -42,7 +42,13 @@ export function Game(props: { snapshot: RoomSnapshot }) {
         <div class="card stack" role="alert">
           <h2>{t("gameOver.heading")}</h2>
           <p>{props.snapshot.winner === "town" ? t("gameOver.townWins") : t("gameOver.mafiaWins")}</p>
-          <button type="button" class="primary" onClick={resetSession}>
+          <Show when={props.snapshot.ready}>
+            {(ready) => <p role="status">{t("lobby.readyCount", { count: ready().count, required: ready().required })}</p>}
+          </Show>
+          <button type="button" class="primary" aria-pressed={iAmReady()} onClick={toggleReady}>
+            {iAmReady() ? t("lobby.cancelReady") : t("gameOver.readyToPlayAgain")}
+          </button>
+          <button type="button" onClick={resetSession}>
             {t("gameOver.backToHome")}
           </button>
         </div>

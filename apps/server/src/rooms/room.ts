@@ -137,6 +137,9 @@ export class Room {
       case "day_discussion":
         if (this.majorityReady(this.alivePlayers())) this.startVote();
         break;
+      case "game_over":
+        if (this.majorityReady([...this.players.values()])) this.restartToLobby();
+        break;
       default:
         break; // day_vote advances via cast_vote; other phases are transient/terminal.
     }
@@ -159,6 +162,7 @@ export class Room {
     switch (this.phase) {
       case "lobby":
       case "day_reveal":
+      case "game_over":
         eligible = [...this.players.values()];
         break;
       case "night":
@@ -355,6 +359,27 @@ export class Room {
     this.phase = "game_over";
     this.narratorLog.push(this.narrator.makeEntry(this.settings.locale, winner === "town" ? "town_wins" : "mafia_wins"));
     return true;
+  }
+
+  /**
+   * Starts a brand new game with the same roster and settings, back in the
+   * lobby (so players can still tweak settings and everyone reconfirms ready
+   * before roles are dealt again) — same room code, so nobody has to rejoin.
+   */
+  private restartToLobby(): ActionResult {
+    if (this.phase !== "game_over") {
+      return { ok: false, code: "WRONG_PHASE", message: "The game hasn't ended yet." };
+    }
+    for (const player of this.players.values()) {
+      player.role = null;
+      player.alive = true;
+    }
+    this.narratorLog = [];
+    this.winner = null;
+    this.lastSheriffResult.clear();
+    this.ready.clear();
+    this.phase = "lobby";
+    return { ok: true, data: {} };
   }
 
   // ---------- Snapshot ----------

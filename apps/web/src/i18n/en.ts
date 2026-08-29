@@ -90,7 +90,8 @@ export const en = {
     heading: "Game over",
     townWins: "The town wins!",
     mafiaWins: "The mafia wins!",
-    backToHome: "Back to home",
+    readyToPlayAgain: "Ready to play again",
+    backToHome: "Leave room",
   },
 
   narrator: {

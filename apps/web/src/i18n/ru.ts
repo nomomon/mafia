@@ -92,7 +92,8 @@ export const ru: TranslationDict = {
     heading: "Игра окончена",
     townWins: "Мирные жители победили!",
     mafiaWins: "Мафия победила!",
-    backToHome: "На главную",
+    readyToPlayAgain: "Готов сыграть ещё раз",
+    backToHome: "Покинуть комнату",
   },
 
   narrator: {
