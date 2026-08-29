@@ -1,0 +1,16 @@
+{
+  "name": "mafia",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.18.3",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm -r --filter=./packages/* --filter=./apps/* run build",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm --filter server run test",
+    "dev:server": "pnpm --filter server run dev",
+    "dev:web": "pnpm --filter web run dev"
+  }
+}
