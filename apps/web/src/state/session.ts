@@ -82,7 +82,10 @@ socket.on("room_snapshot", (next) => {
   // In-room UI always renders in the room's locale; narrator text is already
   // server-rendered in that locale, so the whole app should match it.
   setLocale(next.settings.locale);
-  setIdentity({ roomCode: next.code, name: next.me.name });
+  // Once the game is over, forget the room so a refresh lands back on Home
+  // with a clean slate instead of rejoining the finished game and its
+  // narrator log — the game itself still shows the final result until then.
+  setIdentity({ roomCode: next.phase === "game_over" ? null : next.code, name: next.me.name });
 });
 
 socket.on("error_message", (payload) => {
