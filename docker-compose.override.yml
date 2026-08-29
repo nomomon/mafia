@@ -1,0 +1,7 @@
+# Auto-merged by `docker compose up` on a local machine (and ignored by any
+# tool that runs `docker compose -f docker-compose.yml up`, e.g. Dokploy) —
+# adds back the host port mapping for local development.
+services:
+  web:
+    ports:
+      - "${PORT_WEB:-8080}:80"

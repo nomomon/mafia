@@ -23,6 +23,13 @@ services:
     depends_on:
       server:
         condition: service_healthy
-    ports:
-      - "${PORT_WEB:-8080}:80"
+    # No host port bound here on purpose: a reverse-proxy platform (e.g.
+    # Dokploy/Traefik) picks which container port to route to via its own
+    # dashboard, and a hardcoded `ports:` mapping both fights that and can
+    # fail on redeploy with "port is already allocated". For plain
+    # `docker compose up` on your own machine, docker-compose.override.yml
+    # (auto-merged, and ignored by anything that passes `-f docker-compose.yml`
+    # explicitly) adds the host port mapping back.
+    expose:
+      - "80"
     restart: unless-stopped
