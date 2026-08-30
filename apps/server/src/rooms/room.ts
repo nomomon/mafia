@@ -90,16 +90,19 @@ export class Room {
     player.connected = true;
   }
 
-  /** On disconnect: drop the player entirely pre-game (no role assigned yet), otherwise just mark them offline. */
+  /**
+   * On disconnect: just mark them offline, in every phase including lobby —
+   * NOT delete-in-lobby like an earlier version did. A page refresh closes
+   * the socket (a disconnect) and the reload's rejoin_room only succeeds if
+   * the player is still on the roster; deleting them on a lobby disconnect
+   * meant refreshing during the lobby always self-evicted you, surfacing as
+   * a "You're not part of this room" error on an otherwise-normal refresh.
+   */
   handleDisconnect(playerId: string): void {
     const player = this.players.get(playerId);
     if (!player) return;
-    if (this.phase === "lobby") {
-      this.players.delete(playerId);
-    } else {
-      player.connected = false;
-      player.socketId = null;
-    }
+    player.connected = false;
+    player.socketId = null;
   }
 
   /**

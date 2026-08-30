@@ -43,11 +43,18 @@ export class RoomManager {
     this.rooms.delete(code);
   }
 
-  /** Rooms still in their lobby phase — the only ones new players can join. */
+  /**
+   * Rooms still in their lobby phase with at least one connected player —
+   * the only ones new players can join. Disconnect never deletes a player
+   * (even in the lobby — see Room.handleDisconnect), so a room everyone has
+   * actually abandoned would otherwise linger in this list forever with only
+   * ghost, never-coming-back players in its roster.
+   */
   listJoinable(): RoomListEntry[] {
     const result: RoomListEntry[] = [];
     for (const room of this.rooms.values()) {
       if (room.phase !== "lobby") continue;
+      if (![...room.players.values()].some((p) => p.connected)) continue;
       result.push(room.listInfo());
     }
     return result;

@@ -59,9 +59,11 @@ socket.on("connect", () => {
     attemptedRejoin = true;
     emit("rejoin_room", { playerId: id.playerId, roomCode: id.roomCode }).then((res) => {
       if (!res.ok) {
-        // Stale room reference (server restarted, room gone, etc). Drop it.
+        // This fires silently on every page load, not from something the
+        // user did — a stale room reference (server restarted, the game
+        // already ended elsewhere, they were removed) is routine, not an
+        // error worth alarming them with. Just quietly land on Home.
         clearRoomIdentity();
-        setErrorMessage({ code: res.code, message: res.message });
       }
     });
   }
