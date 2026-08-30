@@ -1,313 +1,1542 @@
 [
-  { "id": "killed-001", "category": "killed", "template": "{victim} was walking down an alley that night, and a brick fell on them. They are gone now." },
-  { "id": "killed-002", "category": "killed", "template": "A runaway shopping cart caught {victim} at exactly the wrong angle, at exactly the wrong speed. Didn't make it." },
-  { "id": "killed-003", "category": "killed", "template": "Somebody lost an argument with a vending machine last night. That somebody was {victim}, and the machine won permanently." },
-  { "id": "killed-004", "category": "killed", "template": "A piano was being lowered from a third-floor window when the rope gave out. {victim} happened to be underneath. Case closed." },
-  { "id": "killed-005", "category": "killed", "template": "{victim} was found at the bottom of the stairs this morning, one banana peel away from a very avoidable death." },
-  { "id": "killed-006", "category": "killed", "template": "An anvil fell off a truck marked \"ANVILS, HANDLE WITH CARE.\" {victim} did not handle it with care. Neither did the anvil." },
-  { "id": "killed-007", "category": "killed", "template": "Someone rigged the town's rotating door to spin just a little too fast. {victim} never saw it coming, or going." },
-  { "id": "killed-008", "category": "killed", "template": "{victim} was murdered by a suspiciously well-aimed bowling ball. The lane was closed for the season." },
-  { "id": "killed-009", "category": "killed", "template": "A vending machine, a loose staircase, and {victim}'s bad luck all met at once last night. Only two of those walked away." },
-  { "id": "killed-010", "category": "killed", "template": "The coroner's report says \"blunt trauma from a frozen turkey, thrown from unknown height.\" {victim} didn't survive the holidays." },
-  { "id": "killed-011", "category": "killed", "template": "{victim} was found wedged under a toppled bookshelf, three mystery novels open beside them. The irony was not lost on the department." },
-  { "id": "killed-012", "category": "killed", "template": "A gas station awning collapsed at the exact moment {victim} stopped to check their tire pressure. Gone before the gauge read zero." },
-  { "id": "killed-013", "category": "killed", "template": "Someone left a rake face-up in the yard. {victim} stepped on it. That, somehow, was the end of them." },
-  { "id": "killed-014", "category": "killed", "template": "{victim} was discovered this morning, buried under a collapsed display of canned soup at the general store. The soup survived." },
-  { "id": "killed-015", "category": "killed", "template": "A carnival strongman game's hammer swung the wrong way. {victim} was standing exactly where it landed." },
-  { "id": "killed-016", "category": "killed", "template": "The elevator cable snapped with impeccable timing, right as {victim} stepped in. Nobody else was in the building that night." },
-  { "id": "killed-017", "category": "killed", "template": "{victim} was found this morning wrapped in an unreasonable amount of bubble wrap and an entirely reasonable amount of dead." },
-  { "id": "killed-018", "category": "killed", "template": "A crane operator lost his grip on a wrecking ball. {victim} lost considerably more." },
-  { "id": "killed-019", "category": "killed", "template": "{victim} tried to outrun a runaway zamboni. The zamboni was not fast, but {victim} was slower." },
-  { "id": "killed-020", "category": "killed", "template": "Someone swapped the sugar for a suspiciously heavy substitute. {victim} took one bite of cake and never took another." },
-  { "id": "killed-021", "category": "killed", "template": "A stack of parking cones fell like dominoes onto {victim}. The last cone landed with what witnesses called \"unnecessary finality.\"" },
-  { "id": "killed-022", "category": "killed", "template": "{victim} was pronounced dead at the scene, tangled in a garden hose with a garden gnome standing suspiciously close by." },
-  { "id": "killed-023", "category": "killed", "template": "The town's oldest oak tree chose last night, of all nights, to drop a branch directly onto {victim}. Timber, and tragedy." },
-  { "id": "killed-024", "category": "killed", "template": "A malfunctioning ATM dispensed its entire cash drawer onto {victim} at unsafe velocity. The bank called it a freak accident." },
-  { "id": "killed-025", "category": "killed", "template": "{victim} was found this morning, having lost a duel with a revolving restaurant door. The door is fine." },
-  { "id": "killed-026", "category": "killed", "template": "A safe fell from a moving truck outside the bank. {victim} was standing under it, which, in hindsight, was the wrong place to stand." },
-  { "id": "killed-027", "category": "killed", "template": "Someone left the manhole cover off, and {victim} did not read the memo. Neither survived the encounter, though only one was human." },
-  { "id": "killed-028", "category": "killed", "template": "{victim} was discovered under an avalanche of frozen dinners after the walk-in freezer door gave out at the worst possible moment." },
-  { "id": "killed-029", "category": "killed", "template": "A flagpole snapped clean in half during a gentle breeze, and {victim} happened to be standing directly beneath the flag." },
-  { "id": "killed-030", "category": "killed", "template": "The last thing {victim} said was \"I'm sure this ladder is fine.\" It was not fine." },
-  { "id": "killed-031", "category": "killed", "template": "A church bell came loose mid-toll and {victim} was standing right below it. It tolled for them, specifically." },
-  { "id": "killed-032", "category": "killed", "template": "{victim} was found this morning at the bottom of a well they swore they'd never go near. Someone should ask why they went near it." },
-  { "id": "killed-033", "category": "killed", "template": "An entire rack of bowling pins fell on {victim} in what the alley insists was \"just gravity, nothing more.\"" },
-  { "id": "killed-034", "category": "killed", "template": "The town's fireworks warehouse had one accidental spark, and {victim} had one very unfortunate spot to be standing." },
-  { "id": "killed-035", "category": "killed", "template": "{victim} was murdered, according to the note pinned to a dartboard where their photograph used to be." },
-
-  { "id": "saved-001", "category": "saved", "template": "The doctor kicked the brick out of the alley a half-second before it would have landed on {victim}. Close one." },
-  { "id": "saved-002", "category": "saved", "template": "Just as the shopping cart barreled toward {victim}, the doctor grabbed the handle and steered it into a wall instead." },
-  { "id": "saved-003", "category": "saved", "template": "The doctor unplugged the vending machine mid-argument, sparing {victim} a very undignified death." },
-  { "id": "saved-004", "category": "saved", "template": "A piano was three floors up and falling fast. The doctor yanked {victim} out of the drop zone with a second to spare." },
-  { "id": "saved-005", "category": "saved", "template": "{victim} had one foot on the banana peel when the doctor snatched them back by the collar." },
-  { "id": "saved-006", "category": "saved", "template": "The anvil truck rumbled past, and the doctor shoved {victim} clear just before it hit a pothole." },
-  { "id": "saved-007", "category": "saved", "template": "The revolving door was spinning dangerously fast. The doctor wedged a chair in it before {victim} stepped through." },
-  { "id": "saved-008", "category": "saved", "template": "The bowling ball was already rolling when the doctor dove and knocked {victim} out of its path." },
-  { "id": "saved-009", "category": "saved", "template": "A frozen turkey sailed through the air, and the doctor caught it inches from {victim}'s head, like it was nothing." },
-  { "id": "saved-010", "category": "saved", "template": "The bookshelf teetered, and the doctor caught it with both hands, giving {victim} just enough time to roll away." },
-  { "id": "saved-011", "category": "saved", "template": "The gas station awning groaned overhead. The doctor pulled {victim} away from the pump right before it came down." },
-  { "id": "saved-012", "category": "saved", "template": "The doctor spotted the rake in the grass and snatched it up before {victim} took a single step near it." },
-  { "id": "saved-013", "category": "saved", "template": "The soup display wobbled, and the doctor braced it with a shoulder, giving {victim} time to back away unscathed." },
-  { "id": "saved-014", "category": "saved", "template": "The strongman hammer swung wide. The doctor tackled {victim} out of the way, and both landed in a heap of relief." },
-  { "id": "saved-015", "category": "saved", "template": "The elevator cable frayed with an ominous twang, and the doctor pulled {victim} back from the doors just in time." },
-  { "id": "saved-016", "category": "saved", "template": "The wrecking ball swung loose, and the doctor hauled {victim} out of range before it so much as grazed the building." },
-  { "id": "saved-017", "category": "saved", "template": "The zamboni was gaining speed, but the doctor cut the engine before it ever reached {victim}." },
-  { "id": "saved-018", "category": "saved", "template": "The doctor swapped the tampered cake for a fresh one moments before {victim} took a bite." },
-  { "id": "saved-019", "category": "saved", "template": "The parking cones toppled in sequence, and the doctor caught the last one mid-air before it reached {victim}." },
-  { "id": "saved-020", "category": "saved", "template": "The garden hose had {victim} half-tangled already, but the doctor cut it loose before things got any tighter." },
-  { "id": "saved-021", "category": "saved", "template": "The oak branch cracked overhead, and the doctor pulled {victim} back by the collar just as it crashed down." },
-  { "id": "saved-022", "category": "saved", "template": "The ATM began sputtering cash at alarming speed, and the doctor yanked {victim} away before the drawer gave out." },
-  { "id": "saved-023", "category": "saved", "template": "The revolving restaurant door was already spinning too fast, but the doctor jammed it with a menu before {victim} got close." },
-  { "id": "saved-024", "category": "saved", "template": "The safe was already falling when the doctor grabbed {victim} by the arm and hauled them out of the drop zone." },
-  { "id": "saved-025", "category": "saved", "template": "The manhole cover was missing, but the doctor flagged {victim} down half a step before they reached the gap." },
-  { "id": "saved-026", "category": "saved", "template": "The freezer door groaned and buckled, and the doctor pulled {victim} clear before the frozen dinners came avalanching down." },
-  { "id": "saved-027", "category": "saved", "template": "The flagpole gave a worrying creak, and the doctor moved {victim} out from under it moments before it snapped." },
-  { "id": "saved-028", "category": "saved", "template": "The ladder wobbled dangerously, and the doctor caught {victim} on the way down, both of them landing safely in a hedge." },
-  { "id": "saved-029", "category": "saved", "template": "The church bell groaned loose above, and the doctor tackled {victim} out of the way right as it hit the ground." },
-  { "id": "saved-030", "category": "saved", "template": "{victim} was leaning over the old well when the doctor grabbed the back of their coat and pulled them to safety." },
-  { "id": "saved-031", "category": "saved", "template": "The bowling pin rack toppled forward, but the doctor shoved {victim} aside before a single pin connected." },
-  { "id": "saved-032", "category": "saved", "template": "A stray firework spark caught, and the doctor smothered it with a coat before it ever reached {victim}." },
-  { "id": "saved-033", "category": "saved", "template": "The dartboard note turned out to be a warning, and the doctor got to {victim} before whoever wrote it did." },
-  { "id": "saved-034", "category": "saved", "template": "The crane's grip slipped overhead, and the doctor hauled {victim} out of the shadow of the wrecking ball just in time." },
-  { "id": "saved-035", "category": "saved", "template": "The doctor arrived breathless, having sprinted the length of Main Street, and pulled {victim} back from the tracks with seconds to spare." },
-
-  { "id": "quiet-001", "category": "quiet_night", "template": "Nothing happened last night. Even the town's one streetlight flickered and that was the most exciting part of the evening." },
-  { "id": "quiet-002", "category": "quiet_night", "template": "The precinct logged zero incidents. A slow night, the kind detectives dream about and then get bored of." },
-  { "id": "quiet-003", "category": "quiet_night", "template": "Not a single body turned up. Somewhere, a typewriter sat unused." },
-  { "id": "quiet-004", "category": "quiet_night", "template": "It was quiet. Suspiciously quiet, the kind of quiet that makes a detective nervous and everyone else relieved." },
-  { "id": "quiet-005", "category": "quiet_night", "template": "The night passed without incident. The coroner got a full eight hours of sleep for once." },
-  { "id": "quiet-006", "category": "quiet_night", "template": "No crimes, no accidents, no anvils. Just a town, sleeping, for once, undisturbed." },
-  { "id": "quiet-007", "category": "quiet_night", "template": "The whole town held its breath and, remarkably, nothing happened to make it let that breath out badly." },
-  { "id": "quiet-008", "category": "quiet_night", "template": "A patrol car rolled slowly down Main Street and found nothing worth writing in the report." },
-  { "id": "quiet-009", "category": "quiet_night", "template": "Nobody died. Nobody vanished. The town's luck, against all odds, held." },
-  { "id": "quiet-010", "category": "quiet_night", "template": "It was the kind of night noir writers hate: uneventful, unremarkable, entirely without a body count." },
-  { "id": "quiet-011", "category": "quiet_night", "template": "The rain fell, the streetlamps buzzed, and that was, genuinely, the whole story tonight." },
-  { "id": "quiet-012", "category": "quiet_night", "template": "The night shift clocked out with nothing to report, which is either good news or the calm before something worse." },
-  { "id": "quiet-013", "category": "quiet_night", "template": "Nobody so much as jaywalked. A remarkably clean night for a town with this much history." },
-  { "id": "quiet-014", "category": "quiet_night", "template": "The morgue stayed empty overnight, a small miracle nobody bothered to celebrate." },
-  { "id": "quiet-015", "category": "quiet_night", "template": "All was still. Even the town's usual suspects stayed home and slept." },
-  { "id": "quiet-016", "category": "quiet_night", "template": "The whole town exhaled at once. No trials, no funerals, no headlines tonight." },
-  { "id": "quiet-017", "category": "quiet_night", "template": "A single moth circled the streetlamp outside the station and, notably, that was the extent of tonight's drama." },
-  { "id": "quiet-018", "category": "quiet_night", "template": "Nothing to report. Even the town gossip had nothing worth spreading this morning." },
-  { "id": "quiet-019", "category": "quiet_night", "template": "The night was so calm the local paper is running the weather forecast as its front page." },
-  { "id": "quiet-020", "category": "quiet_night", "template": "For once, the sirens stayed silent, and the town got to sleep the whole night through." },
-  { "id": "quiet-021", "category": "quiet_night", "template": "Not a single window was broken, not a single alibi was needed. A boring, blessed night." },
-  { "id": "quiet-022", "category": "quiet_night", "template": "The town's one payphone rang once, wrong number, and that was the most suspicious thing that happened all night." },
-  { "id": "quiet-023", "category": "quiet_night", "template": "Everyone stayed indoors, the streets stayed empty, and the case files stayed exactly as thin as yesterday." },
-  { "id": "quiet-024", "category": "quiet_night", "template": "The night watchman finished his crossword, uninterrupted, for the first time all month." },
-  { "id": "quiet-025", "category": "quiet_night", "template": "Peace, however briefly, settled over the town like a fog with nothing sinister hiding in it." },
-  { "id": "quiet-026", "category": "quiet_night", "template": "The bar closed early, the streets emptied quietly, and not one soul went missing." },
-  { "id": "quiet-027", "category": "quiet_night", "template": "The whole precinct sat around doing paperwork, because for once there was no fresh case to open." },
-  { "id": "quiet-028", "category": "quiet_night", "template": "It rained, the gutters ran, and nothing else of note happened in this town tonight." },
-  { "id": "quiet-029", "category": "quiet_night", "template": "The town's one all-night diner served coffee to exactly nobody suspicious." },
-  { "id": "quiet-030", "category": "quiet_night", "template": "A quiet night, unremarkable and unbothered, the kind you almost don't trust." },
-  { "id": "quiet-031", "category": "quiet_night", "template": "Nothing stirred, nothing fell, nobody vanished. Write that one down, it doesn't happen often." },
-  { "id": "quiet-032", "category": "quiet_night", "template": "The town slept soundly, blissfully unaware of how rare a night like this actually is." },
-  { "id": "quiet-033", "category": "quiet_night", "template": "Even the crows on the courthouse roof had nothing to caw about tonight." },
-  { "id": "quiet-034", "category": "quiet_night", "template": "A dry, uneventful night. Not one alibi was tested, not one door was forced." },
-  { "id": "quiet-035", "category": "quiet_night", "template": "The town's luck held for one more night, and nobody thought to be grateful for it." },
-
-  { "id": "vote-eliminated-001", "category": "vote_eliminated", "template": "The town put {victim} on trial, the jury took four minutes, and the verdict was death. They left the city by morning." },
-  { "id": "vote-eliminated-002", "category": "vote_eliminated", "template": "The gavel came down on {victim}. Guilty, said the town, and the sentence was exile, effective immediately." },
-  { "id": "vote-eliminated-003", "category": "vote_eliminated", "template": "A hasty trial, a unanimous verdict, and {victim} was marched out of town before the courthouse lights even cooled." },
-  { "id": "vote-eliminated-004", "category": "vote_eliminated", "template": "The jury deliberated for exactly as long as it took to pour coffee. {victim} was sentenced and sent packing." },
-  { "id": "vote-eliminated-005", "category": "vote_eliminated", "template": "\"Death, or the next train out,\" said the judge. {victim} chose the train, and left before sundown." },
-  { "id": "vote-eliminated-006", "category": "vote_eliminated", "template": "The courtroom fell silent as the foreman read the verdict on {victim}. Guilty. Gone by nightfall." },
-  { "id": "vote-eliminated-007", "category": "vote_eliminated", "template": "{victim} stood trial before the whole town and lost. The sentence: leave, and never look back." },
-  { "id": "vote-eliminated-008", "category": "vote_eliminated", "template": "It took one witness, twelve minutes, and a very short deliberation to convict {victim}. Case closed, city limits crossed." },
-  { "id": "vote-eliminated-009", "category": "vote_eliminated", "template": "The town's makeshift court found {victim} guilty as charged. The sentence was carried out the only merciful way: a one-way ticket out." },
-  { "id": "vote-eliminated-010", "category": "vote_eliminated", "template": "The judge banged the gavel so hard it cracked. {victim} was found guilty and escorted straight to the city line." },
-  { "id": "vote-eliminated-011", "category": "vote_eliminated", "template": "A jury of neighbors convicted {victim} in record time. Sentence handed down, suitcase packed by dawn." },
-  { "id": "vote-eliminated-012", "category": "vote_eliminated", "template": "The town's verdict on {victim} was swift and merciless: guilty, and gone." },
-  { "id": "vote-eliminated-013", "category": "vote_eliminated", "template": "{victim} pleaded their case. Nobody bought it. The sentence was exile, served immediately." },
-  { "id": "vote-eliminated-014", "category": "vote_eliminated", "template": "The trial lasted all of ten minutes, but the verdict on {victim} stuck: guilty, and out of the city by morning." },
-  { "id": "vote-eliminated-015", "category": "vote_eliminated", "template": "The town's jury didn't need long to convict {victim}. The sentence: leave town and don't come back." },
-  { "id": "vote-eliminated-016", "category": "vote_eliminated", "template": "A verdict was reached on {victim} before the coffee got cold. Guilty. Sentence: permanent departure." },
-  { "id": "vote-eliminated-017", "category": "vote_eliminated", "template": "The judge read the charges against {victim} once. That was apparently enough. Guilty, and gone by nightfall." },
-  { "id": "vote-eliminated-018", "category": "vote_eliminated", "template": "{victim}'s trial ended the way most do in this town: quickly, and with a train ticket instead of a headstone." },
-  { "id": "vote-eliminated-019", "category": "vote_eliminated", "template": "The jury found {victim} guilty by a landslide. The sentence spared their life but not their address." },
-  { "id": "vote-eliminated-020", "category": "vote_eliminated", "template": "A closed-door deliberation, a unanimous vote, and {victim} was on the next train out before the ink dried." },
-  { "id": "vote-eliminated-021", "category": "vote_eliminated", "template": "The town convicted {victim} on the strength of one very convincing finger point. Sentence: exile." },
-  { "id": "vote-eliminated-022", "category": "vote_eliminated", "template": "{victim} heard the word \"guilty\" and didn't wait for the rest of the sentence to start packing." },
-  { "id": "vote-eliminated-023", "category": "vote_eliminated", "template": "The verdict on {victim} came down hard and fast: guilty. Their bags were already at the door." },
-  { "id": "vote-eliminated-024", "category": "vote_eliminated", "template": "The town's court showed {victim} no mercy and one option: guilty, and gone by sunrise." },
-  { "id": "vote-eliminated-025", "category": "vote_eliminated", "template": "A trial by torchlight, a verdict by consensus, and {victim} was escorted out of the city limits before the crowd dispersed." },
-  { "id": "vote-eliminated-026", "category": "vote_eliminated", "template": "The people's court convicted {victim} unanimously. The sentence was carried out at the city gates, quietly." },
-  { "id": "vote-eliminated-027", "category": "vote_eliminated", "template": "{victim} was found guilty in the court of public opinion, which, in this town, is the only court that matters." },
-  { "id": "vote-eliminated-028", "category": "vote_eliminated", "template": "The verdict took less time than the trial itself. {victim} was found guilty and shown the city line." },
-  { "id": "vote-eliminated-029", "category": "vote_eliminated", "template": "The town rendered its judgment on {victim}: guilty, exiled, and not to be spoken of again." },
-  { "id": "vote-eliminated-030", "category": "vote_eliminated", "template": "{victim}'s fate was sealed the moment the jury stopped whispering. Guilty. Gone before the sun came up." },
-  { "id": "vote-eliminated-031", "category": "vote_eliminated", "template": "The judge's final words to {victim} were short: \"Guilty. Get out.\" And they did." },
-  { "id": "vote-eliminated-032", "category": "vote_eliminated", "template": "A trial, a verdict, a sentence, all wrapped up before midnight. {victim} left town under a very unflattering headline." },
-  { "id": "vote-eliminated-033", "category": "vote_eliminated", "template": "The court's ruling on {victim} was final: guilty as charged, banished as sentenced." },
-  { "id": "vote-eliminated-034", "category": "vote_eliminated", "template": "{victim} tried to object. The judge overruled it, and the crowd escorted them straight to the train station." },
-  { "id": "vote-eliminated-035", "category": "vote_eliminated", "template": "The town's tribunal delivered its verdict on {victim} in a single breathless sentence: guilty, and gone for good." },
-
-  { "id": "vote-tied-001", "category": "vote_tied", "template": "The jury split clean down the middle. The trial is thrown out, and nobody hangs tonight." },
-  { "id": "vote-tied-002", "category": "vote_tied", "template": "No verdict could be reached. The case is dismissed, for now." },
-  { "id": "vote-tied-003", "category": "vote_tied", "template": "A hung jury. The judge slams the gavel in disgust and adjourns without a sentence." },
-  { "id": "vote-tied-004", "category": "vote_tied", "template": "The town couldn't agree on a single defendant. The whole trial collapses, and everyone stays put." },
-  { "id": "vote-tied-005", "category": "vote_tied", "template": "The votes came back even, and the courtroom empties without a conviction." },
-  { "id": "vote-tied-006", "category": "vote_tied", "template": "A deadlock. The case is thrown out this round, and the accused go free, for now." },
-  { "id": "vote-tied-007", "category": "vote_tied", "template": "The gavel stays up. No majority, no verdict, no exile tonight." },
-  { "id": "vote-tied-008", "category": "vote_tied", "template": "The jury couldn't reach a decision, so the whole trial is scrapped and everyone walks." },
-  { "id": "vote-tied-009", "category": "vote_tied", "template": "It's a dead heat. The judge dismisses the case with a tired sigh." },
-  { "id": "vote-tied-010", "category": "vote_tied", "template": "The town's court failed to convict anyone tonight. The docket carries over to tomorrow." },
-  { "id": "vote-tied-011", "category": "vote_tied", "template": "The jury argued in circles and reached nothing. No sentence, no exile, no closure." },
-  { "id": "vote-tied-012", "category": "vote_tied", "template": "A perfect stalemate in the deliberation room. The trial is voided." },
-  { "id": "vote-tied-013", "category": "vote_tied", "template": "Nobody could out-argue anybody else. The case is thrown out, and the town lives to try again." },
-  { "id": "vote-tied-014", "category": "vote_tied", "template": "The verdict came back tied, which in this town's court means no verdict at all." },
-  { "id": "vote-tied-015", "category": "vote_tied", "template": "The jury filed out unable to agree. Justice, for tonight, is postponed." },
-  { "id": "vote-tied-016", "category": "vote_tied", "template": "The scales balanced exactly. No sentence is handed down, and no one leaves the city tonight." },
-  { "id": "vote-tied-017", "category": "vote_tied", "template": "A split decision means a mistrial. The gavel never comes down." },
-  { "id": "vote-tied-018", "category": "vote_tied", "template": "The town's tribunal reached an impasse. The trial is dismissed until tomorrow night." },
-  { "id": "vote-tied-019", "category": "vote_tied", "template": "Nobody's testimony won out over anybody else's. The case is dropped for now." },
-  { "id": "vote-tied-020", "category": "vote_tied", "template": "The count came back dead even, and with it, a mistrial." },
-  { "id": "vote-tied-021", "category": "vote_tied", "template": "The judge declared a mistrial after the jury couldn't settle on a single name." },
-  { "id": "vote-tied-022", "category": "vote_tied", "template": "The evidence pointed in too many directions at once. No conviction tonight." },
-  { "id": "vote-tied-023", "category": "vote_tied", "template": "A tie in the jury box means the accused all walk free, at least until sundown tomorrow." },
-  { "id": "vote-tied-024", "category": "vote_tied", "template": "The courtroom emptied in confusion. No majority, no verdict, no exile." },
-  { "id": "vote-tied-025", "category": "vote_tied", "template": "The town's justice system, such as it is, produced a tie and nothing else." },
-  { "id": "vote-tied-026", "category": "vote_tied", "template": "It's a hung jury, plain and simple. The case reopens tomorrow." },
-  { "id": "vote-tied-027", "category": "vote_tied", "template": "The verdict split evenly, and the judge threw up her hands and adjourned." },
-  { "id": "vote-tied-028", "category": "vote_tied", "template": "Nobody could be convicted on a tied vote. The whole town breathes a wary sigh of relief." },
-  { "id": "vote-tied-029", "category": "vote_tied", "template": "The deliberation ended exactly where it started: nowhere. No sentence, no exile." },
-  { "id": "vote-tied-030", "category": "vote_tied", "template": "A dead-even tally means the trial is void. The town will reconvene tomorrow." },
-  { "id": "vote-tied-031", "category": "vote_tied", "template": "The jury couldn't settle it, so the case is thrown out and the docket rolls over." },
-  { "id": "vote-tied-032", "category": "vote_tied", "template": "A tie is as good as an acquittal tonight. Nobody is sentenced, nobody exiled." },
-  { "id": "vote-tied-033", "category": "vote_tied", "template": "The court's verdict came back split, and the case is dismissed without prejudice." },
-  { "id": "vote-tied-034", "category": "vote_tied", "template": "The town's jury deadlocked completely. Justice will have to wait until tomorrow." },
-  { "id": "vote-tied-035", "category": "vote_tied", "template": "No conviction tonight, the vote came back tied, and the gavel never fell." },
-
-  { "id": "town-wins-001", "category": "town_wins", "template": "The last mobster's been dragged out of the shadows and put away for good. The town finally gets a decent night's sleep." },
-  { "id": "town-wins-002", "category": "town_wins", "template": "Case closed, for real this time. The mafia's out, and the town raises a toast at the diner counter." },
-  { "id": "town-wins-003", "category": "town_wins", "template": "The town's detectives cracked it wide open. Every last conspirator's been named and shown the door." },
-  { "id": "town-wins-004", "category": "town_wins", "template": "The mob's grip on this town finally broke. Someone's already lighting a cigar in celebration." },
-  { "id": "town-wins-005", "category": "town_wins", "template": "Justice, slow and unglamorous as ever, finally wins out. The town breathes easy for the first time in ages." },
-  { "id": "town-wins-006", "category": "town_wins", "template": "The last conviction is in. The mafia's finished here, and the courthouse lights stay on late in celebration." },
-  { "id": "town-wins-007", "category": "town_wins", "template": "Every crooked name on the list has been checked off. The town wins, and the coffee tastes a little better tonight." },
-  { "id": "town-wins-008", "category": "town_wins", "template": "The mob's last man standing didn't stand for long. The town closes the case, victorious." },
-  { "id": "town-wins-009", "category": "town_wins", "template": "It's over. The town rooted out every last one of them, and the streetlights feel a little brighter tonight." },
-  { "id": "town-wins-010", "category": "town_wins", "template": "The final verdict is in, and it's a win for the good guys. The mafia's out of this town for good." },
-  { "id": "town-wins-011", "category": "town_wins", "template": "Somewhere, a typewriter finally stops clacking. The case is closed, the mob is finished, the town wins." },
-  { "id": "town-wins-012", "category": "town_wins", "template": "The last mobster's confession is in, signed and sealed. The town has won, and it's buying the first round." },
-  { "id": "town-wins-013", "category": "town_wins", "template": "The mafia's operation collapses at last. The town raises a glass, quietly, wearily, and victorious." },
-  { "id": "town-wins-014", "category": "town_wins", "template": "It's a clean sweep. Every last conspirator is behind bars or run out of town. The town wins." },
-  { "id": "town-wins-015", "category": "town_wins", "template": "The final trial ends in conviction. The mob's finished, and the town, at long last, sleeps soundly." },
-  { "id": "town-wins-016", "category": "town_wins", "template": "The town's persistence paid off. The last mobster is out, and the case file finally closes." },
-  { "id": "town-wins-017", "category": "town_wins", "template": "The mafia's schemes finally unravel completely. The town wins, and the newspaper runs a rare good headline." },
-  { "id": "town-wins-018", "category": "town_wins", "template": "It's over for the mob. The town's had its revenge, quiet and total, and can finally rest." },
-  { "id": "town-wins-019", "category": "town_wins", "template": "The town's detectives close the book on this one, for good. Justice wins, and the town toasts to it." },
-  { "id": "town-wins-020", "category": "town_wins", "template": "The last of the mob's men is gone. The town wins, and the diner stays open late to celebrate." },
-  { "id": "town-wins-021", "category": "town_wins", "template": "Every shadow's been cleared. The town wins this one, hard-earned and long overdue." },
-  { "id": "town-wins-022", "category": "town_wins", "template": "The final piece of the case falls into place. The mafia's done here, and the town finally exhales." },
-  { "id": "town-wins-023", "category": "town_wins", "template": "The mob's last stronghold crumbles. The town wins, and somewhere a jukebox plays something triumphant." },
-  { "id": "town-wins-024", "category": "town_wins", "template": "Justice caught up with all of them in the end. The town wins, weary but victorious." },
-  { "id": "town-wins-025", "category": "town_wins", "template": "The last conviction seals it. The mafia's out of business, and the town finally gets its quiet back." },
-  { "id": "town-wins-026", "category": "town_wins", "template": "The town's long, unglamorous fight finally paid off. The mob's finished, and the case is closed for good." },
-  { "id": "town-wins-027", "category": "town_wins", "template": "It's a hard-won victory, but a victory all the same. The mafia's gone, and the town wins." },
-  { "id": "town-wins-028", "category": "town_wins", "template": "The final tribunal delivers its last verdict. The mob's done, and the town, at last, wins the day." },
-  { "id": "town-wins-029", "category": "town_wins", "template": "The mafia's last name gets crossed off the list. The town wins, and the courthouse clock strikes a victorious hour." },
-  { "id": "town-wins-030", "category": "town_wins", "template": "The town's detectives finally close the case for good. Every mobster accounted for. The town wins." },
-  { "id": "town-wins-031", "category": "town_wins", "template": "The mob's grip breaks for the last time. The town wins, and somebody finally waters the courthouse plants again." },
-  { "id": "town-wins-032", "category": "town_wins", "template": "It's over, truly over. The mafia's finished, and the town wins, quietly relieved." },
-
-  { "id": "mafia-wins-001", "category": "mafia_wins", "template": "The mob's taken the whole town, quietly and completely. Nobody's left to file the report." },
-  { "id": "mafia-wins-002", "category": "mafia_wins", "template": "The mafia outlasted every last investigator. The town's lights go out, one by one, for good." },
-  { "id": "mafia-wins-003", "category": "mafia_wins", "template": "It's the mob's town now. The case file closes itself, unsolved, unfinished, unfortunate." },
-  { "id": "mafia-wins-004", "category": "mafia_wins", "template": "The mafia's plan came together perfectly, in the worst possible way for everyone else." },
-  { "id": "mafia-wins-005", "category": "mafia_wins", "template": "The town ran out of suspects to convict. The mafia claims the whole board, and the silence after is deafening." },
-  { "id": "mafia-wins-006", "category": "mafia_wins", "template": "It's over. The mob wins, and somewhere, a cigar gets lit in celebration nobody will hear about." },
-  { "id": "mafia-wins-007", "category": "mafia_wins", "template": "The town's last honest citizen just got outvoted for good. The mafia takes the town." },
-  { "id": "mafia-wins-008", "category": "mafia_wins", "template": "The mob's takeover is complete. The courthouse lights stay dark tonight, and every night after." },
-  { "id": "mafia-wins-009", "category": "mafia_wins", "template": "The town never saw it coming, not really. The mafia wins, and the case stays open forever." },
-  { "id": "mafia-wins-010", "category": "mafia_wins", "template": "The mob's patience finally paid off. The town belongs to them now, whether anyone likes it or not." },
-  { "id": "mafia-wins-011", "category": "mafia_wins", "template": "It's the mafia's town, top to bottom. The typewriter in the precinct goes quiet for good." },
-  { "id": "mafia-wins-012", "category": "mafia_wins", "template": "The mob simply outnumbered the good guys in the end. Round over, mafia wins, town lost." },
-  { "id": "mafia-wins-013", "category": "mafia_wins", "template": "Well played, mob. The town never saw the whole picture until it was far too late." },
-  { "id": "mafia-wins-014", "category": "mafia_wins", "template": "The mafia's scheme ran like clockwork, and the town's last chance walked out the door with it." },
-  { "id": "mafia-wins-015", "category": "mafia_wins", "template": "The town's been thoroughly outfoxed. The mob takes the whole operation, quiet as ever." },
-  { "id": "mafia-wins-016", "category": "mafia_wins", "template": "It's a mob victory, clean and total. Somewhere, a fedora tips in mock respect." },
-  { "id": "mafia-wins-017", "category": "mafia_wins", "template": "The mafia pulls off the long con completely. Shuffle the deck, folks, it's over." },
-  { "id": "mafia-wins-018", "category": "mafia_wins", "template": "The town fought as hard as it could, but the mob's cunning carried the whole town away." },
-  { "id": "mafia-wins-019", "category": "mafia_wins", "template": "Case closed, badly. The mafia comes out on top, and the town's left holding an empty file." },
-  { "id": "mafia-wins-020", "category": "mafia_wins", "template": "The mob's patience finally paid off in full. This town, and this case, belongs to them now." },
-  { "id": "mafia-wins-021", "category": "mafia_wins", "template": "It's the mafia's turn to run this town, and they've earned every crooked inch of it." },
-  { "id": "mafia-wins-022", "category": "mafia_wins", "template": "The town ran out of jurors, out of witnesses, and out of luck. The mob takes it all." },
-  { "id": "mafia-wins-023", "category": "mafia_wins", "template": "Mafia wins. Somewhere in the dark, a very quiet toast is being raised." },
-  { "id": "mafia-wins-024", "category": "mafia_wins", "template": "The mob's plan came together without a single hitch. This town belongs to them now." },
-  { "id": "mafia-wins-025", "category": "mafia_wins", "template": "The town gave it everything it had, and the mafia still walked away with the whole operation." },
-  { "id": "mafia-wins-026", "category": "mafia_wins", "template": "It's over, and the mob has the run of the whole place. Nicely done, gentlemen." },
-  { "id": "mafia-wins-027", "category": "mafia_wins", "template": "The mafia claims this town outright. Reset the board, if anyone's still willing to play." },
-  { "id": "mafia-wins-028", "category": "mafia_wins", "template": "The town's suspicions never landed where they needed to. The mob wins, clean and quiet." },
-  { "id": "mafia-wins-029", "category": "mafia_wins", "template": "Round over. The mob's teamwork was better than the town's, and now the town knows it too late." },
-  { "id": "mafia-wins-030", "category": "mafia_wins", "template": "The mafia's won the whole town. Somewhere, the courthouse clock stops ticking out of respect." },
-  { "id": "mafia-wins-031", "category": "mafia_wins", "template": "It's a mob sweep. They out-thought, out-waited, and outlasted the entire town." },
-  { "id": "mafia-wins-032", "category": "mafia_wins", "template": "The mafia takes the whole operation tonight. The town's case file gets filed away, unsolved." },
-
-  { "id": "sheriff-mafia-001", "category": "sheriff_result_mafia", "template": "The file on {victim} confirms it: mafia, through and through." },
-  { "id": "sheriff-mafia-002", "category": "sheriff_result_mafia", "template": "Case notes, tonight's entry: {victim} is dirty. No two ways about it." },
-  { "id": "sheriff-mafia-003", "category": "sheriff_result_mafia", "template": "The tail paid off. {victim} is mob, confirmed, in your own handwriting now." },
-  { "id": "sheriff-mafia-004", "category": "sheriff_result_mafia", "template": "You close the folder on {victim} with one word underlined twice: guilty." },
-  { "id": "sheriff-mafia-005", "category": "sheriff_result_mafia", "template": "The evidence lines up clean. {victim} is one of theirs." },
-  { "id": "sheriff-mafia-006", "category": "sheriff_result_mafia", "template": "A long night of watching pays off. {victim}'s in with the mob, no question." },
-  { "id": "sheriff-mafia-007", "category": "sheriff_result_mafia", "template": "You add {victim}'s name to the list, right where the mob's other names sit." },
-  { "id": "sheriff-mafia-008", "category": "sheriff_result_mafia", "template": "Your gut said dirty. The file agrees: {victim} is mafia." },
-  { "id": "sheriff-mafia-009", "category": "sheriff_result_mafia", "template": "The report's conclusive: {victim} has been running with the mob the whole time." },
-  { "id": "sheriff-mafia-010", "category": "sheriff_result_mafia", "template": "Your notes tonight are short and damning: {victim}, confirmed mafia." },
-  { "id": "sheriff-mafia-011", "category": "sheriff_result_mafia", "template": "The truth's in the file now, in ink: {victim} is one of the mob's own." },
-  { "id": "sheriff-mafia-012", "category": "sheriff_result_mafia", "template": "You peeled back the alibi, and underneath it was exactly what you feared. {victim} is mafia." },
-  { "id": "sheriff-mafia-013", "category": "sheriff_result_mafia", "template": "The hunch pays off in full tonight. {victim} is dirty as they come." },
-  { "id": "sheriff-mafia-014", "category": "sheriff_result_mafia", "template": "The investigation's closed on this one: {victim}, mafia, case built." },
-  { "id": "sheriff-mafia-015", "category": "sheriff_result_mafia", "template": "Well, that settles it. {victim}'s in the mob's pocket, plain as day." },
-  { "id": "sheriff-mafia-016", "category": "sheriff_result_mafia", "template": "The digging uncovers the truth: {victim} answers to the mob." },
-  { "id": "sheriff-mafia-017", "category": "sheriff_result_mafia", "template": "No surprise, really. {victim} is mafia, and now it's on record." },
-  { "id": "sheriff-mafia-018", "category": "sheriff_result_mafia", "template": "The badge earns its keep tonight. {victim} confirmed dirty." },
-  { "id": "sheriff-mafia-019", "category": "sheriff_result_mafia", "template": "The pieces fit together at last: {victim} is one of the mob's." },
-  { "id": "sheriff-mafia-020", "category": "sheriff_result_mafia", "template": "No doubt left in the file: {victim} runs with the mafia." },
-  { "id": "sheriff-mafia-021", "category": "sheriff_result_mafia", "template": "There it is. {victim}. Mafia. Case closed on that question." },
-  { "id": "sheriff-mafia-022", "category": "sheriff_result_mafia", "template": "The stakeout pays off. {victim} is confirmed mob." },
-  { "id": "sheriff-mafia-023", "category": "sheriff_result_mafia", "template": "The results are in, and they're bad news for {victim}. Mafia, confirmed." },
-  { "id": "sheriff-mafia-024", "category": "sheriff_result_mafia", "template": "You've cracked it: {victim} has been mob the whole time." },
-  { "id": "sheriff-mafia-025", "category": "sheriff_result_mafia", "template": "The instincts were right on the money. {victim} is dirty." },
-  { "id": "sheriff-mafia-026", "category": "sheriff_result_mafia", "template": "It all checks out, unfortunately: {victim} is one of the mob's." },
-  { "id": "sheriff-mafia-027", "category": "sheriff_result_mafia", "template": "The mystery unravels, and {victim} comes out the other side, mafia." },
-  { "id": "sheriff-mafia-028", "category": "sheriff_result_mafia", "template": "The file confirms the worst suspicion: {victim} is mob." },
-  { "id": "sheriff-mafia-029", "category": "sheriff_result_mafia", "template": "There it is, in black and white, in your own case notes: {victim} is mafia." },
-  { "id": "sheriff-mafia-030", "category": "sheriff_result_mafia", "template": "A night of quiet watching reveals the truth: {victim} is mob." },
-  { "id": "sheriff-mafia-031", "category": "sheriff_result_mafia", "template": "The signs were all there, and now the file says it plainly: {victim} is mafia." },
-  { "id": "sheriff-mafia-032", "category": "sheriff_result_mafia", "template": "Case cracked. {victim} is mafia, and the file goes to the top of the stack." },
-
-  { "id": "sheriff-clean-001", "category": "sheriff_result_clean", "template": "The file on {victim} comes back clean. Not mob, not even close." },
-  { "id": "sheriff-clean-002", "category": "sheriff_result_clean", "template": "Case notes, tonight's entry: {victim} checks out. No ties to the mob." },
-  { "id": "sheriff-clean-003", "category": "sheriff_result_clean", "template": "The tail turned up nothing. {victim} is exactly who they claim to be." },
-  { "id": "sheriff-clean-004", "category": "sheriff_result_clean", "template": "You close the folder on {victim} with a rare word: innocent." },
-  { "id": "sheriff-clean-005", "category": "sheriff_result_clean", "template": "The evidence lines up clean, for once. {victim} has nothing to do with the mob." },
-  { "id": "sheriff-clean-006", "category": "sheriff_result_clean", "template": "A long night of watching turns up nothing. {victim}'s clear." },
-  { "id": "sheriff-clean-007", "category": "sheriff_result_clean", "template": "You cross {victim} off the list. Not mafia, confirmed." },
-  { "id": "sheriff-clean-008", "category": "sheriff_result_clean", "template": "The gut said suspicious. The file disagrees: {victim} is clean." },
-  { "id": "sheriff-clean-009", "category": "sheriff_result_clean", "template": "The report's conclusive: {victim} has been minding their own business the whole time." },
-  { "id": "sheriff-clean-010", "category": "sheriff_result_clean", "template": "Your notes tonight are short and relieving: {victim}, confirmed clean." },
-  { "id": "sheriff-clean-011", "category": "sheriff_result_clean", "template": "The truth's in the file now, in ink: {victim} is not one of the mob's." },
-  { "id": "sheriff-clean-012", "category": "sheriff_result_clean", "template": "You peeled back the alibi, and underneath it was nothing but a boring, honest life. {victim} is clean." },
-  { "id": "sheriff-clean-013", "category": "sheriff_result_clean", "template": "The hunch missed this time, happily. {victim} isn't mafia." },
-  { "id": "sheriff-clean-014", "category": "sheriff_result_clean", "template": "The investigation's closed on this one: {victim}, innocent, no case to build." },
-  { "id": "sheriff-clean-015", "category": "sheriff_result_clean", "template": "Well, that settles it. {victim} is clean, plain as day." },
-  { "id": "sheriff-clean-016", "category": "sheriff_result_clean", "template": "The digging uncovers the truth: {victim} answers to nobody but themselves." },
-  { "id": "sheriff-clean-017", "category": "sheriff_result_clean", "template": "No surprise, really. {victim} isn't mafia, and now it's on record." },
-  { "id": "sheriff-clean-018", "category": "sheriff_result_clean", "template": "The badge earns its keep tonight, ruling someone out for once. {victim} confirmed clean." },
-  { "id": "sheriff-clean-019", "category": "sheriff_result_clean", "template": "The pieces fit together at last: {victim} is not one of the mob's." },
-  { "id": "sheriff-clean-020", "category": "sheriff_result_clean", "template": "No doubt left in the file: {victim} has nothing to do with the mafia." },
-  { "id": "sheriff-clean-021", "category": "sheriff_result_clean", "template": "There it is. {victim}. Clean. One name off the suspect board." },
-  { "id": "sheriff-clean-022", "category": "sheriff_result_clean", "template": "The stakeout turns up nothing incriminating. {victim} is confirmed innocent." },
-  { "id": "sheriff-clean-023", "category": "sheriff_result_clean", "template": "The results are in, and it's good news for {victim}. Clean, confirmed." },
-  { "id": "sheriff-clean-024", "category": "sheriff_result_clean", "template": "You've settled it: {victim} was never mob at all." },
-  { "id": "sheriff-clean-025", "category": "sheriff_result_clean", "template": "The instincts were off, happily. {victim} isn't dirty." },
-  { "id": "sheriff-clean-026", "category": "sheriff_result_clean", "template": "It all checks out, thankfully: {victim} is not one of the mob's." },
-  { "id": "sheriff-clean-027", "category": "sheriff_result_clean", "template": "The mystery unravels, and {victim} comes out the other side, innocent." },
-  { "id": "sheriff-clean-028", "category": "sheriff_result_clean", "template": "The file confirms the good news: {victim} is not mob." },
-  { "id": "sheriff-clean-029", "category": "sheriff_result_clean", "template": "There it is, in black and white, in your own case notes: {victim} is clean." },
-  { "id": "sheriff-clean-030", "category": "sheriff_result_clean", "template": "A night of quiet watching reveals the truth: {victim} isn't mob." },
-  { "id": "sheriff-clean-031", "category": "sheriff_result_clean", "template": "The signs pointed elsewhere all along. {victim} is not mafia." },
-  { "id": "sheriff-clean-032", "category": "sheriff_result_clean", "template": "Case cracked, in the good direction this time. {victim} is clean, and the file goes back in the drawer." }
+  {
+    "id": "killed-001",
+    "category": "killed",
+    "template": "{victim} was walking down an alley that night, and a brick fell on them. They are gone now."
+  },
+  {
+    "id": "killed-002",
+    "category": "killed",
+    "template": "A runaway shopping cart caught {victim} at exactly the wrong angle, at exactly the wrong speed. Didn't make it."
+  },
+  {
+    "id": "killed-003",
+    "category": "killed",
+    "template": "Somebody lost an argument with a vending machine last night. That somebody was {victim}, and the machine won permanently."
+  },
+  {
+    "id": "killed-004",
+    "category": "killed",
+    "template": "A piano was being lowered from a third-floor window when the rope gave out. {victim} happened to be underneath. Case closed."
+  },
+  {
+    "id": "killed-005",
+    "category": "killed",
+    "template": "{victim} was found at the bottom of the stairs this morning, one banana peel away from a very avoidable death."
+  },
+  {
+    "id": "killed-006",
+    "category": "killed",
+    "template": "An anvil fell off a truck marked \"ANVILS, HANDLE WITH CARE.\" {victim} did not handle it with care. Neither did the anvil."
+  },
+  {
+    "id": "killed-007",
+    "category": "killed",
+    "template": "Someone rigged the town's rotating door to spin just a little too fast. {victim} never saw it coming, or going."
+  },
+  {
+    "id": "killed-008",
+    "category": "killed",
+    "template": "{victim} was murdered by a suspiciously well-aimed bowling ball. The lane was closed for the season."
+  },
+  {
+    "id": "killed-009",
+    "category": "killed",
+    "template": "A vending machine, a loose staircase, and {victim}'s bad luck all met at once last night. Only two of those walked away."
+  },
+  {
+    "id": "killed-010",
+    "category": "killed",
+    "template": "The coroner's report says \"blunt trauma from a frozen turkey, thrown from unknown height.\" {victim} didn't survive the holidays."
+  },
+  {
+    "id": "killed-011",
+    "category": "killed",
+    "template": "{victim} was found wedged under a toppled bookshelf, three mystery novels open beside them. The irony was not lost on the department."
+  },
+  {
+    "id": "killed-012",
+    "category": "killed",
+    "template": "A gas station awning collapsed at the exact moment {victim} stopped to check their tire pressure. Gone before the gauge read zero."
+  },
+  {
+    "id": "killed-013",
+    "category": "killed",
+    "template": "Someone left a rake face-up in the yard. {victim} stepped on it. That, somehow, was the end of them."
+  },
+  {
+    "id": "killed-014",
+    "category": "killed",
+    "template": "{victim} was discovered this morning, buried under a collapsed display of canned soup at the general store. The soup survived."
+  },
+  {
+    "id": "killed-015",
+    "category": "killed",
+    "template": "A carnival strongman game's hammer swung the wrong way. {victim} was standing exactly where it landed."
+  },
+  {
+    "id": "killed-016",
+    "category": "killed",
+    "template": "The elevator cable snapped with impeccable timing, right as {victim} stepped in. Nobody else was in the building that night."
+  },
+  {
+    "id": "killed-017",
+    "category": "killed",
+    "template": "{victim} was found this morning wrapped in an unreasonable amount of bubble wrap and an entirely reasonable amount of dead."
+  },
+  {
+    "id": "killed-018",
+    "category": "killed",
+    "template": "A crane operator lost his grip on a wrecking ball. {victim} lost considerably more."
+  },
+  {
+    "id": "killed-019",
+    "category": "killed",
+    "template": "{victim} tried to outrun a runaway zamboni. The zamboni was not fast, but {victim} was slower."
+  },
+  {
+    "id": "killed-020",
+    "category": "killed",
+    "template": "Someone swapped the sugar for a suspiciously heavy substitute. {victim} took one bite of cake and never took another."
+  },
+  {
+    "id": "killed-021",
+    "category": "killed",
+    "template": "A stack of parking cones fell like dominoes onto {victim}. The last cone landed with what witnesses called \"unnecessary finality.\""
+  },
+  {
+    "id": "killed-022",
+    "category": "killed",
+    "template": "{victim} was pronounced dead at the scene, tangled in a garden hose with a garden gnome standing suspiciously close by."
+  },
+  {
+    "id": "killed-023",
+    "category": "killed",
+    "template": "The town's oldest oak tree chose last night, of all nights, to drop a branch directly onto {victim}. Timber, and tragedy."
+  },
+  {
+    "id": "killed-024",
+    "category": "killed",
+    "template": "A malfunctioning ATM dispensed its entire cash drawer onto {victim} at unsafe velocity. The bank called it a freak accident."
+  },
+  {
+    "id": "killed-025",
+    "category": "killed",
+    "template": "{victim} was found this morning, having lost a duel with a revolving restaurant door. The door is fine."
+  },
+  {
+    "id": "killed-026",
+    "category": "killed",
+    "template": "A safe fell from a moving truck outside the bank. {victim} was standing under it, which, in hindsight, was the wrong place to stand."
+  },
+  {
+    "id": "killed-027",
+    "category": "killed",
+    "template": "Someone left the manhole cover off, and {victim} did not read the memo. Neither survived the encounter, though only one was human."
+  },
+  {
+    "id": "killed-028",
+    "category": "killed",
+    "template": "{victim} was discovered under an avalanche of frozen dinners after the walk-in freezer door gave out at the worst possible moment."
+  },
+  {
+    "id": "killed-029",
+    "category": "killed",
+    "template": "A flagpole snapped clean in half during a gentle breeze, and {victim} happened to be standing directly beneath the flag."
+  },
+  {
+    "id": "killed-030",
+    "category": "killed",
+    "template": "The last thing {victim} said was \"I'm sure this ladder is fine.\" It was not fine."
+  },
+  {
+    "id": "killed-031",
+    "category": "killed",
+    "template": "A church bell came loose mid-toll and {victim} was standing right below it. It tolled for them, specifically."
+  },
+  {
+    "id": "killed-032",
+    "category": "killed",
+    "template": "{victim} was found this morning at the bottom of a well they swore they'd never go near. Someone should ask why they went near it."
+  },
+  {
+    "id": "killed-033",
+    "category": "killed",
+    "template": "An entire rack of bowling pins fell on {victim} in what the alley insists was \"just gravity, nothing more.\""
+  },
+  {
+    "id": "killed-034",
+    "category": "killed",
+    "template": "The town's fireworks warehouse had one accidental spark, and {victim} had one very unfortunate spot to be standing."
+  },
+  {
+    "id": "killed-035",
+    "category": "killed",
+    "template": "{victim} was murdered, according to the note pinned to a dartboard where their photograph used to be."
+  },
+  {
+    "id": "saved-001",
+    "category": "saved",
+    "template": "The doctor kicked the brick out of the alley a half-second before it would have landed on {victim}. Close one."
+  },
+  {
+    "id": "saved-002",
+    "category": "saved",
+    "template": "Just as the shopping cart barreled toward {victim}, the doctor grabbed the handle and steered it into a wall instead."
+  },
+  {
+    "id": "saved-003",
+    "category": "saved",
+    "template": "The doctor unplugged the vending machine mid-argument, sparing {victim} a very undignified death."
+  },
+  {
+    "id": "saved-004",
+    "category": "saved",
+    "template": "A piano was three floors up and falling fast. The doctor yanked {victim} out of the drop zone with a second to spare."
+  },
+  {
+    "id": "saved-005",
+    "category": "saved",
+    "template": "{victim} had one foot on the banana peel when the doctor snatched them back by the collar."
+  },
+  {
+    "id": "saved-006",
+    "category": "saved",
+    "template": "The anvil truck rumbled past, and the doctor shoved {victim} clear just before it hit a pothole."
+  },
+  {
+    "id": "saved-007",
+    "category": "saved",
+    "template": "The revolving door was spinning dangerously fast. The doctor wedged a chair in it before {victim} stepped through."
+  },
+  {
+    "id": "saved-008",
+    "category": "saved",
+    "template": "The bowling ball was already rolling when the doctor dove and knocked {victim} out of its path."
+  },
+  {
+    "id": "saved-009",
+    "category": "saved",
+    "template": "A frozen turkey sailed through the air, and the doctor caught it inches from {victim}'s head, like it was nothing."
+  },
+  {
+    "id": "saved-010",
+    "category": "saved",
+    "template": "The bookshelf teetered, and the doctor caught it with both hands, giving {victim} just enough time to roll away."
+  },
+  {
+    "id": "saved-011",
+    "category": "saved",
+    "template": "The gas station awning groaned overhead. The doctor pulled {victim} away from the pump right before it came down."
+  },
+  {
+    "id": "saved-012",
+    "category": "saved",
+    "template": "The doctor spotted the rake in the grass and snatched it up before {victim} took a single step near it."
+  },
+  {
+    "id": "saved-013",
+    "category": "saved",
+    "template": "The soup display wobbled, and the doctor braced it with a shoulder, giving {victim} time to back away unscathed."
+  },
+  {
+    "id": "saved-014",
+    "category": "saved",
+    "template": "The strongman hammer swung wide. The doctor tackled {victim} out of the way, and both landed in a heap of relief."
+  },
+  {
+    "id": "saved-015",
+    "category": "saved",
+    "template": "The elevator cable frayed with an ominous twang, and the doctor pulled {victim} back from the doors just in time."
+  },
+  {
+    "id": "saved-016",
+    "category": "saved",
+    "template": "The wrecking ball swung loose, and the doctor hauled {victim} out of range before it so much as grazed the building."
+  },
+  {
+    "id": "saved-017",
+    "category": "saved",
+    "template": "The zamboni was gaining speed, but the doctor cut the engine before it ever reached {victim}."
+  },
+  {
+    "id": "saved-018",
+    "category": "saved",
+    "template": "The doctor swapped the tampered cake for a fresh one moments before {victim} took a bite."
+  },
+  {
+    "id": "saved-019",
+    "category": "saved",
+    "template": "The parking cones toppled in sequence, and the doctor caught the last one mid-air before it reached {victim}."
+  },
+  {
+    "id": "saved-020",
+    "category": "saved",
+    "template": "The garden hose had {victim} half-tangled already, but the doctor cut it loose before things got any tighter."
+  },
+  {
+    "id": "saved-021",
+    "category": "saved",
+    "template": "The oak branch cracked overhead, and the doctor pulled {victim} back by the collar just as it crashed down."
+  },
+  {
+    "id": "saved-022",
+    "category": "saved",
+    "template": "The ATM began sputtering cash at alarming speed, and the doctor yanked {victim} away before the drawer gave out."
+  },
+  {
+    "id": "saved-023",
+    "category": "saved",
+    "template": "The revolving restaurant door was already spinning too fast, but the doctor jammed it with a menu before {victim} got close."
+  },
+  {
+    "id": "saved-024",
+    "category": "saved",
+    "template": "The safe was already falling when the doctor grabbed {victim} by the arm and hauled them out of the drop zone."
+  },
+  {
+    "id": "saved-025",
+    "category": "saved",
+    "template": "The manhole cover was missing, but the doctor flagged {victim} down half a step before they reached the gap."
+  },
+  {
+    "id": "saved-026",
+    "category": "saved",
+    "template": "The freezer door groaned and buckled, and the doctor pulled {victim} clear before the frozen dinners came avalanching down."
+  },
+  {
+    "id": "saved-027",
+    "category": "saved",
+    "template": "The flagpole gave a worrying creak, and the doctor moved {victim} out from under it moments before it snapped."
+  },
+  {
+    "id": "saved-028",
+    "category": "saved",
+    "template": "The ladder wobbled dangerously, and the doctor caught {victim} on the way down, both of them landing safely in a hedge."
+  },
+  {
+    "id": "saved-029",
+    "category": "saved",
+    "template": "The church bell groaned loose above, and the doctor tackled {victim} out of the way right as it hit the ground."
+  },
+  {
+    "id": "saved-030",
+    "category": "saved",
+    "template": "{victim} was leaning over the old well when the doctor grabbed the back of their coat and pulled them to safety."
+  },
+  {
+    "id": "saved-031",
+    "category": "saved",
+    "template": "The bowling pin rack toppled forward, but the doctor shoved {victim} aside before a single pin connected."
+  },
+  {
+    "id": "saved-032",
+    "category": "saved",
+    "template": "A stray firework spark caught, and the doctor smothered it with a coat before it ever reached {victim}."
+  },
+  {
+    "id": "saved-033",
+    "category": "saved",
+    "template": "The dartboard note turned out to be a warning, and the doctor got to {victim} before whoever wrote it did."
+  },
+  {
+    "id": "saved-034",
+    "category": "saved",
+    "template": "The crane's grip slipped overhead, and the doctor hauled {victim} out of the shadow of the wrecking ball just in time."
+  },
+  {
+    "id": "saved-035",
+    "category": "saved",
+    "template": "The doctor arrived breathless, having sprinted the length of Main Street, and pulled {victim} back from the tracks with seconds to spare."
+  },
+  {
+    "id": "quiet-001",
+    "category": "quiet_night",
+    "template": "Nothing happened last night. Even the town's one streetlight flickered and that was the most exciting part of the evening."
+  },
+  {
+    "id": "quiet-002",
+    "category": "quiet_night",
+    "template": "The precinct logged zero incidents. A slow night, the kind detectives dream about and then get bored of."
+  },
+  {
+    "id": "quiet-003",
+    "category": "quiet_night",
+    "template": "Not a single body turned up. Somewhere, a typewriter sat unused."
+  },
+  {
+    "id": "quiet-004",
+    "category": "quiet_night",
+    "template": "It was quiet. Suspiciously quiet, the kind of quiet that makes a detective nervous and everyone else relieved."
+  },
+  {
+    "id": "quiet-005",
+    "category": "quiet_night",
+    "template": "The night passed without incident. The coroner got a full eight hours of sleep for once."
+  },
+  {
+    "id": "quiet-006",
+    "category": "quiet_night",
+    "template": "No crimes, no accidents, no anvils. Just a town, sleeping, for once, undisturbed."
+  },
+  {
+    "id": "quiet-007",
+    "category": "quiet_night",
+    "template": "The whole town held its breath and, remarkably, nothing happened to make it let that breath out badly."
+  },
+  {
+    "id": "quiet-008",
+    "category": "quiet_night",
+    "template": "A patrol car rolled slowly down Main Street and found nothing worth writing in the report."
+  },
+  {
+    "id": "quiet-009",
+    "category": "quiet_night",
+    "template": "Nobody died. Nobody vanished. The town's luck, against all odds, held."
+  },
+  {
+    "id": "quiet-010",
+    "category": "quiet_night",
+    "template": "It was the kind of night noir writers hate: uneventful, unremarkable, entirely without a body count."
+  },
+  {
+    "id": "quiet-011",
+    "category": "quiet_night",
+    "template": "The rain fell, the streetlamps buzzed, and that was, genuinely, the whole story tonight."
+  },
+  {
+    "id": "quiet-012",
+    "category": "quiet_night",
+    "template": "The night shift clocked out with nothing to report, which is either good news or the calm before something worse."
+  },
+  {
+    "id": "quiet-013",
+    "category": "quiet_night",
+    "template": "Nobody so much as jaywalked. A remarkably clean night for a town with this much history."
+  },
+  {
+    "id": "quiet-014",
+    "category": "quiet_night",
+    "template": "The morgue stayed empty overnight, a small miracle nobody bothered to celebrate."
+  },
+  {
+    "id": "quiet-015",
+    "category": "quiet_night",
+    "template": "All was still. Even the town's usual suspects stayed home and slept."
+  },
+  {
+    "id": "quiet-016",
+    "category": "quiet_night",
+    "template": "The whole town exhaled at once. No trials, no funerals, no headlines tonight."
+  },
+  {
+    "id": "quiet-017",
+    "category": "quiet_night",
+    "template": "A single moth circled the streetlamp outside the station and, notably, that was the extent of tonight's drama."
+  },
+  {
+    "id": "quiet-018",
+    "category": "quiet_night",
+    "template": "Nothing to report. Even the town gossip had nothing worth spreading this morning."
+  },
+  {
+    "id": "quiet-019",
+    "category": "quiet_night",
+    "template": "The night was so calm the local paper is running the weather forecast as its front page."
+  },
+  {
+    "id": "quiet-020",
+    "category": "quiet_night",
+    "template": "For once, the sirens stayed silent, and the town got to sleep the whole night through."
+  },
+  {
+    "id": "quiet-021",
+    "category": "quiet_night",
+    "template": "Not a single window was broken, not a single alibi was needed. A boring, blessed night."
+  },
+  {
+    "id": "quiet-022",
+    "category": "quiet_night",
+    "template": "The town's one payphone rang once, wrong number, and that was the most suspicious thing that happened all night."
+  },
+  {
+    "id": "quiet-023",
+    "category": "quiet_night",
+    "template": "Everyone stayed indoors, the streets stayed empty, and the case files stayed exactly as thin as yesterday."
+  },
+  {
+    "id": "quiet-024",
+    "category": "quiet_night",
+    "template": "The night watchman finished his crossword, uninterrupted, for the first time all month."
+  },
+  {
+    "id": "quiet-025",
+    "category": "quiet_night",
+    "template": "Peace, however briefly, settled over the town like a fog with nothing sinister hiding in it."
+  },
+  {
+    "id": "quiet-026",
+    "category": "quiet_night",
+    "template": "The bar closed early, the streets emptied quietly, and not one soul went missing."
+  },
+  {
+    "id": "quiet-027",
+    "category": "quiet_night",
+    "template": "The whole precinct sat around doing paperwork, because for once there was no fresh case to open."
+  },
+  {
+    "id": "quiet-028",
+    "category": "quiet_night",
+    "template": "It rained, the gutters ran, and nothing else of note happened in this town tonight."
+  },
+  {
+    "id": "quiet-029",
+    "category": "quiet_night",
+    "template": "The town's one all-night diner served coffee to exactly nobody suspicious."
+  },
+  {
+    "id": "quiet-030",
+    "category": "quiet_night",
+    "template": "A quiet night, unremarkable and unbothered, the kind you almost don't trust."
+  },
+  {
+    "id": "quiet-031",
+    "category": "quiet_night",
+    "template": "Nothing stirred, nothing fell, nobody vanished. Write that one down, it doesn't happen often."
+  },
+  {
+    "id": "quiet-032",
+    "category": "quiet_night",
+    "template": "The town slept soundly, blissfully unaware of how rare a night like this actually is."
+  },
+  {
+    "id": "quiet-033",
+    "category": "quiet_night",
+    "template": "Even the crows on the courthouse roof had nothing to caw about tonight."
+  },
+  {
+    "id": "quiet-034",
+    "category": "quiet_night",
+    "template": "A dry, uneventful night. Not one alibi was tested, not one door was forced."
+  },
+  {
+    "id": "quiet-035",
+    "category": "quiet_night",
+    "template": "The town's luck held for one more night, and nobody thought to be grateful for it."
+  },
+  {
+    "id": "vote-eliminated-001",
+    "category": "vote_eliminated",
+    "template": "The town put {victim} on trial, the jury took four minutes, and the verdict was death. They left the city by morning."
+  },
+  {
+    "id": "vote-eliminated-002",
+    "category": "vote_eliminated",
+    "template": "The gavel came down on {victim}. Guilty, said the town, and the sentence was exile, effective immediately."
+  },
+  {
+    "id": "vote-eliminated-003",
+    "category": "vote_eliminated",
+    "template": "A hasty trial, a unanimous verdict, and {victim} was marched out of town before the courthouse lights even cooled."
+  },
+  {
+    "id": "vote-eliminated-004",
+    "category": "vote_eliminated",
+    "template": "The jury deliberated for exactly as long as it took to pour coffee. {victim} was sentenced and sent packing."
+  },
+  {
+    "id": "vote-eliminated-005",
+    "category": "vote_eliminated",
+    "template": "\"Death, or the next train out,\" said the judge. {victim} chose the train, and left before sundown."
+  },
+  {
+    "id": "vote-eliminated-006",
+    "category": "vote_eliminated",
+    "template": "The courtroom fell silent as the foreman read the verdict on {victim}. Guilty. Gone by nightfall."
+  },
+  {
+    "id": "vote-eliminated-007",
+    "category": "vote_eliminated",
+    "template": "{victim} stood trial before the whole town and lost. The sentence: leave, and never look back."
+  },
+  {
+    "id": "vote-eliminated-008",
+    "category": "vote_eliminated",
+    "template": "It took one witness, twelve minutes, and a very short deliberation to convict {victim}. Case closed, city limits crossed."
+  },
+  {
+    "id": "vote-eliminated-009",
+    "category": "vote_eliminated",
+    "template": "The town's makeshift court found {victim} guilty as charged. The sentence was carried out the only merciful way: a one-way ticket out."
+  },
+  {
+    "id": "vote-eliminated-010",
+    "category": "vote_eliminated",
+    "template": "The judge banged the gavel so hard it cracked. {victim} was found guilty and escorted straight to the city line."
+  },
+  {
+    "id": "vote-eliminated-011",
+    "category": "vote_eliminated",
+    "template": "A jury of neighbors convicted {victim} in record time. Sentence handed down, suitcase packed by dawn."
+  },
+  {
+    "id": "vote-eliminated-012",
+    "category": "vote_eliminated",
+    "template": "The town's verdict on {victim} was swift and merciless: guilty, and gone."
+  },
+  {
+    "id": "vote-eliminated-013",
+    "category": "vote_eliminated",
+    "template": "{victim} pleaded their case. Nobody bought it. The sentence was exile, served immediately."
+  },
+  {
+    "id": "vote-eliminated-014",
+    "category": "vote_eliminated",
+    "template": "The trial lasted all of ten minutes, but the verdict on {victim} stuck: guilty, and out of the city by morning."
+  },
+  {
+    "id": "vote-eliminated-015",
+    "category": "vote_eliminated",
+    "template": "The town's jury didn't need long to convict {victim}. The sentence: leave town and don't come back."
+  },
+  {
+    "id": "vote-eliminated-016",
+    "category": "vote_eliminated",
+    "template": "A verdict was reached on {victim} before the coffee got cold. Guilty. Sentence: permanent departure."
+  },
+  {
+    "id": "vote-eliminated-017",
+    "category": "vote_eliminated",
+    "template": "The judge read the charges against {victim} once. That was apparently enough. Guilty, and gone by nightfall."
+  },
+  {
+    "id": "vote-eliminated-018",
+    "category": "vote_eliminated",
+    "template": "{victim}'s trial ended the way most do in this town: quickly, and with a train ticket instead of a headstone."
+  },
+  {
+    "id": "vote-eliminated-019",
+    "category": "vote_eliminated",
+    "template": "The jury found {victim} guilty by a landslide. The sentence spared their life but not their address."
+  },
+  {
+    "id": "vote-eliminated-020",
+    "category": "vote_eliminated",
+    "template": "A closed-door deliberation, a unanimous vote, and {victim} was on the next train out before the ink dried."
+  },
+  {
+    "id": "vote-eliminated-021",
+    "category": "vote_eliminated",
+    "template": "The town convicted {victim} on the strength of one very convincing finger point. Sentence: exile."
+  },
+  {
+    "id": "vote-eliminated-022",
+    "category": "vote_eliminated",
+    "template": "{victim} heard the word \"guilty\" and didn't wait for the rest of the sentence to start packing."
+  },
+  {
+    "id": "vote-eliminated-023",
+    "category": "vote_eliminated",
+    "template": "The verdict on {victim} came down hard and fast: guilty. Their bags were already at the door."
+  },
+  {
+    "id": "vote-eliminated-024",
+    "category": "vote_eliminated",
+    "template": "The town's court showed {victim} no mercy and one option: guilty, and gone by sunrise."
+  },
+  {
+    "id": "vote-eliminated-025",
+    "category": "vote_eliminated",
+    "template": "A trial by torchlight, a verdict by consensus, and {victim} was escorted out of the city limits before the crowd dispersed."
+  },
+  {
+    "id": "vote-eliminated-026",
+    "category": "vote_eliminated",
+    "template": "The people's court convicted {victim} unanimously. The sentence was carried out at the city gates, quietly."
+  },
+  {
+    "id": "vote-eliminated-027",
+    "category": "vote_eliminated",
+    "template": "{victim} was found guilty in the court of public opinion, which, in this town, is the only court that matters."
+  },
+  {
+    "id": "vote-eliminated-028",
+    "category": "vote_eliminated",
+    "template": "The verdict took less time than the trial itself. {victim} was found guilty and shown the city line."
+  },
+  {
+    "id": "vote-eliminated-029",
+    "category": "vote_eliminated",
+    "template": "The town rendered its judgment on {victim}: guilty, exiled, and not to be spoken of again."
+  },
+  {
+    "id": "vote-eliminated-030",
+    "category": "vote_eliminated",
+    "template": "{victim}'s fate was sealed the moment the jury stopped whispering. Guilty. Gone before the sun came up."
+  },
+  {
+    "id": "vote-eliminated-031",
+    "category": "vote_eliminated",
+    "template": "The judge's final words to {victim} were short: \"Guilty. Get out.\" And they did."
+  },
+  {
+    "id": "vote-eliminated-032",
+    "category": "vote_eliminated",
+    "template": "A trial, a verdict, a sentence, all wrapped up before midnight. {victim} left town under a very unflattering headline."
+  },
+  {
+    "id": "vote-eliminated-033",
+    "category": "vote_eliminated",
+    "template": "The court's ruling on {victim} was final: guilty as charged, banished as sentenced."
+  },
+  {
+    "id": "vote-eliminated-034",
+    "category": "vote_eliminated",
+    "template": "{victim} tried to object. The judge overruled it, and the crowd escorted them straight to the train station."
+  },
+  {
+    "id": "vote-eliminated-035",
+    "category": "vote_eliminated",
+    "template": "The town's tribunal delivered its verdict on {victim} in a single breathless sentence: guilty, and gone for good."
+  },
+  {
+    "id": "vote-tied-001",
+    "category": "vote_tied",
+    "template": "The jury split clean down the middle. The trial is thrown out, and nobody hangs tonight."
+  },
+  {
+    "id": "vote-tied-002",
+    "category": "vote_tied",
+    "template": "No verdict could be reached. The case is dismissed, for now."
+  },
+  {
+    "id": "vote-tied-003",
+    "category": "vote_tied",
+    "template": "A hung jury. The judge slams the gavel in disgust and adjourns without a sentence."
+  },
+  {
+    "id": "vote-tied-004",
+    "category": "vote_tied",
+    "template": "The town couldn't agree on a single defendant. The whole trial collapses, and everyone stays put."
+  },
+  {
+    "id": "vote-tied-005",
+    "category": "vote_tied",
+    "template": "The votes came back even, and the courtroom empties without a conviction."
+  },
+  {
+    "id": "vote-tied-006",
+    "category": "vote_tied",
+    "template": "A deadlock. The case is thrown out this round, and the accused go free, for now."
+  },
+  {
+    "id": "vote-tied-007",
+    "category": "vote_tied",
+    "template": "The gavel stays up. No majority, no verdict, no exile tonight."
+  },
+  {
+    "id": "vote-tied-008",
+    "category": "vote_tied",
+    "template": "The jury couldn't reach a decision, so the whole trial is scrapped and everyone walks."
+  },
+  {
+    "id": "vote-tied-009",
+    "category": "vote_tied",
+    "template": "It's a dead heat. The judge dismisses the case with a tired sigh."
+  },
+  {
+    "id": "vote-tied-010",
+    "category": "vote_tied",
+    "template": "The town's court failed to convict anyone tonight. The docket carries over to tomorrow."
+  },
+  {
+    "id": "vote-tied-011",
+    "category": "vote_tied",
+    "template": "The jury argued in circles and reached nothing. No sentence, no exile, no closure."
+  },
+  {
+    "id": "vote-tied-012",
+    "category": "vote_tied",
+    "template": "A perfect stalemate in the deliberation room. The trial is voided."
+  },
+  {
+    "id": "vote-tied-013",
+    "category": "vote_tied",
+    "template": "Nobody could out-argue anybody else. The case is thrown out, and the town lives to try again."
+  },
+  {
+    "id": "vote-tied-014",
+    "category": "vote_tied",
+    "template": "The verdict came back tied, which in this town's court means no verdict at all."
+  },
+  {
+    "id": "vote-tied-015",
+    "category": "vote_tied",
+    "template": "The jury filed out unable to agree. Justice, for tonight, is postponed."
+  },
+  {
+    "id": "vote-tied-016",
+    "category": "vote_tied",
+    "template": "The scales balanced exactly. No sentence is handed down, and no one leaves the city tonight."
+  },
+  {
+    "id": "vote-tied-017",
+    "category": "vote_tied",
+    "template": "A split decision means a mistrial. The gavel never comes down."
+  },
+  {
+    "id": "vote-tied-018",
+    "category": "vote_tied",
+    "template": "The town's tribunal reached an impasse. The trial is dismissed until tomorrow night."
+  },
+  {
+    "id": "vote-tied-019",
+    "category": "vote_tied",
+    "template": "Nobody's testimony won out over anybody else's. The case is dropped for now."
+  },
+  {
+    "id": "vote-tied-020",
+    "category": "vote_tied",
+    "template": "The count came back dead even, and with it, a mistrial."
+  },
+  {
+    "id": "vote-tied-021",
+    "category": "vote_tied",
+    "template": "The judge declared a mistrial after the jury couldn't settle on a single name."
+  },
+  {
+    "id": "vote-tied-022",
+    "category": "vote_tied",
+    "template": "The evidence pointed in too many directions at once. No conviction tonight."
+  },
+  {
+    "id": "vote-tied-023",
+    "category": "vote_tied",
+    "template": "A tie in the jury box means the accused all walk free, at least until sundown tomorrow."
+  },
+  {
+    "id": "vote-tied-024",
+    "category": "vote_tied",
+    "template": "The courtroom emptied in confusion. No majority, no verdict, no exile."
+  },
+  {
+    "id": "vote-tied-025",
+    "category": "vote_tied",
+    "template": "The town's justice system, such as it is, produced a tie and nothing else."
+  },
+  {
+    "id": "vote-tied-026",
+    "category": "vote_tied",
+    "template": "It's a hung jury, plain and simple. The case reopens tomorrow."
+  },
+  {
+    "id": "vote-tied-027",
+    "category": "vote_tied",
+    "template": "The verdict split evenly, and the judge threw up her hands and adjourned."
+  },
+  {
+    "id": "vote-tied-028",
+    "category": "vote_tied",
+    "template": "Nobody could be convicted on a tied vote. The whole town breathes a wary sigh of relief."
+  },
+  {
+    "id": "vote-tied-029",
+    "category": "vote_tied",
+    "template": "The deliberation ended exactly where it started: nowhere. No sentence, no exile."
+  },
+  {
+    "id": "vote-tied-030",
+    "category": "vote_tied",
+    "template": "A dead-even tally means the trial is void. The town will reconvene tomorrow."
+  },
+  {
+    "id": "vote-tied-031",
+    "category": "vote_tied",
+    "template": "The jury couldn't settle it, so the case is thrown out and the docket rolls over."
+  },
+  {
+    "id": "vote-tied-032",
+    "category": "vote_tied",
+    "template": "A tie is as good as an acquittal tonight. Nobody is sentenced, nobody exiled."
+  },
+  {
+    "id": "vote-tied-033",
+    "category": "vote_tied",
+    "template": "The court's verdict came back split, and the case is dismissed without prejudice."
+  },
+  {
+    "id": "vote-tied-034",
+    "category": "vote_tied",
+    "template": "The town's jury deadlocked completely. Justice will have to wait until tomorrow."
+  },
+  {
+    "id": "vote-tied-035",
+    "category": "vote_tied",
+    "template": "No conviction tonight, the vote came back tied, and the gavel never fell."
+  },
+  {
+    "id": "town-wins-001",
+    "category": "town_wins",
+    "template": "The last mobster's been dragged out of the shadows and put away for good. The town finally gets a decent night's sleep."
+  },
+  {
+    "id": "town-wins-002",
+    "category": "town_wins",
+    "template": "Case closed, for real this time. The mafia's out, and the town raises a toast at the diner counter."
+  },
+  {
+    "id": "town-wins-003",
+    "category": "town_wins",
+    "template": "The town's detectives cracked it wide open. Every last conspirator's been named and shown the door."
+  },
+  {
+    "id": "town-wins-004",
+    "category": "town_wins",
+    "template": "The mob's grip on this town finally broke. Someone's already lighting a cigar in celebration."
+  },
+  {
+    "id": "town-wins-005",
+    "category": "town_wins",
+    "template": "Justice, slow and unglamorous as ever, finally wins out. The town breathes easy for the first time in ages."
+  },
+  {
+    "id": "town-wins-006",
+    "category": "town_wins",
+    "template": "The last conviction is in. The mafia's finished here, and the courthouse lights stay on late in celebration."
+  },
+  {
+    "id": "town-wins-007",
+    "category": "town_wins",
+    "template": "Every crooked name on the list has been checked off. The town wins, and the coffee tastes a little better tonight."
+  },
+  {
+    "id": "town-wins-008",
+    "category": "town_wins",
+    "template": "The mob's last man standing didn't stand for long. The town closes the case, victorious."
+  },
+  {
+    "id": "town-wins-009",
+    "category": "town_wins",
+    "template": "It's over. The town rooted out every last one of them, and the streetlights feel a little brighter tonight."
+  },
+  {
+    "id": "town-wins-010",
+    "category": "town_wins",
+    "template": "The final verdict is in, and it's a win for the good guys. The mafia's out of this town for good."
+  },
+  {
+    "id": "town-wins-011",
+    "category": "town_wins",
+    "template": "Somewhere, a typewriter finally stops clacking. The case is closed, the mob is finished, the town wins."
+  },
+  {
+    "id": "town-wins-012",
+    "category": "town_wins",
+    "template": "The last mobster's confession is in, signed and sealed. The town has won, and it's buying the first round."
+  },
+  {
+    "id": "town-wins-013",
+    "category": "town_wins",
+    "template": "The mafia's operation collapses at last. The town raises a glass, quietly, wearily, and victorious."
+  },
+  {
+    "id": "town-wins-014",
+    "category": "town_wins",
+    "template": "It's a clean sweep. Every last conspirator is behind bars or run out of town. The town wins."
+  },
+  {
+    "id": "town-wins-015",
+    "category": "town_wins",
+    "template": "The final trial ends in conviction. The mob's finished, and the town, at long last, sleeps soundly."
+  },
+  {
+    "id": "town-wins-016",
+    "category": "town_wins",
+    "template": "The town's persistence paid off. The last mobster is out, and the case file finally closes."
+  },
+  {
+    "id": "town-wins-017",
+    "category": "town_wins",
+    "template": "The mafia's schemes finally unravel completely. The town wins, and the newspaper runs a rare good headline."
+  },
+  {
+    "id": "town-wins-018",
+    "category": "town_wins",
+    "template": "It's over for the mob. The town's had its revenge, quiet and total, and can finally rest."
+  },
+  {
+    "id": "town-wins-019",
+    "category": "town_wins",
+    "template": "The town's detectives close the book on this one, for good. Justice wins, and the town toasts to it."
+  },
+  {
+    "id": "town-wins-020",
+    "category": "town_wins",
+    "template": "The last of the mob's men is gone. The town wins, and the diner stays open late to celebrate."
+  },
+  {
+    "id": "town-wins-021",
+    "category": "town_wins",
+    "template": "Every shadow's been cleared. The town wins this one, hard-earned and long overdue."
+  },
+  {
+    "id": "town-wins-022",
+    "category": "town_wins",
+    "template": "The final piece of the case falls into place. The mafia's done here, and the town finally exhales."
+  },
+  {
+    "id": "town-wins-023",
+    "category": "town_wins",
+    "template": "The mob's last stronghold crumbles. The town wins, and somewhere a jukebox plays something triumphant."
+  },
+  {
+    "id": "town-wins-024",
+    "category": "town_wins",
+    "template": "Justice caught up with all of them in the end. The town wins, weary but victorious."
+  },
+  {
+    "id": "town-wins-025",
+    "category": "town_wins",
+    "template": "The last conviction seals it. The mafia's out of business, and the town finally gets its quiet back."
+  },
+  {
+    "id": "town-wins-026",
+    "category": "town_wins",
+    "template": "The town's long, unglamorous fight finally paid off. The mob's finished, and the case is closed for good."
+  },
+  {
+    "id": "town-wins-027",
+    "category": "town_wins",
+    "template": "It's a hard-won victory, but a victory all the same. The mafia's gone, and the town wins."
+  },
+  {
+    "id": "town-wins-028",
+    "category": "town_wins",
+    "template": "The final tribunal delivers its last verdict. The mob's done, and the town, at last, wins the day."
+  },
+  {
+    "id": "town-wins-029",
+    "category": "town_wins",
+    "template": "The mafia's last name gets crossed off the list. The town wins, and the courthouse clock strikes a victorious hour."
+  },
+  {
+    "id": "town-wins-030",
+    "category": "town_wins",
+    "template": "The town's detectives finally close the case for good. Every mobster accounted for. The town wins."
+  },
+  {
+    "id": "town-wins-031",
+    "category": "town_wins",
+    "template": "The mob's grip breaks for the last time. The town wins, and somebody finally waters the courthouse plants again."
+  },
+  {
+    "id": "town-wins-032",
+    "category": "town_wins",
+    "template": "It's over, truly over. The mafia's finished, and the town wins, quietly relieved."
+  },
+  {
+    "id": "mafia-wins-001",
+    "category": "mafia_wins",
+    "template": "The mob's taken the whole town, quietly and completely. Nobody's left to file the report."
+  },
+  {
+    "id": "mafia-wins-002",
+    "category": "mafia_wins",
+    "template": "The mafia outlasted every last investigator. The town's lights go out, one by one, for good."
+  },
+  {
+    "id": "mafia-wins-003",
+    "category": "mafia_wins",
+    "template": "It's the mob's town now. The case file closes itself, unsolved, unfinished, unfortunate."
+  },
+  {
+    "id": "mafia-wins-004",
+    "category": "mafia_wins",
+    "template": "The mafia's plan came together perfectly, in the worst possible way for everyone else."
+  },
+  {
+    "id": "mafia-wins-005",
+    "category": "mafia_wins",
+    "template": "The town ran out of suspects to convict. The mafia claims the whole board, and the silence after is deafening."
+  },
+  {
+    "id": "mafia-wins-006",
+    "category": "mafia_wins",
+    "template": "It's over. The mob wins, and somewhere, a cigar gets lit in celebration nobody will hear about."
+  },
+  {
+    "id": "mafia-wins-007",
+    "category": "mafia_wins",
+    "template": "The town's last honest citizen just got outvoted for good. The mafia takes the town."
+  },
+  {
+    "id": "mafia-wins-008",
+    "category": "mafia_wins",
+    "template": "The mob's takeover is complete. The courthouse lights stay dark tonight, and every night after."
+  },
+  {
+    "id": "mafia-wins-009",
+    "category": "mafia_wins",
+    "template": "The town never saw it coming, not really. The mafia wins, and the case stays open forever."
+  },
+  {
+    "id": "mafia-wins-010",
+    "category": "mafia_wins",
+    "template": "The mob's patience finally paid off. The town belongs to them now, whether anyone likes it or not."
+  },
+  {
+    "id": "mafia-wins-011",
+    "category": "mafia_wins",
+    "template": "It's the mafia's town, top to bottom. The typewriter in the precinct goes quiet for good."
+  },
+  {
+    "id": "mafia-wins-012",
+    "category": "mafia_wins",
+    "template": "The mob simply outnumbered the good guys in the end. Round over, mafia wins, town lost."
+  },
+  {
+    "id": "mafia-wins-013",
+    "category": "mafia_wins",
+    "template": "Well played, mob. The town never saw the whole picture until it was far too late."
+  },
+  {
+    "id": "mafia-wins-014",
+    "category": "mafia_wins",
+    "template": "The mafia's scheme ran like clockwork, and the town's last chance walked out the door with it."
+  },
+  {
+    "id": "mafia-wins-015",
+    "category": "mafia_wins",
+    "template": "The town's been thoroughly outfoxed. The mob takes the whole operation, quiet as ever."
+  },
+  {
+    "id": "mafia-wins-016",
+    "category": "mafia_wins",
+    "template": "It's a mob victory, clean and total. Somewhere, a fedora tips in mock respect."
+  },
+  {
+    "id": "mafia-wins-017",
+    "category": "mafia_wins",
+    "template": "The mafia pulls off the long con completely. Shuffle the deck, folks, it's over."
+  },
+  {
+    "id": "mafia-wins-018",
+    "category": "mafia_wins",
+    "template": "The town fought as hard as it could, but the mob's cunning carried the whole town away."
+  },
+  {
+    "id": "mafia-wins-019",
+    "category": "mafia_wins",
+    "template": "Case closed, badly. The mafia comes out on top, and the town's left holding an empty file."
+  },
+  {
+    "id": "mafia-wins-020",
+    "category": "mafia_wins",
+    "template": "The mob's patience finally paid off in full. This town, and this case, belongs to them now."
+  },
+  {
+    "id": "mafia-wins-021",
+    "category": "mafia_wins",
+    "template": "It's the mafia's turn to run this town, and they've earned every crooked inch of it."
+  },
+  {
+    "id": "mafia-wins-022",
+    "category": "mafia_wins",
+    "template": "The town ran out of jurors, out of witnesses, and out of luck. The mob takes it all."
+  },
+  {
+    "id": "mafia-wins-023",
+    "category": "mafia_wins",
+    "template": "Mafia wins. Somewhere in the dark, a very quiet toast is being raised."
+  },
+  {
+    "id": "mafia-wins-024",
+    "category": "mafia_wins",
+    "template": "The mob's plan came together without a single hitch. This town belongs to them now."
+  },
+  {
+    "id": "mafia-wins-025",
+    "category": "mafia_wins",
+    "template": "The town gave it everything it had, and the mafia still walked away with the whole operation."
+  },
+  {
+    "id": "mafia-wins-026",
+    "category": "mafia_wins",
+    "template": "It's over, and the mob has the run of the whole place. Nicely done, gentlemen."
+  },
+  {
+    "id": "mafia-wins-027",
+    "category": "mafia_wins",
+    "template": "The mafia claims this town outright. Reset the board, if anyone's still willing to play."
+  },
+  {
+    "id": "mafia-wins-028",
+    "category": "mafia_wins",
+    "template": "The town's suspicions never landed where they needed to. The mob wins, clean and quiet."
+  },
+  {
+    "id": "mafia-wins-029",
+    "category": "mafia_wins",
+    "template": "Round over. The mob's teamwork was better than the town's, and now the town knows it too late."
+  },
+  {
+    "id": "mafia-wins-030",
+    "category": "mafia_wins",
+    "template": "The mafia's won the whole town. Somewhere, the courthouse clock stops ticking out of respect."
+  },
+  {
+    "id": "mafia-wins-031",
+    "category": "mafia_wins",
+    "template": "It's a mob sweep. They out-thought, out-waited, and outlasted the entire town."
+  },
+  {
+    "id": "mafia-wins-032",
+    "category": "mafia_wins",
+    "template": "The mafia takes the whole operation tonight. The town's case file gets filed away, unsolved."
+  },
+  {
+    "id": "sheriff-mafia-001",
+    "category": "sheriff_result_mafia",
+    "template": "The file on {victim} confirms it: mafia, through and through."
+  },
+  {
+    "id": "sheriff-mafia-002",
+    "category": "sheriff_result_mafia",
+    "template": "Case notes, tonight's entry: {victim} is dirty. No two ways about it."
+  },
+  {
+    "id": "sheriff-mafia-003",
+    "category": "sheriff_result_mafia",
+    "template": "The tail paid off. {victim} is mob, confirmed, in your own handwriting now."
+  },
+  {
+    "id": "sheriff-mafia-004",
+    "category": "sheriff_result_mafia",
+    "template": "You close the folder on {victim} with one word underlined twice: guilty."
+  },
+  {
+    "id": "sheriff-mafia-005",
+    "category": "sheriff_result_mafia",
+    "template": "The evidence lines up clean. {victim} is one of theirs."
+  },
+  {
+    "id": "sheriff-mafia-006",
+    "category": "sheriff_result_mafia",
+    "template": "A long night of watching pays off. {victim}'s in with the mob, no question."
+  },
+  {
+    "id": "sheriff-mafia-007",
+    "category": "sheriff_result_mafia",
+    "template": "You add {victim}'s name to the list, right where the mob's other names sit."
+  },
+  {
+    "id": "sheriff-mafia-008",
+    "category": "sheriff_result_mafia",
+    "template": "Your gut said dirty. The file agrees: {victim} is mafia."
+  },
+  {
+    "id": "sheriff-mafia-009",
+    "category": "sheriff_result_mafia",
+    "template": "The report's conclusive: {victim} has been running with the mob the whole time."
+  },
+  {
+    "id": "sheriff-mafia-010",
+    "category": "sheriff_result_mafia",
+    "template": "Your notes tonight are short and damning: {victim}, confirmed mafia."
+  },
+  {
+    "id": "sheriff-mafia-011",
+    "category": "sheriff_result_mafia",
+    "template": "The truth's in the file now, in ink: {victim} is one of the mob's own."
+  },
+  {
+    "id": "sheriff-mafia-012",
+    "category": "sheriff_result_mafia",
+    "template": "You peeled back the alibi, and underneath it was exactly what you feared. {victim} is mafia."
+  },
+  {
+    "id": "sheriff-mafia-013",
+    "category": "sheriff_result_mafia",
+    "template": "The hunch pays off in full tonight. {victim} is dirty as they come."
+  },
+  {
+    "id": "sheriff-mafia-014",
+    "category": "sheriff_result_mafia",
+    "template": "The investigation's closed on this one: {victim}, mafia, case built."
+  },
+  {
+    "id": "sheriff-mafia-015",
+    "category": "sheriff_result_mafia",
+    "template": "Well, that settles it. {victim}'s in the mob's pocket, plain as day."
+  },
+  {
+    "id": "sheriff-mafia-016",
+    "category": "sheriff_result_mafia",
+    "template": "The digging uncovers the truth: {victim} answers to the mob."
+  },
+  {
+    "id": "sheriff-mafia-017",
+    "category": "sheriff_result_mafia",
+    "template": "No surprise, really. {victim} is mafia, and now it's on record."
+  },
+  {
+    "id": "sheriff-mafia-018",
+    "category": "sheriff_result_mafia",
+    "template": "The badge earns its keep tonight. {victim} confirmed dirty."
+  },
+  {
+    "id": "sheriff-mafia-019",
+    "category": "sheriff_result_mafia",
+    "template": "The pieces fit together at last: {victim} is one of the mob's."
+  },
+  {
+    "id": "sheriff-mafia-020",
+    "category": "sheriff_result_mafia",
+    "template": "No doubt left in the file: {victim} runs with the mafia."
+  },
+  {
+    "id": "sheriff-mafia-021",
+    "category": "sheriff_result_mafia",
+    "template": "There it is. {victim}. Mafia. Case closed on that question."
+  },
+  {
+    "id": "sheriff-mafia-022",
+    "category": "sheriff_result_mafia",
+    "template": "The stakeout pays off. {victim} is confirmed mob."
+  },
+  {
+    "id": "sheriff-mafia-023",
+    "category": "sheriff_result_mafia",
+    "template": "The results are in, and they're bad news for {victim}. Mafia, confirmed."
+  },
+  {
+    "id": "sheriff-mafia-024",
+    "category": "sheriff_result_mafia",
+    "template": "You've cracked it: {victim} has been mob the whole time."
+  },
+  {
+    "id": "sheriff-mafia-025",
+    "category": "sheriff_result_mafia",
+    "template": "The instincts were right on the money. {victim} is dirty."
+  },
+  {
+    "id": "sheriff-mafia-026",
+    "category": "sheriff_result_mafia",
+    "template": "It all checks out, unfortunately: {victim} is one of the mob's."
+  },
+  {
+    "id": "sheriff-mafia-027",
+    "category": "sheriff_result_mafia",
+    "template": "The mystery unravels, and {victim} comes out the other side, mafia."
+  },
+  {
+    "id": "sheriff-mafia-028",
+    "category": "sheriff_result_mafia",
+    "template": "The file confirms the worst suspicion: {victim} is mob."
+  },
+  {
+    "id": "sheriff-mafia-029",
+    "category": "sheriff_result_mafia",
+    "template": "There it is, in black and white, in your own case notes: {victim} is mafia."
+  },
+  {
+    "id": "sheriff-mafia-030",
+    "category": "sheriff_result_mafia",
+    "template": "A night of quiet watching reveals the truth: {victim} is mob."
+  },
+  {
+    "id": "sheriff-mafia-031",
+    "category": "sheriff_result_mafia",
+    "template": "The signs were all there, and now the file says it plainly: {victim} is mafia."
+  },
+  {
+    "id": "sheriff-mafia-032",
+    "category": "sheriff_result_mafia",
+    "template": "Case cracked. {victim} is mafia, and the file goes to the top of the stack."
+  },
+  {
+    "id": "sheriff-clean-001",
+    "category": "sheriff_result_clean",
+    "template": "The file on {victim} comes back clean. Not mob, not even close."
+  },
+  {
+    "id": "sheriff-clean-002",
+    "category": "sheriff_result_clean",
+    "template": "Case notes, tonight's entry: {victim} checks out. No ties to the mob."
+  },
+  {
+    "id": "sheriff-clean-003",
+    "category": "sheriff_result_clean",
+    "template": "The tail turned up nothing. {victim} is exactly who they claim to be."
+  },
+  {
+    "id": "sheriff-clean-004",
+    "category": "sheriff_result_clean",
+    "template": "You close the folder on {victim} with a rare word: innocent."
+  },
+  {
+    "id": "sheriff-clean-005",
+    "category": "sheriff_result_clean",
+    "template": "The evidence lines up clean, for once. {victim} has nothing to do with the mob."
+  },
+  {
+    "id": "sheriff-clean-006",
+    "category": "sheriff_result_clean",
+    "template": "A long night of watching turns up nothing. {victim}'s clear."
+  },
+  {
+    "id": "sheriff-clean-007",
+    "category": "sheriff_result_clean",
+    "template": "You cross {victim} off the list. Not mafia, confirmed."
+  },
+  {
+    "id": "sheriff-clean-008",
+    "category": "sheriff_result_clean",
+    "template": "The gut said suspicious. The file disagrees: {victim} is clean."
+  },
+  {
+    "id": "sheriff-clean-009",
+    "category": "sheriff_result_clean",
+    "template": "The report's conclusive: {victim} has been minding their own business the whole time."
+  },
+  {
+    "id": "sheriff-clean-010",
+    "category": "sheriff_result_clean",
+    "template": "Your notes tonight are short and relieving: {victim}, confirmed clean."
+  },
+  {
+    "id": "sheriff-clean-011",
+    "category": "sheriff_result_clean",
+    "template": "The truth's in the file now, in ink: {victim} is not one of the mob's."
+  },
+  {
+    "id": "sheriff-clean-012",
+    "category": "sheriff_result_clean",
+    "template": "You peeled back the alibi, and underneath it was nothing but a boring, honest life. {victim} is clean."
+  },
+  {
+    "id": "sheriff-clean-013",
+    "category": "sheriff_result_clean",
+    "template": "The hunch missed this time, happily. {victim} isn't mafia."
+  },
+  {
+    "id": "sheriff-clean-014",
+    "category": "sheriff_result_clean",
+    "template": "The investigation's closed on this one: {victim}, innocent, no case to build."
+  },
+  {
+    "id": "sheriff-clean-015",
+    "category": "sheriff_result_clean",
+    "template": "Well, that settles it. {victim} is clean, plain as day."
+  },
+  {
+    "id": "sheriff-clean-016",
+    "category": "sheriff_result_clean",
+    "template": "The digging uncovers the truth: {victim} answers to nobody but themselves."
+  },
+  {
+    "id": "sheriff-clean-017",
+    "category": "sheriff_result_clean",
+    "template": "No surprise, really. {victim} isn't mafia, and now it's on record."
+  },
+  {
+    "id": "sheriff-clean-018",
+    "category": "sheriff_result_clean",
+    "template": "The badge earns its keep tonight, ruling someone out for once. {victim} confirmed clean."
+  },
+  {
+    "id": "sheriff-clean-019",
+    "category": "sheriff_result_clean",
+    "template": "The pieces fit together at last: {victim} is not one of the mob's."
+  },
+  {
+    "id": "sheriff-clean-020",
+    "category": "sheriff_result_clean",
+    "template": "No doubt left in the file: {victim} has nothing to do with the mafia."
+  },
+  {
+    "id": "sheriff-clean-021",
+    "category": "sheriff_result_clean",
+    "template": "There it is. {victim}. Clean. One name off the suspect board."
+  },
+  {
+    "id": "sheriff-clean-022",
+    "category": "sheriff_result_clean",
+    "template": "The stakeout turns up nothing incriminating. {victim} is confirmed innocent."
+  },
+  {
+    "id": "sheriff-clean-023",
+    "category": "sheriff_result_clean",
+    "template": "The results are in, and it's good news for {victim}. Clean, confirmed."
+  },
+  {
+    "id": "sheriff-clean-024",
+    "category": "sheriff_result_clean",
+    "template": "You've settled it: {victim} was never mob at all."
+  },
+  {
+    "id": "sheriff-clean-025",
+    "category": "sheriff_result_clean",
+    "template": "The instincts were off, happily. {victim} isn't dirty."
+  },
+  {
+    "id": "sheriff-clean-026",
+    "category": "sheriff_result_clean",
+    "template": "It all checks out, thankfully: {victim} is not one of the mob's."
+  },
+  {
+    "id": "sheriff-clean-027",
+    "category": "sheriff_result_clean",
+    "template": "The mystery unravels, and {victim} comes out the other side, innocent."
+  },
+  {
+    "id": "sheriff-clean-028",
+    "category": "sheriff_result_clean",
+    "template": "The file confirms the good news: {victim} is not mob."
+  },
+  {
+    "id": "sheriff-clean-029",
+    "category": "sheriff_result_clean",
+    "template": "There it is, in black and white, in your own case notes: {victim} is clean."
+  },
+  {
+    "id": "sheriff-clean-030",
+    "category": "sheriff_result_clean",
+    "template": "A night of quiet watching reveals the truth: {victim} isn't mob."
+  },
+  {
+    "id": "sheriff-clean-031",
+    "category": "sheriff_result_clean",
+    "template": "The signs pointed elsewhere all along. {victim} is not mafia."
+  },
+  {
+    "id": "sheriff-clean-032",
+    "category": "sheriff_result_clean",
+    "template": "Case cracked, in the good direction this time. {victim} is clean, and the file goes back in the drawer."
+  },
+  {
+    "id": "player-left-001",
+    "category": "player_left",
+    "template": "{victim} has left the city, no explanation given."
+  },
+  {
+    "id": "player-left-002",
+    "category": "player_left",
+    "template": "{victim} packed a bag and walked out of town without a word."
+  },
+  {
+    "id": "player-left-003",
+    "category": "player_left",
+    "template": "{victim} is gone. Not dead — just gone. Rumor has it they got tired of the whole business."
+  },
+  {
+    "id": "player-left-004",
+    "category": "player_left",
+    "template": "{victim} has skipped town. The rest of you will have to carry on without them."
+  },
+  {
+    "id": "player-left-005",
+    "category": "player_left",
+    "template": "Word just in: {victim} has quietly left the game."
+  }
 ]

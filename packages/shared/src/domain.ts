@@ -61,7 +61,7 @@ export type PublicPlayer = z.infer<typeof PublicPlayerSchema>;
  */
 export const NarratorEntrySchema = z.object({
   id: z.string(),
-  kind: z.enum(["night_killed", "night_saved", "night_quiet", "vote_eliminated", "vote_tied", "game_over"]),
+  kind: z.enum(["night_killed", "night_saved", "night_quiet", "vote_eliminated", "vote_tied", "game_over", "player_left"]),
   params: z.record(z.string(), z.string()),
   text: z.string(),
 });

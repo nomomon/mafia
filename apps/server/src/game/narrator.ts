@@ -12,6 +12,7 @@ const CATEGORY_TO_KIND: Record<StoryCategory, NarratorEntry["kind"] | null> = {
   vote_tied: "vote_tied",
   town_wins: "game_over",
   mafia_wins: "game_over",
+  player_left: "player_left",
   // Sheriff results are private (never shown in the shared narrator log), so
   // they don't need a public NarratorEntry kind.
   sheriff_result_mafia: null,

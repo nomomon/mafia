@@ -130,8 +130,14 @@ export class Room {
    * (e.g. the only remaining mafia leaving).
    */
   leaveRoom(playerId: string): ActionResult {
-    if (!this.players.has(playerId)) {
+    const player = this.players.get(playerId);
+    if (!player) {
       return { ok: false, code: "PLAYER_NOT_FOUND", message: "You're not part of this room." };
+    }
+    // Only worth announcing once there's an actual game/narrator log to
+    // announce it in — a lobby departure is mundane roster bookkeeping.
+    if (this.phase !== "lobby") {
+      this.narratorLog.push(this.narrator.makeEntry(this.settings.locale, "player_left", { victim: player.name }));
     }
     this.removePlayer(playerId);
     if (this.phase !== "lobby" && this.phase !== "game_over") {
