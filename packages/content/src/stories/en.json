@@ -2,702 +2,702 @@
   {
     "id": "killed-001",
     "category": "killed",
-    "template": "{victim} was walking down an alley that night, and a brick fell on them. They are gone now."
+    "template": "Last night, tragedy struck the corner of Main and 5th. {victim} was walking down an alley when a brick fell from a rooftop above. {victim} is not with us anymore. Today, the town wakes up one person short."
   },
   {
     "id": "killed-002",
     "category": "killed",
-    "template": "A runaway shopping cart caught {victim} at exactly the wrong angle, at exactly the wrong speed. Didn't make it."
+    "template": "This morning, disturbing news reached the precinct. A runaway shopping cart caught {victim} at exactly the wrong angle, at exactly the wrong speed. {victim} did not survive it. This morning, the city is one voice quieter."
   },
   {
     "id": "killed-003",
     "category": "killed",
-    "template": "Somebody lost an argument with a vending machine last night. That somebody was {victim}, and the machine won permanently."
+    "template": "The morning report opens with grim news. Somebody lost an argument with a vending machine last night, and that somebody was {victim} - the machine won permanently. {victim} is gone. The town wakes up today, minus one familiar face."
   },
   {
     "id": "killed-004",
     "category": "killed",
-    "template": "A piano was being lowered from a third-floor window when the rope gave out. {victim} happened to be underneath. Case closed."
+    "template": "Word came in before sunrise: another life lost. A piano was being lowered from a third-floor window when the rope gave out, and {victim} happened to be standing underneath. Case closed, and {victim} with it. Breakfast tables across town have one empty chair this morning."
   },
   {
     "id": "killed-005",
     "category": "killed",
-    "template": "{victim} was found at the bottom of the stairs this morning, one banana peel away from a very avoidable death."
+    "template": "It happened again last night, the way it always seems to. {victim} was found at the bottom of the stairs this morning, one banana peel away from a very avoidable death, and not avoided. {victim} is not with us anymore. The morning roll call comes up one name short."
   },
   {
     "id": "killed-006",
     "category": "killed",
-    "template": "An anvil fell off a truck marked \"ANVILS, HANDLE WITH CARE.\" {victim} did not handle it with care. Neither did the anvil."
+    "template": "Tonight's bulletin leads with a loss for the town. An anvil fell off a truck marked \"ANVILS, HANDLE WITH CARE,\" and {victim} did not handle it with care. Neither did the anvil. Today, the town wakes up one person short."
   },
   {
     "id": "killed-007",
     "category": "killed",
-    "template": "Someone rigged the town's rotating door to spin just a little too fast. {victim} never saw it coming, or going."
+    "template": "The coroner was called out again last night. Someone had rigged the town's rotating door to spin just a little too fast, and {victim} never saw it coming, or going. {victim} is gone. This morning, the city is one voice quieter."
   },
   {
     "id": "killed-008",
     "category": "killed",
-    "template": "{victim} was murdered by a suspiciously well-aimed bowling ball. The lane was closed for the season."
+    "template": "Bad news travels fast in this town, and today it arrived early. {victim} was struck down by a suspiciously well-aimed bowling ball; the lane has been closed for the season. {victim} is not with us anymore. The town wakes up today, minus one familiar face."
   },
   {
     "id": "killed-009",
     "category": "killed",
-    "template": "A vending machine, a loose staircase, and {victim}'s bad luck all met at once last night. Only two of those walked away."
+    "template": "Another name for the morning report, and not a happy one. A vending machine, a loose staircase, and {victim}'s bad luck all met at once last night, only two of those walked away, and {victim} was not one of them. Today, the town wakes up one person short."
   },
   {
     "id": "killed-010",
     "category": "killed",
-    "template": "The coroner's report says \"blunt trauma from a frozen turkey, thrown from unknown height.\" {victim} didn't survive the holidays."
+    "template": "The night shift had one call, and it was the worst kind. The coroner's report reads \"blunt trauma from a frozen turkey, thrown from unknown height,\" and {victim} did not survive the holidays. This morning, the city is one voice quieter."
   },
   {
     "id": "killed-011",
     "category": "killed",
-    "template": "{victim} was found wedged under a toppled bookshelf, three mystery novels open beside them. The irony was not lost on the department."
+    "template": "Sad news out of downtown this morning. {victim} was found wedged under a toppled bookshelf, three mystery novels open beside them, the irony was not lost on the department. {victim} is gone. Breakfast tables across town have one empty chair this morning."
   },
   {
     "id": "killed-012",
     "category": "killed",
-    "template": "A gas station awning collapsed at the exact moment {victim} stopped to check their tire pressure. Gone before the gauge read zero."
+    "template": "The town's luck ran out again last night. A gas station awning collapsed at the exact moment {victim} stopped to check their tire pressure, gone before the gauge read zero. The morning roll call comes up one name short."
   },
   {
     "id": "killed-013",
     "category": "killed",
-    "template": "Someone left a rake face-up in the yard. {victim} stepped on it. That, somehow, was the end of them."
+    "template": "There's no easy way to open this morning's report. Someone left a rake face-up in the yard, {victim} stepped on it, and that, somehow, was the end of them. Today, the town wakes up one person short."
   },
   {
     "id": "killed-014",
     "category": "killed",
-    "template": "{victim} was discovered this morning, buried under a collapsed display of canned soup at the general store. The soup survived."
+    "template": "Once again, tragedy found this town overnight. {victim} was discovered this morning buried under a collapsed display of canned soup at the general store, the soup survived, {victim} did not. This morning, the city is one voice quieter."
   },
   {
     "id": "killed-015",
     "category": "killed",
-    "template": "A carnival strongman game's hammer swung the wrong way. {victim} was standing exactly where it landed."
+    "template": "The morning paper leads with an obituary today. A carnival strongman game's hammer swung the wrong way, and {victim} was standing exactly where it landed. The town wakes up today, minus one familiar face."
   },
   {
     "id": "killed-016",
     "category": "killed",
-    "template": "The elevator cable snapped with impeccable timing, right as {victim} stepped in. Nobody else was in the building that night."
+    "template": "A quiet night turned ugly around midnight. The elevator cable snapped with impeccable timing right as {victim} stepped in, and nobody else was in the building to help. {victim} is not with us anymore. Breakfast tables across town have one empty chair this morning."
   },
   {
     "id": "killed-017",
     "category": "killed",
-    "template": "{victim} was found this morning wrapped in an unreasonable amount of bubble wrap and an entirely reasonable amount of dead."
+    "template": "Another unfortunate accident happened overnight. {victim} was found this morning wrapped in an unreasonable amount of bubble wrap and an entirely reasonable amount of dead. Today, the town wakes up one person short."
   },
   {
     "id": "killed-018",
     "category": "killed",
-    "template": "A crane operator lost his grip on a wrecking ball. {victim} lost considerably more."
+    "template": "The town's streak of bad luck continues. A crane operator lost his grip on a wrecking ball, and {victim} lost considerably more. This morning, the city is one voice quieter."
   },
   {
     "id": "killed-019",
     "category": "killed",
-    "template": "{victim} tried to outrun a runaway zamboni. The zamboni was not fast, but {victim} was slower."
+    "template": "Another accident, another headline nobody wanted to write. {victim} tried to outrun a runaway zamboni; the zamboni was not fast, but {victim} was slower. {victim} did not make it. The town wakes up today, minus one familiar face."
   },
   {
     "id": "killed-020",
     "category": "killed",
-    "template": "Someone swapped the sugar for a suspiciously heavy substitute. {victim} took one bite of cake and never took another."
+    "template": "The precinct's morning briefing opens with bad news. Someone swapped the sugar for a suspiciously heavy substitute, and {victim} took one bite of cake and never took another. Today, the town wakes up one person short."
   },
   {
     "id": "killed-021",
     "category": "killed",
-    "template": "A stack of parking cones fell like dominoes onto {victim}. The last cone landed with what witnesses called \"unnecessary finality.\""
+    "template": "It's becoming a habit this town could do without. A stack of parking cones fell like dominoes onto {victim}, the last one landing with what witnesses called \"unnecessary finality.\" {victim} is gone. This morning, the city is one voice quieter."
   },
   {
     "id": "killed-022",
     "category": "killed",
-    "template": "{victim} was pronounced dead at the scene, tangled in a garden hose with a garden gnome standing suspiciously close by."
+    "template": "This morning brings word of another unfortunate accident. {victim} was pronounced dead at the scene, tangled in a garden hose with a garden gnome standing suspiciously close by. Breakfast tables across town have one empty chair this morning."
   },
   {
     "id": "killed-023",
     "category": "killed",
-    "template": "The town's oldest oak tree chose last night, of all nights, to drop a branch directly onto {victim}. Timber, and tragedy."
+    "template": "The town lost someone else last night. The town's oldest oak tree chose last night, of all nights, to drop a branch directly onto {victim}. Timber, and tragedy. The morning roll call comes up one name short."
   },
   {
     "id": "killed-024",
     "category": "killed",
-    "template": "A malfunctioning ATM dispensed its entire cash drawer onto {victim} at unsafe velocity. The bank called it a freak accident."
+    "template": "Grim news greeted the milkman this morning. A malfunctioning ATM dispensed its entire cash drawer onto {victim} at unsafe velocity; the bank is calling it a freak accident. {victim} is not with us anymore. Today, the town wakes up one person short."
   },
   {
     "id": "killed-025",
     "category": "killed",
-    "template": "{victim} was found this morning, having lost a duel with a revolving restaurant door. The door is fine."
+    "template": "The coroner's office had a busy night, unfortunately. {victim} was found this morning having lost a duel with a revolving restaurant door, the door is fine. This morning, the city is one voice quieter."
   },
   {
     "id": "killed-026",
     "category": "killed",
-    "template": "A safe fell from a moving truck outside the bank. {victim} was standing under it, which, in hindsight, was the wrong place to stand."
+    "template": "Overnight, this town's luck took another hit. A safe fell from a moving truck outside the bank, and {victim} was standing under it, which, in hindsight, was the wrong place to stand. The town wakes up today, minus one familiar face."
   },
   {
     "id": "killed-027",
     "category": "killed",
-    "template": "Someone left the manhole cover off, and {victim} did not read the memo. Neither survived the encounter, though only one was human."
+    "template": "The morning report, regrettably, has an obituary in it. Someone left the manhole cover off, and {victim} did not read the memo, neither survived the encounter, though only one of them was human. Today, the town wakes up one person short."
   },
   {
     "id": "killed-028",
     "category": "killed",
-    "template": "{victim} was discovered under an avalanche of frozen dinners after the walk-in freezer door gave out at the worst possible moment."
+    "template": "Another unfortunate accident, another name struck from the roster. {victim} was discovered under an avalanche of frozen dinners after the walk-in freezer door gave out at the worst possible moment. This morning, the city is one voice quieter."
   },
   {
     "id": "killed-029",
     "category": "killed",
-    "template": "A flagpole snapped clean in half during a gentle breeze, and {victim} happened to be standing directly beneath the flag."
+    "template": "The town's morning briefing starts with sad news, again. A flagpole snapped clean in half during a gentle breeze, and {victim} happened to be standing directly beneath the flag. Breakfast tables across town have one empty chair this morning."
   },
   {
     "id": "killed-030",
     "category": "killed",
-    "template": "The last thing {victim} said was \"I'm sure this ladder is fine.\" It was not fine."
+    "template": "It happened fast, and nobody saw it coming. The last thing {victim} said was \"I'm sure this ladder is fine.\" It was not fine. The morning roll call comes up one name short."
   },
   {
     "id": "killed-031",
     "category": "killed",
-    "template": "A church bell came loose mid-toll and {victim} was standing right below it. It tolled for them, specifically."
+    "template": "Disturbing news reached the town desk before breakfast. A church bell came loose mid-toll, and {victim} was standing right below it, it tolled for them, specifically. Today, the town wakes up one person short."
   },
   {
     "id": "killed-032",
     "category": "killed",
-    "template": "{victim} was found this morning at the bottom of a well they swore they'd never go near. Someone should ask why they went near it."
+    "template": "This town's freak-accident streak claims another victim. {victim} was found this morning at the bottom of a well they swore they'd never go near. Someone should ask why they went near it. This morning, the city is one voice quieter."
   },
   {
     "id": "killed-033",
     "category": "killed",
-    "template": "An entire rack of bowling pins fell on {victim} in what the alley insists was \"just gravity, nothing more.\""
+    "template": "The night's silence was broken by very bad news. An entire rack of bowling pins fell on {victim} in what the alley insists was \"just gravity, nothing more.\" The town wakes up today, minus one familiar face."
   },
   {
     "id": "killed-034",
     "category": "killed",
-    "template": "The town's fireworks warehouse had one accidental spark, and {victim} had one very unfortunate spot to be standing."
+    "template": "Tragedy, of the strangest sort, struck again overnight. The town's fireworks warehouse had one accidental spark, and {victim} had one very unfortunate spot to be standing. Breakfast tables across town have one empty chair this morning."
   },
   {
     "id": "killed-035",
     "category": "killed",
-    "template": "{victim} was murdered, according to the note pinned to a dartboard where their photograph used to be."
+    "template": "The morning's first headline is, sadly, an obituary. {victim} was murdered, according to the note pinned to a dartboard where their photograph used to be. Today, the town wakes up one person short."
   },
   {
     "id": "saved-001",
     "category": "saved",
-    "template": "The doctor kicked the brick out of the alley a half-second before it would have landed on {victim}. Close one."
+    "template": "This night, no casualties were reported. A brick was already falling toward {victim} in a quiet alley when the doctor kicked it aside a half-second before impact. Close one."
   },
   {
     "id": "saved-002",
     "category": "saved",
-    "template": "Just as the shopping cart barreled toward {victim}, the doctor grabbed the handle and steered it into a wall instead."
+    "template": "Tonight's bulletin brings rare good news: no casualties. A shopping cart broke loose and barreled toward {victim}, but the doctor grabbed the handle and steered it straight into a wall instead. The town breathes a little easier tonight."
   },
   {
     "id": "saved-003",
     "category": "saved",
-    "template": "The doctor unplugged the vending machine mid-argument, sparing {victim} a very undignified death."
+    "template": "The morning report is, for once, casualty-free. {victim} was mid-argument with a vending machine when the doctor calmly unplugged it, sparing them a very undignified death. Somebody owes the doctor a drink."
   },
   {
     "id": "saved-004",
     "category": "saved",
-    "template": "A piano was three floors up and falling fast. The doctor yanked {victim} out of the drop zone with a second to spare."
+    "template": "No one died last night, and it was closer than you'd think. A piano was three floors up and falling fast when the doctor yanked {victim} out of the drop zone with a second to spare. A near miss, filed under lucky."
   },
   {
     "id": "saved-005",
     "category": "saved",
-    "template": "{victim} had one foot on the banana peel when the doctor snatched them back by the collar."
+    "template": "The town's luck held last night, barely. {victim} had one foot on a banana peel when the doctor snatched them back by the collar just in time. The town keeps its full headcount, for now."
   },
   {
     "id": "saved-006",
     "category": "saved",
-    "template": "The anvil truck rumbled past, and the doctor shoved {victim} clear just before it hit a pothole."
+    "template": "Zero casualties on tonight's report, and it was a near thing. An anvil truck rumbled past, and the doctor shoved {victim} clear just before it hit a pothole. Close one."
   },
   {
     "id": "saved-007",
     "category": "saved",
-    "template": "The revolving door was spinning dangerously fast. The doctor wedged a chair in it before {victim} stepped through."
+    "template": "The precinct logs no fatalities tonight, though it was close. The revolving door was spinning dangerously fast until the doctor wedged a chair in it, just before {victim} stepped through. The town breathes a little easier tonight."
   },
   {
     "id": "saved-008",
     "category": "saved",
-    "template": "The bowling ball was already rolling when the doctor dove and knocked {victim} out of its path."
+    "template": "This night, no casualties were reported. A bowling ball was already rolling toward {victim} when the doctor dove in and knocked them clear of its path. Somebody owes the doctor a drink."
   },
   {
     "id": "saved-009",
     "category": "saved",
-    "template": "A frozen turkey sailed through the air, and the doctor caught it inches from {victim}'s head, like it was nothing."
+    "template": "Tonight's bulletin brings rare good news: no casualties. A frozen turkey sailed through the air, and the doctor caught it inches from {victim}'s head, like it was nothing. A near miss, filed under lucky."
   },
   {
     "id": "saved-010",
     "category": "saved",
-    "template": "The bookshelf teetered, and the doctor caught it with both hands, giving {victim} just enough time to roll away."
+    "template": "The morning report is, for once, casualty-free. A bookshelf teetered over {victim}, and the doctor caught it with both hands, giving them just enough time to roll away. Close one."
   },
   {
     "id": "saved-011",
     "category": "saved",
-    "template": "The gas station awning groaned overhead. The doctor pulled {victim} away from the pump right before it came down."
+    "template": "No one died last night, and it was closer than you'd think. A gas station awning groaned overhead, and the doctor pulled {victim} away from the pump right before it came down. The town keeps its full headcount, for now."
   },
   {
     "id": "saved-012",
     "category": "saved",
-    "template": "The doctor spotted the rake in the grass and snatched it up before {victim} took a single step near it."
+    "template": "The town's luck held last night, barely. The doctor spotted a rake lying face-up in the grass and snatched it away before {victim} ever took a step near it. The town breathes a little easier tonight."
   },
   {
     "id": "saved-013",
     "category": "saved",
-    "template": "The soup display wobbled, and the doctor braced it with a shoulder, giving {victim} time to back away unscathed."
+    "template": "Zero casualties on tonight's report, and it was a near thing. A soup display wobbled dangerously, and the doctor braced it with a shoulder, giving {victim} time to back away unscathed. Close one."
   },
   {
     "id": "saved-014",
     "category": "saved",
-    "template": "The strongman hammer swung wide. The doctor tackled {victim} out of the way, and both landed in a heap of relief."
+    "template": "The precinct logs no fatalities tonight, though it was close. A strongman hammer swung wide toward {victim}, but the doctor tackled them out of the way, and both landed in a heap of relief. Somebody owes the doctor a drink."
   },
   {
     "id": "saved-015",
     "category": "saved",
-    "template": "The elevator cable frayed with an ominous twang, and the doctor pulled {victim} back from the doors just in time."
+    "template": "This night, no casualties were reported. An elevator cable frayed with an ominous twang right as {victim} reached for the doors, and the doctor pulled them back just in time. A near miss, filed under lucky."
   },
   {
     "id": "saved-016",
     "category": "saved",
-    "template": "The wrecking ball swung loose, and the doctor hauled {victim} out of range before it so much as grazed the building."
+    "template": "Tonight's bulletin brings rare good news: no casualties. A wrecking ball swung loose near {victim}, and the doctor hauled them out of range before it so much as grazed the building. The town keeps its full headcount, for now."
   },
   {
     "id": "saved-017",
     "category": "saved",
-    "template": "The zamboni was gaining speed, but the doctor cut the engine before it ever reached {victim}."
+    "template": "The morning report is, for once, casualty-free. A runaway zamboni was gaining speed toward {victim}, but the doctor cut the engine before it ever got close. Close one."
   },
   {
     "id": "saved-018",
     "category": "saved",
-    "template": "The doctor swapped the tampered cake for a fresh one moments before {victim} took a bite."
+    "template": "No one died last night, and it was closer than you'd think. The doctor swapped a tampered cake for a fresh one moments before {victim} could take a single bite. The town breathes a little easier tonight."
   },
   {
     "id": "saved-019",
     "category": "saved",
-    "template": "The parking cones toppled in sequence, and the doctor caught the last one mid-air before it reached {victim}."
+    "template": "The town's luck held last night, barely. A row of parking cones toppled in sequence toward {victim}, and the doctor caught the last one mid-air before it landed. Somebody owes the doctor a drink."
   },
   {
     "id": "saved-020",
     "category": "saved",
-    "template": "The garden hose had {victim} half-tangled already, but the doctor cut it loose before things got any tighter."
+    "template": "Zero casualties on tonight's report, and it was a near thing. {victim} was already half-tangled in a garden hose, but the doctor cut it loose before things got any tighter. A near miss, filed under lucky."
   },
   {
     "id": "saved-021",
     "category": "saved",
-    "template": "The oak branch cracked overhead, and the doctor pulled {victim} back by the collar just as it crashed down."
+    "template": "The precinct logs no fatalities tonight, though it was close. An oak branch cracked overhead, and the doctor pulled {victim} back by the collar just as it crashed to the ground. Close one."
   },
   {
     "id": "saved-022",
     "category": "saved",
-    "template": "The ATM began sputtering cash at alarming speed, and the doctor yanked {victim} away before the drawer gave out."
+    "template": "This night, no casualties were reported. An ATM began sputtering cash at an alarming rate near {victim}, and the doctor yanked them away before the whole drawer gave out. The town keeps its full headcount, for now."
   },
   {
     "id": "saved-023",
     "category": "saved",
-    "template": "The revolving restaurant door was already spinning too fast, but the doctor jammed it with a menu before {victim} got close."
+    "template": "Tonight's bulletin brings rare good news: no casualties. The revolving door at the restaurant was already spinning too fast, but the doctor jammed it with a menu before {victim} got close. The town breathes a little easier tonight."
   },
   {
     "id": "saved-024",
     "category": "saved",
-    "template": "The safe was already falling when the doctor grabbed {victim} by the arm and hauled them out of the drop zone."
+    "template": "The morning report is, for once, casualty-free. A safe was already falling when the doctor grabbed {victim} by the arm and hauled them clear of the drop zone. Close one."
   },
   {
     "id": "saved-025",
     "category": "saved",
-    "template": "The manhole cover was missing, but the doctor flagged {victim} down half a step before they reached the gap."
+    "template": "No one died last night, and it was closer than you'd think. A manhole cover was missing its lid, but the doctor flagged {victim} down half a step before they reached the gap. Somebody owes the doctor a drink."
   },
   {
     "id": "saved-026",
     "category": "saved",
-    "template": "The freezer door groaned and buckled, and the doctor pulled {victim} clear before the frozen dinners came avalanching down."
+    "template": "The town's luck held last night, barely. A freezer door groaned and buckled near {victim}, and the doctor pulled them clear before the frozen dinners came avalanching down. A near miss, filed under lucky."
   },
   {
     "id": "saved-027",
     "category": "saved",
-    "template": "The flagpole gave a worrying creak, and the doctor moved {victim} out from under it moments before it snapped."
+    "template": "Zero casualties on tonight's report, and it was a near thing. A flagpole gave a worrying creak above {victim}, and the doctor moved them out from under it moments before it snapped. Close one."
   },
   {
     "id": "saved-028",
     "category": "saved",
-    "template": "The ladder wobbled dangerously, and the doctor caught {victim} on the way down, both of them landing safely in a hedge."
+    "template": "The precinct logs no fatalities tonight, though it was close. A ladder wobbled dangerously beneath {victim}, and the doctor caught them on the way down; both landed safely in a hedge. The town breathes a little easier tonight."
   },
   {
     "id": "saved-029",
     "category": "saved",
-    "template": "The church bell groaned loose above, and the doctor tackled {victim} out of the way right as it hit the ground."
+    "template": "This night, no casualties were reported. A church bell groaned loose above {victim}, and the doctor tackled them out of the way right as it hit the ground. Somebody owes the doctor a drink."
   },
   {
     "id": "saved-030",
     "category": "saved",
-    "template": "{victim} was leaning over the old well when the doctor grabbed the back of their coat and pulled them to safety."
+    "template": "Tonight's bulletin brings rare good news: no casualties. {victim} was leaning over the old well when the doctor grabbed the back of their coat and pulled them to safety. The town keeps its full headcount, for now."
   },
   {
     "id": "saved-031",
     "category": "saved",
-    "template": "The bowling pin rack toppled forward, but the doctor shoved {victim} aside before a single pin connected."
+    "template": "The morning report is, for once, casualty-free. A rack of bowling pins toppled forward toward {victim}, but the doctor shoved them aside before a single pin connected. Close one."
   },
   {
     "id": "saved-032",
     "category": "saved",
-    "template": "A stray firework spark caught, and the doctor smothered it with a coat before it ever reached {victim}."
+    "template": "No one died last night, and it was closer than you'd think. A stray firework spark caught near {victim}, and the doctor smothered it with a coat before it ever reached them. A near miss, filed under lucky."
   },
   {
     "id": "saved-033",
     "category": "saved",
-    "template": "The dartboard note turned out to be a warning, and the doctor got to {victim} before whoever wrote it did."
+    "template": "The town's luck held last night, barely. A note pinned to a dartboard turned out to be a warning about {victim}, and the doctor got to them before whoever wrote it did. The town breathes a little easier tonight."
   },
   {
     "id": "saved-034",
     "category": "saved",
-    "template": "The crane's grip slipped overhead, and the doctor hauled {victim} out of the shadow of the wrecking ball just in time."
+    "template": "Zero casualties on tonight's report, and it was a near thing. A crane's grip slipped overhead, and the doctor hauled {victim} out of the wrecking ball's shadow just in time. Close one."
   },
   {
     "id": "saved-035",
     "category": "saved",
-    "template": "The doctor arrived breathless, having sprinted the length of Main Street, and pulled {victim} back from the tracks with seconds to spare."
+    "template": "The precinct logs no fatalities tonight, though it was close. The doctor arrived breathless, having sprinted the length of Main Street, and pulled {victim} back from the tracks with seconds to spare. Somebody owes the doctor a drink."
   },
   {
     "id": "quiet-001",
     "category": "quiet_night",
-    "template": "Nothing happened last night. Even the town's one streetlight flickered and that was the most exciting part of the evening."
+    "template": "This night, no casualties happened. Even the town's one streetlight flickered, and that was the most exciting part of the evening. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-002",
     "category": "quiet_night",
-    "template": "The precinct logged zero incidents. A slow night, the kind detectives dream about and then get bored of."
+    "template": "Tonight's report: no casualties, nothing much of anything. The precinct logged zero incidents, the kind of slow night detectives dream about and then get bored of. A quiet one, through and through."
   },
   {
     "id": "quiet-003",
     "category": "quiet_night",
-    "template": "Not a single body turned up. Somewhere, a typewriter sat unused."
+    "template": "No casualties, no incidents, no news to speak of. Not a single body turned up, and somewhere a typewriter sat unused all night. The town sleeps easy tonight."
   },
   {
     "id": "quiet-004",
     "category": "quiet_night",
-    "template": "It was quiet. Suspiciously quiet, the kind of quiet that makes a detective nervous and everyone else relieved."
+    "template": "This night, the town recorded zero casualties. It was quiet, suspiciously quiet, the kind of quiet that makes a detective nervous and everyone else relieved. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-005",
     "category": "quiet_night",
-    "template": "The night passed without incident. The coroner got a full eight hours of sleep for once."
+    "template": "Once again, no casualties to report. The night passed without incident, and the coroner got a full eight hours of sleep for once. A rare, restful morning for everyone."
   },
   {
     "id": "quiet-006",
     "category": "quiet_night",
-    "template": "No crimes, no accidents, no anvils. Just a town, sleeping, for once, undisturbed."
+    "template": "This night, no casualties happened. No crimes, no accidents, no anvils, just a town sleeping, for once, undisturbed. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-007",
     "category": "quiet_night",
-    "template": "The whole town held its breath and, remarkably, nothing happened to make it let that breath out badly."
+    "template": "Tonight's report: no casualties, nothing much of anything. The whole town held its breath, and, remarkably, nothing made it let that breath out badly. A quiet one, through and through."
   },
   {
     "id": "quiet-008",
     "category": "quiet_night",
-    "template": "A patrol car rolled slowly down Main Street and found nothing worth writing in the report."
+    "template": "No casualties, no incidents, no news to speak of. A patrol car rolled slowly down Main Street and found nothing worth writing in the report. The town sleeps easy tonight."
   },
   {
     "id": "quiet-009",
     "category": "quiet_night",
-    "template": "Nobody died. Nobody vanished. The town's luck, against all odds, held."
+    "template": "This night, the town recorded zero casualties. Nobody died, nobody vanished, the town's luck, against all odds, held. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-010",
     "category": "quiet_night",
-    "template": "It was the kind of night noir writers hate: uneventful, unremarkable, entirely without a body count."
+    "template": "Once again, no casualties to report. It was the kind of night noir writers hate: uneventful, unremarkable, entirely without a body count. A rare, restful morning for everyone."
   },
   {
     "id": "quiet-011",
     "category": "quiet_night",
-    "template": "The rain fell, the streetlamps buzzed, and that was, genuinely, the whole story tonight."
+    "template": "This night, no casualties happened. The rain fell, the streetlamps buzzed, and that was, genuinely, the whole story tonight. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-012",
     "category": "quiet_night",
-    "template": "The night shift clocked out with nothing to report, which is either good news or the calm before something worse."
+    "template": "Tonight's report: no casualties, nothing much of anything. The night shift clocked out with nothing to report, which is either good news or the calm before something worse. A quiet one, through and through."
   },
   {
     "id": "quiet-013",
     "category": "quiet_night",
-    "template": "Nobody so much as jaywalked. A remarkably clean night for a town with this much history."
+    "template": "No casualties, no incidents, no news to speak of. Nobody so much as jaywalked, a remarkably clean night for a town with this much history. The town sleeps easy tonight."
   },
   {
     "id": "quiet-014",
     "category": "quiet_night",
-    "template": "The morgue stayed empty overnight, a small miracle nobody bothered to celebrate."
+    "template": "This night, the town recorded zero casualties. The morgue stayed empty overnight, a small miracle nobody bothered to celebrate. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-015",
     "category": "quiet_night",
-    "template": "All was still. Even the town's usual suspects stayed home and slept."
+    "template": "Once again, no casualties to report. All was still; even the town's usual suspects stayed home and slept. A rare, restful morning for everyone."
   },
   {
     "id": "quiet-016",
     "category": "quiet_night",
-    "template": "The whole town exhaled at once. No trials, no funerals, no headlines tonight."
+    "template": "This night, no casualties happened. The whole town exhaled at once, no trials, no funerals, no headlines tonight. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-017",
     "category": "quiet_night",
-    "template": "A single moth circled the streetlamp outside the station and, notably, that was the extent of tonight's drama."
+    "template": "Tonight's report: no casualties, nothing much of anything. A single moth circled the streetlamp outside the station, and, notably, that was the extent of tonight's drama. A quiet one, through and through."
   },
   {
     "id": "quiet-018",
     "category": "quiet_night",
-    "template": "Nothing to report. Even the town gossip had nothing worth spreading this morning."
+    "template": "No casualties, no incidents, no news to speak of. Even the town gossip had nothing worth spreading this morning. The town sleeps easy tonight."
   },
   {
     "id": "quiet-019",
     "category": "quiet_night",
-    "template": "The night was so calm the local paper is running the weather forecast as its front page."
+    "template": "This night, the town recorded zero casualties. The night was so calm the local paper is running the weather forecast as its front page. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-020",
     "category": "quiet_night",
-    "template": "For once, the sirens stayed silent, and the town got to sleep the whole night through."
+    "template": "Once again, no casualties to report. For once, the sirens stayed silent, and the town got to sleep the whole night through. A rare, restful morning for everyone."
   },
   {
     "id": "quiet-021",
     "category": "quiet_night",
-    "template": "Not a single window was broken, not a single alibi was needed. A boring, blessed night."
+    "template": "This night, no casualties happened. Not a single window was broken, not a single alibi was needed, a boring, blessed night. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-022",
     "category": "quiet_night",
-    "template": "The town's one payphone rang once, wrong number, and that was the most suspicious thing that happened all night."
+    "template": "Tonight's report: no casualties, nothing much of anything. The town's one payphone rang once, wrong number, and that was the most suspicious thing that happened all night. A quiet one, through and through."
   },
   {
     "id": "quiet-023",
     "category": "quiet_night",
-    "template": "Everyone stayed indoors, the streets stayed empty, and the case files stayed exactly as thin as yesterday."
+    "template": "No casualties, no incidents, no news to speak of. Everyone stayed indoors, the streets stayed empty, and the case files stayed exactly as thin as yesterday. The town sleeps easy tonight."
   },
   {
     "id": "quiet-024",
     "category": "quiet_night",
-    "template": "The night watchman finished his crossword, uninterrupted, for the first time all month."
+    "template": "This night, the town recorded zero casualties. The night watchman finished his crossword uninterrupted, for the first time all month. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-025",
     "category": "quiet_night",
-    "template": "Peace, however briefly, settled over the town like a fog with nothing sinister hiding in it."
+    "template": "Once again, no casualties to report. Peace, however briefly, settled over the town like a fog with nothing sinister hiding in it. A rare, restful morning for everyone."
   },
   {
     "id": "quiet-026",
     "category": "quiet_night",
-    "template": "The bar closed early, the streets emptied quietly, and not one soul went missing."
+    "template": "This night, no casualties happened. The bar closed early, the streets emptied quietly, and not one soul went missing. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-027",
     "category": "quiet_night",
-    "template": "The whole precinct sat around doing paperwork, because for once there was no fresh case to open."
+    "template": "Tonight's report: no casualties, nothing much of anything. The whole precinct sat around doing paperwork, because for once there was no fresh case to open. A quiet one, through and through."
   },
   {
     "id": "quiet-028",
     "category": "quiet_night",
-    "template": "It rained, the gutters ran, and nothing else of note happened in this town tonight."
+    "template": "No casualties, no incidents, no news to speak of. It rained, the gutters ran, and nothing else of note happened in this town tonight. The town sleeps easy tonight."
   },
   {
     "id": "quiet-029",
     "category": "quiet_night",
-    "template": "The town's one all-night diner served coffee to exactly nobody suspicious."
+    "template": "This night, the town recorded zero casualties. The town's one all-night diner served coffee to exactly nobody suspicious. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-030",
     "category": "quiet_night",
-    "template": "A quiet night, unremarkable and unbothered, the kind you almost don't trust."
+    "template": "Once again, no casualties to report. A quiet night, unremarkable and unbothered, the kind you almost don't trust. A rare, restful morning for everyone."
   },
   {
     "id": "quiet-031",
     "category": "quiet_night",
-    "template": "Nothing stirred, nothing fell, nobody vanished. Write that one down, it doesn't happen often."
+    "template": "This night, no casualties happened. Nothing stirred, nothing fell, nobody vanished, write that one down, it doesn't happen often. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-032",
     "category": "quiet_night",
-    "template": "The town slept soundly, blissfully unaware of how rare a night like this actually is."
+    "template": "Tonight's report: no casualties, nothing much of anything. The town slept soundly, blissfully unaware of how rare a night like this actually is. A quiet one, through and through."
   },
   {
     "id": "quiet-033",
     "category": "quiet_night",
-    "template": "Even the crows on the courthouse roof had nothing to caw about tonight."
+    "template": "No casualties, no incidents, no news to speak of. Even the crows on the courthouse roof had nothing to caw about tonight. The town sleeps easy tonight."
   },
   {
     "id": "quiet-034",
     "category": "quiet_night",
-    "template": "A dry, uneventful night. Not one alibi was tested, not one door was forced."
+    "template": "This night, the town recorded zero casualties. A dry, uneventful night, not one alibi was tested, not one door was forced. Today is one of the most peaceful nights this city will experience."
   },
   {
     "id": "quiet-035",
     "category": "quiet_night",
-    "template": "The town's luck held for one more night, and nobody thought to be grateful for it."
+    "template": "Once again, no casualties to report. The town's luck held for one more night, and nobody thought to be grateful for it. A rare, restful morning for everyone."
   },
   {
     "id": "vote-eliminated-001",
     "category": "vote_eliminated",
-    "template": "The town put {victim} on trial, the jury took four minutes, and the verdict was death. They left the city by morning."
+    "template": "The town reached its consensus this afternoon: {victim} must be mafia. They were dropped into a vat of chocolate at the candy factory and never resurfaced. Unfortunately, the game goes on."
   },
   {
     "id": "vote-eliminated-002",
     "category": "vote_eliminated",
-    "template": "The gavel came down on {victim}. Guilty, said the town, and the sentence was exile, effective immediately."
+    "template": "By a show of hands, the town decided {victim} was mafia. They were strapped into the electric chair, which turned out to be unplugged, though the trapdoor beneath it worked just fine. The game, unfortunately, continues without them."
   },
   {
     "id": "vote-eliminated-003",
     "category": "vote_eliminated",
-    "template": "A hasty trial, a unanimous verdict, and {victim} was marched out of town before the courthouse lights even cooled."
+    "template": "The verdict was unanimous: {victim} is mafia. The town's ceremonial cannon did the rest, launching them clean across the lake. And so, the game carries on."
   },
   {
     "id": "vote-eliminated-004",
     "category": "vote_eliminated",
-    "template": "The jury deliberated for exactly as long as it took to pour coffee. {victim} was sentenced and sent packing."
+    "template": "The town agreed, with surprising speed, that {victim} was mafia. They were packed into a very large box and mailed to Alaska. Somehow, the game continues."
   },
   {
     "id": "vote-eliminated-005",
     "category": "vote_eliminated",
-    "template": "\"Death, or the next train out,\" said the judge. {victim} chose the train, and left before sundown."
+    "template": "Consensus reached: {victim} is mafia. They were sent down the county fair's water slide, which had been quietly rerouted off a cliff. Life in this town goes on. This round of it, anyway."
   },
   {
     "id": "vote-eliminated-006",
     "category": "vote_eliminated",
-    "template": "The courtroom fell silent as the foreman read the verdict on {victim}. Guilty. Gone by nightfall."
+    "template": "The town pointed, in unison, at {victim}. They were locked in a phone booth and lowered into the harbor. The game, unfortunately, continues without them."
   },
   {
     "id": "vote-eliminated-007",
     "category": "vote_eliminated",
-    "template": "{victim} stood trial before the whole town and lost. The sentence: leave, and never look back."
+    "template": "It was decided: {victim} is mafia. They were sealed in a barrel and rolled off a cliff, like something out of a cartoon. Unfortunately, the game goes on."
   },
   {
     "id": "vote-eliminated-008",
     "category": "vote_eliminated",
-    "template": "It took one witness, twelve minutes, and a very short deliberation to convict {victim}. Case closed, city limits crossed."
+    "template": "The consensus came fast this time: {victim} is mafia. They were loaded into a homemade rocket and launched at the moon. The town moves on. The game does too."
   },
   {
     "id": "vote-eliminated-009",
     "category": "vote_eliminated",
-    "template": "The town's makeshift court found {victim} guilty as charged. The sentence was carried out the only merciful way: a one-way ticket out."
+    "template": "The town's suspicion landed squarely on {victim}. They were lowered into a vat of gravy at the diner and never came back up. And so, the game carries on."
   },
   {
     "id": "vote-eliminated-010",
     "category": "vote_eliminated",
-    "template": "The judge banged the gavel so hard it cracked. {victim} was found guilty and escorted straight to the city line."
+    "template": "By popular vote, {victim} was declared mafia. They were sealed inside a truly enormous fortune cookie. Somehow, the game continues."
   },
   {
     "id": "vote-eliminated-011",
     "category": "vote_eliminated",
-    "template": "A jury of neighbors convicted {victim} in record time. Sentence handed down, suitcase packed by dawn."
+    "template": "The town agreed: {victim} is mafia. They were sent up in a hot air balloon with a very slow leak. Unfortunately, the game goes on."
   },
   {
     "id": "vote-eliminated-012",
     "category": "vote_eliminated",
-    "template": "The town's verdict on {victim} was swift and merciless: guilty, and gone."
+    "template": "It didn't take long for the town to settle on {victim}. They were sent down the old mine shaft on a cart with no brakes. The game, unfortunately, continues without them."
   },
   {
     "id": "vote-eliminated-013",
     "category": "vote_eliminated",
-    "template": "{victim} pleaded their case. Nobody bought it. The sentence was exile, served immediately."
+    "template": "The verdict came in fast: {victim} is mafia. They were tossed into the dunk tank, which had been rigged to never, ever stop dunking. Life in this town goes on. This round of it, anyway."
   },
   {
     "id": "vote-eliminated-014",
     "category": "vote_eliminated",
-    "template": "The trial lasted all of ten minutes, but the verdict on {victim} stuck: guilty, and out of the city by morning."
+    "template": "The town's consensus fell on {victim}. They were wrapped in a carpet and rolled down the courthouse steps. And so, the game carries on."
   },
   {
     "id": "vote-eliminated-015",
     "category": "vote_eliminated",
-    "template": "The town's jury didn't need long to convict {victim}. The sentence: leave town and don't come back."
+    "template": "The town agreed, with a straight face, that {victim} was mafia. They were fired out of a confetti cannon, unfortunately from the inside. Unfortunately, the game goes on."
   },
   {
     "id": "vote-eliminated-016",
     "category": "vote_eliminated",
-    "template": "A verdict was reached on {victim} before the coffee got cold. Guilty. Sentence: permanent departure."
+    "template": "It was decided, unanimously: {victim} is mafia. They were dropped into the town's fondue pot at the county fair. Somehow, the game continues."
   },
   {
     "id": "vote-eliminated-017",
     "category": "vote_eliminated",
-    "template": "The judge read the charges against {victim} once. That was apparently enough. Guilty, and gone by nightfall."
+    "template": "The town settled on {victim} without much debate. They were sent through the car wash, without the benefit of a car. The game, unfortunately, continues without them."
   },
   {
     "id": "vote-eliminated-018",
     "category": "vote_eliminated",
-    "template": "{victim}'s trial ended the way most do in this town: quickly, and with a train ticket instead of a headstone."
+    "template": "Consensus: {victim} is mafia. They were put on a raft and pushed out to sea, no paddle included. The town moves on. The game does too."
   },
   {
     "id": "vote-eliminated-019",
     "category": "vote_eliminated",
-    "template": "The jury found {victim} guilty by a landslide. The sentence spared their life but not their address."
+    "template": "The town pointed a collective finger at {victim}. They were locked in the clock tower just as the hands began to move. Unfortunately, the game goes on."
   },
   {
     "id": "vote-eliminated-020",
     "category": "vote_eliminated",
-    "template": "A closed-door deliberation, a unanimous vote, and {victim} was on the next train out before the ink dried."
+    "template": "It was agreed: {victim} is mafia. They were dropped into a giant vat of jello at the fairgrounds. And so, the game carries on."
   },
   {
     "id": "vote-eliminated-021",
     "category": "vote_eliminated",
-    "template": "The town convicted {victim} on the strength of one very convincing finger point. Sentence: exile."
+    "template": "The town reached its verdict on {victim} quickly. They went skydiving with a parachute that turned out to be a tablecloth. Life in this town goes on. This round of it, anyway."
   },
   {
     "id": "vote-eliminated-022",
     "category": "vote_eliminated",
-    "template": "{victim} heard the word \"guilty\" and didn't wait for the rest of the sentence to start packing."
+    "template": "The town's consensus landed on {victim} today. They were loaded into a catapult and launched toward the neighboring county. Somehow, the game continues."
   },
   {
     "id": "vote-eliminated-023",
     "category": "vote_eliminated",
-    "template": "The verdict on {victim} came down hard and fast: guilty. Their bags were already at the door."
+    "template": "It was decided that {victim} is mafia. They were lowered into the chocolate fountain at the wedding expo downtown. The game, unfortunately, continues without them."
   },
   {
     "id": "vote-eliminated-024",
     "category": "vote_eliminated",
-    "template": "The town's court showed {victim} no mercy and one option: guilty, and gone by sunrise."
+    "template": "The town agreed on {victim} without much fuss. They were sealed in a barrel and sent over the town's waterfall. Unfortunately, the game goes on."
   },
   {
     "id": "vote-eliminated-025",
     "category": "vote_eliminated",
-    "template": "A trial by torchlight, a verdict by consensus, and {victim} was escorted out of the city limits before the crowd dispersed."
+    "template": "The verdict on {victim} came in overwhelming: mafia. They were strapped to a firework and launched into the night sky. And so, the game carries on."
   },
   {
     "id": "vote-eliminated-026",
     "category": "vote_eliminated",
-    "template": "The people's court convicted {victim} unanimously. The sentence was carried out at the city gates, quietly."
+    "template": "The town's suspicion, once again, landed on {victim}. They went down the laundry chute, which apparently leads nowhere good. The town moves on. The game does too."
   },
   {
     "id": "vote-eliminated-027",
     "category": "vote_eliminated",
-    "template": "{victim} was found guilty in the court of public opinion, which, in this town, is the only court that matters."
+    "template": "Consensus reached: {victim} is mafia. They were placed in the town's ancient dunking stool, over the lake, and left there. Somehow, the game continues."
   },
   {
     "id": "vote-eliminated-028",
     "category": "vote_eliminated",
-    "template": "The verdict took less time than the trial itself. {victim} was found guilty and shown the city line."
+    "template": "The town agreed on {victim} today. They were shipped off in a crate marked \"FRAGILE\" to nowhere in particular. Unfortunately, the game goes on."
   },
   {
     "id": "vote-eliminated-029",
     "category": "vote_eliminated",
-    "template": "The town rendered its judgment on {victim}: guilty, exiled, and not to be spoken of again."
+    "template": "It was decided, with unusual confidence, that {victim} is mafia. They were dropped into the vat at the taffy factory. The game, unfortunately, continues without them."
   },
   {
     "id": "vote-eliminated-030",
     "category": "vote_eliminated",
-    "template": "{victim}'s fate was sealed the moment the jury stopped whispering. Guilty. Gone before the sun came up."
+    "template": "The town's verdict fell on {victim}. They were sent up in the world's least reliable hot air balloon. Life in this town goes on. This round of it, anyway."
   },
   {
     "id": "vote-eliminated-031",
     "category": "vote_eliminated",
-    "template": "The judge's final words to {victim} were short: \"Guilty. Get out.\" And they did."
+    "template": "The town agreed: {victim} is mafia. They were put through the revolving door, which simply kept going. And so, the game carries on."
   },
   {
     "id": "vote-eliminated-032",
     "category": "vote_eliminated",
-    "template": "A trial, a verdict, a sentence, all wrapped up before midnight. {victim} left town under a very unflattering headline."
+    "template": "Consensus landed on {victim} this evening. They were sealed inside a piñata and left for the children's party down the street. Unfortunately, the game goes on."
   },
   {
     "id": "vote-eliminated-033",
     "category": "vote_eliminated",
-    "template": "The court's ruling on {victim} was final: guilty as charged, banished as sentenced."
+    "template": "It was decided that {victim} is mafia, and quickly. They were sent down the town's decommissioned log flume. Somehow, the game continues."
   },
   {
     "id": "vote-eliminated-034",
     "category": "vote_eliminated",
-    "template": "{victim} tried to object. The judge overruled it, and the crowd escorted them straight to the train station."
+    "template": "The town's suspicion settled on {victim} today. They were locked in the photo booth and mailed away, one snapshot at a time. The game, unfortunately, continues without them."
   },
   {
     "id": "vote-eliminated-035",
     "category": "vote_eliminated",
-    "template": "The town's tribunal delivered its verdict on {victim} in a single breathless sentence: guilty, and gone for good."
+    "template": "The verdict was unanimous: {victim} is mafia. They were tied to a rocket-powered shopping cart and sent off down Main Street. Unfortunately, the game goes on."
   },
   {
     "id": "vote-tied-001",
@@ -1527,7 +1527,7 @@
   {
     "id": "player-left-003",
     "category": "player_left",
-    "template": "{victim} is gone. Not dead — just gone. Rumor has it they got tired of the whole business."
+    "template": "{victim} is gone. Not dead - just gone. Rumor has it they got tired of the whole business."
   },
   {
     "id": "player-left-004",
@@ -1538,5 +1538,105 @@
     "id": "player-left-005",
     "category": "player_left",
     "template": "Word just in: {victim} has quietly left the game."
+  },
+  {
+    "id": "player-left-006",
+    "category": "player_left",
+    "template": "{victim} left town sometime before dawn, no forwarding address."
+  },
+  {
+    "id": "player-left-007",
+    "category": "player_left",
+    "template": "Word from the station: {victim} bought a one-way ticket and used it."
+  },
+  {
+    "id": "player-left-008",
+    "category": "player_left",
+    "template": "{victim} is no longer in the game. Nothing suspicious about it, allegedly."
+  },
+  {
+    "id": "player-left-009",
+    "category": "player_left",
+    "template": "This just in: {victim} has stepped away from the table for good."
+  },
+  {
+    "id": "player-left-010",
+    "category": "player_left",
+    "template": "{victim} slipped out the back door of this story entirely."
+  },
+  {
+    "id": "player-left-011",
+    "category": "player_left",
+    "template": "The town notes one fewer resident this morning: {victim}."
+  },
+  {
+    "id": "player-left-012",
+    "category": "player_left",
+    "template": "{victim} decided tonight wasn't for them, and left."
+  },
+  {
+    "id": "player-left-013",
+    "category": "player_left",
+    "template": "Consider {victim} officially checked out of this town."
+  },
+  {
+    "id": "player-left-014",
+    "category": "player_left",
+    "template": "{victim} has exited the game, no drama, no note."
+  },
+  {
+    "id": "player-left-015",
+    "category": "player_left",
+    "template": "Breaking: {victim} is out. That's the whole story."
+  },
+  {
+    "id": "player-left-016",
+    "category": "player_left",
+    "template": "{victim} won't be finishing this one. They've left the game."
+  },
+  {
+    "id": "player-left-017",
+    "category": "player_left",
+    "template": "The seat once held by {victim} is now empty."
+  },
+  {
+    "id": "player-left-018",
+    "category": "player_left",
+    "template": "{victim} has stepped out of the story, permanently this round."
+  },
+  {
+    "id": "player-left-019",
+    "category": "player_left",
+    "template": "For the record, {victim} has left the game early."
+  },
+  {
+    "id": "player-left-020",
+    "category": "player_left",
+    "template": "{victim} called it a night, for good, and left."
+  },
+  {
+    "id": "player-left-021",
+    "category": "player_left",
+    "template": "The town's roster is short one name tonight: {victim} has left."
+  },
+  {
+    "id": "player-left-022",
+    "category": "player_left",
+    "template": "{victim} is done playing. They've left the game."
+  },
+  {
+    "id": "player-left-023",
+    "category": "player_left",
+    "template": "That's it for {victim} - they've left the table."
+  },
+  {
+    "id": "player-left-024",
+    "category": "player_left",
+    "template": "{victim} has taken themselves out of the running entirely."
+  },
+  {
+    "id": "player-left-025",
+    "category": "player_left",
+    "template": "Quick update: {victim} left the game moments ago."
   }
 ]
