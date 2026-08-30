@@ -8,7 +8,7 @@ import { z } from "zod";
 export const LocaleSchema = z.enum(["en", "ru"]);
 export type Locale = z.infer<typeof LocaleSchema>;
 
-export const RoleSchema = z.enum(["mafia", "doctor", "sheriff", "civilian"]);
+export const RoleSchema = z.enum(["mafia", "doctor", "sheriff", "baker", "civilian"]);
 export type Role = z.infer<typeof RoleSchema>;
 
 export const PhaseSchema = z.enum([
@@ -28,12 +28,14 @@ export const RoomSettingsSchema = z.object({
   mafiaCount: z.number().int().min(1).max(3),
   hasDoctor: z.boolean(),
   hasSheriff: z.boolean(),
+  hasBaker: z.boolean(),
 });
 export type RoomSettings = z.infer<typeof RoomSettingsSchema>;
 
-/** Minimum players so mafiaCount + doctor + sheriff + >=1 civilian all fit, with mafia < half. */
+/** Minimum players so mafiaCount + doctor + sheriff + baker + >=1 civilian all fit, with mafia < half. */
 export function minPlayersForSettings(settings: RoomSettings): number {
-  const specialRoles = settings.mafiaCount + (settings.hasDoctor ? 1 : 0) + (settings.hasSheriff ? 1 : 0);
+  const specialRoles =
+    settings.mafiaCount + (settings.hasDoctor ? 1 : 0) + (settings.hasSheriff ? 1 : 0) + (settings.hasBaker ? 1 : 0);
   return Math.max(specialRoles + 1, settings.mafiaCount * 2 + 1);
 }
 
@@ -65,9 +67,19 @@ export const NarratorEntrySchema = z.object({
 });
 export type NarratorEntry = z.infer<typeof NarratorEntrySchema>;
 
+/** One row in the public, joinable-rooms list shown on the Home screen. */
+export const RoomListEntrySchema = z.object({
+  code: z.string(),
+  hostName: z.string(),
+  playerCount: z.number().int(),
+  minPlayers: z.number().int(),
+});
+export type RoomListEntry = z.infer<typeof RoomListEntrySchema>;
+
 export const SheriffResultSchema = z.object({
   targetId: z.string(),
-  isMafia: z.boolean(),
+  /** null means the investigation was inconclusive — the baker distracted the sheriff that night. */
+  isMafia: z.boolean().nullable(),
 });
 export type SheriffResult = z.infer<typeof SheriffResultSchema>;
 

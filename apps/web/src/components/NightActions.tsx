@@ -12,7 +12,7 @@ export function NightActions(props: { snapshot: RoomSnapshot }) {
   const alivePlayers = () => props.snapshot.players.filter((p) => p.alive);
   const targets = () => alivePlayers().filter((p) => p.id !== identity().playerId);
 
-  async function act(action: "mafia_kill" | "doctor_save" | "sheriff_investigate", targetId: string) {
+  async function act(action: "mafia_kill" | "doctor_save" | "sheriff_investigate" | "baker_distract", targetId: string) {
     setPending(targetId);
     const res = await emit("night_action", {
       roomCode: props.snapshot.code,
@@ -36,6 +36,8 @@ export function NightActions(props: { snapshot: RoomSnapshot }) {
         return "night.doctorPrompt";
       case "sheriff":
         return "night.sheriffPrompt";
+      case "baker":
+        return "night.bakerPrompt";
       default:
         return null;
     }
@@ -49,6 +51,8 @@ export function NightActions(props: { snapshot: RoomSnapshot }) {
         return "doctor_save" as const;
       case "sheriff":
         return "sheriff_investigate" as const;
+      case "baker":
+        return "baker_distract" as const;
       default:
         return null;
     }
@@ -57,19 +61,6 @@ export function NightActions(props: { snapshot: RoomSnapshot }) {
   return (
     <section aria-labelledby="night-actions-heading" class="stack">
       <h2 id="night-actions-heading">{t("phase.night")}</h2>
-
-      <Show when={props.snapshot.me.role === "sheriff" && props.snapshot.lastSheriffResult}>
-        {(result) => (
-          <div class="card" role="status">
-            <h3>{t("night.sheriffResultHeading")}</h3>
-            <p>
-              {result().isMafia
-                ? t("night.sheriffResultMafia", { name: nameFor(props.snapshot, result().targetId) })
-                : t("night.sheriffResultInnocent", { name: nameFor(props.snapshot, result().targetId) })}
-            </p>
-          </div>
-        )}
-      </Show>
 
       <Show
         when={props.snapshot.pendingActionFor && promptKey() && !submitted()}
@@ -105,8 +96,4 @@ export function NightActions(props: { snapshot: RoomSnapshot }) {
       </Show>
     </section>
   );
-}
-
-function nameFor(snapshot: RoomSnapshot, id: string): string {
-  return snapshot.players.find((p) => p.id === id)?.name ?? id;
 }

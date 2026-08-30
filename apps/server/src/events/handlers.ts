@@ -54,12 +54,32 @@ export function registerHandlers(io: IoServer, roomManager: RoomManager): void {
       }
     };
 
+    /**
+     * A playerId can only ever be active in one room at a time (see
+     * RoomManager's registry docstring for why). Call this before any
+     * create/join/rejoin so a stray double-join can't leave the player
+     * registered in two rooms — which used to surface as the client flipping
+     * between two rooms' snapshots.
+     */
+    const leaveAnyOtherRoom = (playerId: string, targetRoomCode: string) => {
+      const existingCode = roomManager.getRoomCodeForPlayer(playerId);
+      if (!existingCode || existingCode === targetRoomCode) return;
+      const oldRoom = roomManager.get(existingCode);
+      if (oldRoom) {
+        oldRoom.removePlayer(playerId);
+        broadcastRoom(existingCode);
+      }
+      socket.leave(existingCode);
+      roomManager.clearPlayerRoom(playerId, existingCode);
+    };
+
     socket.on("create_room", (payload, ack) => {
       const parsed = parse(CreateRoomPayloadSchema, payload);
       if (!parsed.ok) return ack(parsed.ack);
       const { playerId, name, locale } = parsed.value;
 
       const room = roomManager.createRoom(locale);
+      leaveAnyOtherRoom(playerId, room.code);
       const result = room.addPlayer(playerId, name, true);
       if (!result.ok) return ack(result);
 
@@ -67,6 +87,7 @@ export function registerHandlers(io: IoServer, roomManager: RoomManager): void {
       data.roomCode = room.code;
       room.bindSocket(playerId, socket.id);
       socket.join(room.code);
+      roomManager.setPlayerRoom(playerId, room.code);
 
       ack({ ok: true, data: { roomCode: room.code } });
       broadcastRoom(room.code);
@@ -80,6 +101,7 @@ export function registerHandlers(io: IoServer, roomManager: RoomManager): void {
       const room = roomManager.get(roomCode);
       if (!room) return ack(fail("ROOM_NOT_FOUND", "No room with that code."));
 
+      leaveAnyOtherRoom(playerId, room.code);
       const result = room.addPlayer(playerId, name, false);
       if (!result.ok) return ack(result);
 
@@ -87,6 +109,7 @@ export function registerHandlers(io: IoServer, roomManager: RoomManager): void {
       data.roomCode = room.code;
       room.bindSocket(playerId, socket.id);
       socket.join(room.code);
+      roomManager.setPlayerRoom(playerId, room.code);
 
       ack({ ok: true, data: {} });
       broadcastRoom(room.code);
@@ -101,13 +124,19 @@ export function registerHandlers(io: IoServer, roomManager: RoomManager): void {
       if (!room) return ack(fail("ROOM_NOT_FOUND", "No room with that code."));
       if (!room.players.has(playerId)) return ack(fail("PLAYER_NOT_FOUND", "You're not part of this room."));
 
+      leaveAnyOtherRoom(playerId, room.code);
       data.playerId = playerId;
       data.roomCode = room.code;
       room.bindSocket(playerId, socket.id);
       socket.join(room.code);
+      roomManager.setPlayerRoom(playerId, room.code);
 
       ack({ ok: true, data: {} });
       broadcastRoom(room.code);
+    });
+
+    socket.on("list_rooms", (_payload, ack) => {
+      ack({ ok: true, data: { rooms: roomManager.listJoinable() } });
     });
 
     socket.on("update_settings", (payload, ack) => {

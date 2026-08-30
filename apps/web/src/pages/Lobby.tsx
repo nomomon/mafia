@@ -113,6 +113,16 @@ export function Lobby(props: { snapshot: RoomSnapshot }) {
               onChange={(e) => updateSettings({ hasSheriff: e.currentTarget.checked })}
             />
           </div>
+
+          <div class="toggle-row">
+            <label for="has-baker">{t("lobby.hasBaker")}</label>
+            <input
+              id="has-baker"
+              type="checkbox"
+              checked={settings().hasBaker}
+              onChange={(e) => updateSettings({ hasBaker: e.currentTarget.checked })}
+            />
+          </div>
         </fieldset>
 
         <Show when={!enoughPlayers()}>

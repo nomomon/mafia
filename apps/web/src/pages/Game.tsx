@@ -38,17 +38,26 @@ export function Game(props: { snapshot: RoomSnapshot }) {
         <span class="badge">{t("lobby.roomCode")}: {props.snapshot.code}</span>
       </div>
 
+      <Show when={props.snapshot.me.role === "sheriff" && props.snapshot.lastSheriffResult}>
+        {(result) => (
+          <div class="card" role="status">
+            <h3>{t("night.sheriffResultHeading")}</h3>
+            <p>
+              {result().isMafia === null
+                ? t("night.sheriffResultDistracted", { name: nameFor(props.snapshot, result().targetId) })
+                : result().isMafia
+                  ? t("night.sheriffResultMafia", { name: nameFor(props.snapshot, result().targetId) })
+                  : t("night.sheriffResultInnocent", { name: nameFor(props.snapshot, result().targetId) })}
+            </p>
+          </div>
+        )}
+      </Show>
+
       <Show when={props.snapshot.phase === "game_over"}>
         <div class="card stack" role="alert">
           <h2>{t("gameOver.heading")}</h2>
           <p>{props.snapshot.winner === "town" ? t("gameOver.townWins") : t("gameOver.mafiaWins")}</p>
-          <Show when={props.snapshot.ready}>
-            {(ready) => <p role="status">{t("lobby.readyCount", { count: ready().count, required: ready().required })}</p>}
-          </Show>
-          <button type="button" class="primary" aria-pressed={iAmReady()} onClick={toggleReady}>
-            {iAmReady() ? t("lobby.cancelReady") : t("gameOver.readyToPlayAgain")}
-          </button>
-          <button type="button" onClick={resetSession}>
+          <button type="button" class="primary" onClick={resetSession}>
             {t("gameOver.backToHome")}
           </button>
         </div>
@@ -87,4 +96,8 @@ export function Game(props: { snapshot: RoomSnapshot }) {
       </div>
     </main>
   );
+}
+
+function nameFor(snapshot: RoomSnapshot, id: string): string {
+  return snapshot.players.find((p) => p.id === id)?.name ?? id;
 }

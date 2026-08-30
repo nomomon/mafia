@@ -4,6 +4,7 @@ import {
   type Phase,
   type PublicPlayer,
   type Role,
+  type RoomListEntry,
   type RoomSettings,
   type RoomSnapshot,
   type SheriffResult,
@@ -31,6 +32,7 @@ const DEFAULT_SETTINGS: RoomSettings = {
   mafiaCount: 1,
   hasDoctor: true,
   hasSheriff: true,
+  hasBaker: false,
 };
 
 export class Room {
@@ -47,6 +49,7 @@ export class Room {
   private mafiaVotes = new Map<string, string>();
   private doctorSave: string | null = null;
   private sheriffPick: string | null = null;
+  private bakerVisit: string | null = null;
   private lastSheriffResult = new Map<string, SheriffResult>(); // sheriff playerId -> their latest result
 
   // Day vote state (reset at the start of every day_vote phase)
@@ -99,6 +102,35 @@ export class Room {
     }
   }
 
+  /**
+   * Fully removes a player regardless of phase — used when they've joined or
+   * created a different room, since a player can only ever be active in one
+   * room at a time (see RoomManager's cross-room registry). Any dangling
+   * references to them as someone else's target just resolve to "someone" —
+   * this only happens for a confused double-join, not normal play.
+   */
+  removePlayer(playerId: string): void {
+    this.players.delete(playerId);
+    this.ready.delete(playerId);
+    this.mafiaVotes.delete(playerId);
+    this.dayVotes.delete(playerId);
+    this.lastSheriffResult.delete(playerId);
+    if (this.doctorSave === playerId) this.doctorSave = null;
+    if (this.sheriffPick === playerId) this.sheriffPick = null;
+    if (this.bakerVisit === playerId) this.bakerVisit = null;
+  }
+
+  /** Summary row for the Home screen's joinable-rooms list; only meaningful while phase === "lobby". */
+  listInfo(): RoomListEntry {
+    const host = [...this.players.values()].find((p) => p.isHost);
+    return {
+      code: this.code,
+      hostName: host?.name ?? "?",
+      playerCount: this.players.size,
+      minPlayers: minPlayersForSettings(this.settings),
+    };
+  }
+
   updateSettings(settings: RoomSettings): ActionResult {
     if (this.phase !== "lobby") {
       return { ok: false, code: "GAME_IN_PROGRESS", message: "Can't change settings after the game has started." };
@@ -137,9 +169,6 @@ export class Room {
       case "day_discussion":
         if (this.majorityReady(this.alivePlayers())) this.startVote();
         break;
-      case "game_over":
-        if (this.majorityReady([...this.players.values()])) this.restartToLobby();
-        break;
       default:
         break; // day_vote advances via cast_vote; other phases are transient/terminal.
     }
@@ -162,7 +191,6 @@ export class Room {
     switch (this.phase) {
       case "lobby":
       case "day_reveal":
-      case "game_over":
         eligible = [...this.players.values()];
         break;
       case "night":
@@ -200,11 +228,16 @@ export class Room {
     this.mafiaVotes.clear();
     this.doctorSave = null;
     this.sheriffPick = null;
+    this.bakerVisit = null;
   }
 
   // ---------- Night actions ----------
 
-  submitNightAction(playerId: string, action: "mafia_kill" | "doctor_save" | "sheriff_investigate", targetId: string): ActionResult {
+  submitNightAction(
+    playerId: string,
+    action: "mafia_kill" | "doctor_save" | "sheriff_investigate" | "baker_distract",
+    targetId: string,
+  ): ActionResult {
     if (this.phase !== "night") {
       return { ok: false, code: "WRONG_PHASE", message: "It's not night right now." };
     }
@@ -222,9 +255,12 @@ export class Room {
     } else if (action === "doctor_save") {
       if (player.role !== "doctor") return { ok: false, code: "WRONG_ROLE", message: "Only the doctor can do that." };
       this.doctorSave = targetId;
-    } else {
+    } else if (action === "sheriff_investigate") {
       if (player.role !== "sheriff") return { ok: false, code: "WRONG_ROLE", message: "Only the sheriff can do that." };
       this.sheriffPick = targetId;
+    } else {
+      if (player.role !== "baker") return { ok: false, code: "WRONG_ROLE", message: "Only the baker can do that." };
+      this.bakerVisit = targetId;
     }
 
     if (this.allNightActionsSubmitted()) this.resolveNight();
@@ -236,10 +272,12 @@ export class Room {
     const aliveMafia = alive.filter((p) => p.role === "mafia");
     const aliveDoctor = alive.find((p) => p.role === "doctor");
     const aliveSheriff = alive.find((p) => p.role === "sheriff");
+    const aliveBaker = alive.find((p) => p.role === "baker");
 
     if (aliveMafia.some((p) => !this.mafiaVotes.has(p.id))) return false;
     if (aliveDoctor && this.doctorSave === null) return false;
     if (aliveSheriff && this.sheriffPick === null) return false;
+    if (aliveBaker && this.bakerVisit === null) return false;
     return true;
   }
 
@@ -251,8 +289,8 @@ export class Room {
     this.phase = "night_resolve";
 
     const result = resolveNightActions(
-      { mafiaVotes: this.mafiaVotes, doctorSave: this.doctorSave, sheriffPick: this.sheriffPick },
-      (id) => this.players.get(id)?.role === "mafia",
+      { mafiaVotes: this.mafiaVotes, doctorSave: this.doctorSave, sheriffPick: this.sheriffPick, bakerVisit: this.bakerVisit },
+      (id) => this.players.get(id)?.role ?? null,
     );
 
     if (result.sheriffResult) {
@@ -361,27 +399,6 @@ export class Room {
     return true;
   }
 
-  /**
-   * Starts a brand new game with the same roster and settings, back in the
-   * lobby (so players can still tweak settings and everyone reconfirms ready
-   * before roles are dealt again) — same room code, so nobody has to rejoin.
-   */
-  private restartToLobby(): ActionResult {
-    if (this.phase !== "game_over") {
-      return { ok: false, code: "WRONG_PHASE", message: "The game hasn't ended yet." };
-    }
-    for (const player of this.players.values()) {
-      player.role = null;
-      player.alive = true;
-    }
-    this.narratorLog = [];
-    this.winner = null;
-    this.lastSheriffResult.clear();
-    this.ready.clear();
-    this.phase = "lobby";
-    return { ok: true, data: {} };
-  }
-
   // ---------- Snapshot ----------
 
   /**
@@ -422,6 +439,7 @@ export class Room {
       if (player.role === "mafia") return !this.mafiaVotes.has(player.id);
       if (player.role === "doctor") return this.doctorSave === null;
       if (player.role === "sheriff") return this.sheriffPick === null;
+      if (player.role === "baker") return this.bakerVisit === null;
       return false;
     }
     if (this.phase === "day_vote") return !this.dayVotes.has(player.id);

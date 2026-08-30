@@ -36,6 +36,7 @@ export function assignRoles(playerIds: string[], settings: RoomSettings): Map<st
   for (let i = 0; i < settings.mafiaCount; i++) roles.set(shuffled[cursor++], "mafia");
   if (settings.hasDoctor) roles.set(shuffled[cursor++], "doctor");
   if (settings.hasSheriff) roles.set(shuffled[cursor++], "sheriff");
+  if (settings.hasBaker) roles.set(shuffled[cursor++], "baker");
   for (; cursor < shuffled.length; cursor++) roles.set(shuffled[cursor], "civilian");
 
   return roles;

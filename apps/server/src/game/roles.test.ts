@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import type { RoomSettings } from "@mafia/shared";
 import { assignRoles, NotEnoughPlayersError } from "./roles.js";
 
-const settings: RoomSettings = { locale: "en", mafiaCount: 1, hasDoctor: true, hasSheriff: true };
+const settings: RoomSettings = { locale: "en", mafiaCount: 1, hasDoctor: true, hasSheriff: true, hasBaker: false };
 
 describe("assignRoles", () => {
   it("assigns exactly the requested count of each special role", () => {
@@ -10,7 +10,7 @@ describe("assignRoles", () => {
     const roles = assignRoles(ids, settings);
     expect(roles.size).toBe(ids.length);
 
-    const counts = { mafia: 0, doctor: 0, sheriff: 0, civilian: 0 };
+    const counts = { mafia: 0, doctor: 0, sheriff: 0, baker: 0, civilian: 0 };
     for (const role of roles.values()) counts[role]++;
     expect(counts.mafia).toBe(1);
     expect(counts.doctor).toBe(1);
@@ -19,7 +19,13 @@ describe("assignRoles", () => {
   });
 
   it("omits roles disabled in settings", () => {
-    const noSpecials: RoomSettings = { locale: "en", mafiaCount: 1, hasDoctor: false, hasSheriff: false };
+    const noSpecials: RoomSettings = {
+      locale: "en",
+      mafiaCount: 1,
+      hasDoctor: false,
+      hasSheriff: false,
+      hasBaker: false,
+    };
     const roles = assignRoles(["a", "b", "c"], noSpecials);
     const values = [...roles.values()];
     expect(values.filter((r) => r === "doctor")).toHaveLength(0);
@@ -32,8 +38,20 @@ describe("assignRoles", () => {
   });
 
   it("supports multiple mafia members", () => {
-    const multiMafia: RoomSettings = { locale: "en", mafiaCount: 2, hasDoctor: false, hasSheriff: false };
+    const multiMafia: RoomSettings = {
+      locale: "en",
+      mafiaCount: 2,
+      hasDoctor: false,
+      hasSheriff: false,
+      hasBaker: false,
+    };
     const roles = assignRoles(["a", "b", "c", "d", "e"], multiMafia);
     expect([...roles.values()].filter((r) => r === "mafia")).toHaveLength(2);
+  });
+
+  it("assigns a baker when enabled", () => {
+    const withBaker: RoomSettings = { locale: "en", mafiaCount: 1, hasDoctor: true, hasSheriff: true, hasBaker: true };
+    const roles = assignRoles(["a", "b", "c", "d", "e", "f"], withBaker);
+    expect([...roles.values()].filter((r) => r === "baker")).toHaveLength(1);
   });
 });

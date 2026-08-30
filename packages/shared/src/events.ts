@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { LocaleSchema, RoomSettingsSchema, RoomSnapshotSchema } from "./domain.js";
+import { LocaleSchema, RoomListEntrySchema, RoomSettingsSchema, RoomSnapshotSchema } from "./domain.js";
 
 /** Player names: short, human, no control characters. */
 const NameSchema = z.string().trim().min(1).max(24);
@@ -56,7 +56,7 @@ export type SetReadyPayload = z.infer<typeof SetReadyPayloadSchema>;
 export const NightActionPayloadSchema = z.object({
   roomCode: RoomCodeSchema,
   playerId: PlayerIdSchema,
-  action: z.enum(["mafia_kill", "doctor_save", "sheriff_investigate"]),
+  action: z.enum(["mafia_kill", "doctor_save", "sheriff_investigate", "baker_distract"]),
   targetId: PlayerTargetSchema,
 });
 export type NightActionPayload = z.infer<typeof NightActionPayloadSchema>;
@@ -72,6 +72,8 @@ export interface ClientToServerEvents {
   create_room: (payload: CreateRoomPayload, ack: (res: AckResponse<{ roomCode: string }>) => void) => void;
   join_room: (payload: JoinRoomPayload, ack: (res: AckResponse<{}>) => void) => void;
   rejoin_room: (payload: RejoinRoomPayload, ack: (res: AckResponse<{}>) => void) => void;
+  /** One-shot request for the Home screen's list of currently joinable (lobby-phase) rooms. */
+  list_rooms: (payload: {}, ack: (res: AckResponse<{ rooms: z.infer<typeof RoomListEntrySchema>[] }>) => void) => void;
   update_settings: (payload: UpdateSettingsPayload, ack: (res: AckResponse<{}>) => void) => void;
   night_action: (payload: NightActionPayload, ack: (res: AckResponse<{}>) => void) => void;
   set_ready: (payload: SetReadyPayload, ack: (res: AckResponse<{}>) => void) => void;

@@ -1,9 +1,11 @@
-import { createSignal, onMount, Show } from "solid-js";
-import type { Locale } from "@mafia/shared";
+import { createSignal, For, onCleanup, onMount, Show } from "solid-js";
+import type { Locale, RoomListEntry } from "@mafia/shared";
 import { t, locale } from "../i18n";
 import { LocaleSwitcher } from "../components/LocaleSwitcher";
 import { emit } from "../socket";
 import { identity, setIdentity, setErrorMessage, connectionStatus } from "../state/session";
+
+const ROOM_LIST_POLL_MS = 4000;
 
 export function Home() {
   const [name, setName] = createSignal(identity().name);
@@ -11,11 +13,21 @@ export function Home() {
   const [roomCode, setRoomCode] = createSignal("");
   const [roomCodeError, setRoomCodeError] = createSignal<string | null>(null);
   const [busy, setBusy] = createSignal(false);
+  const [rooms, setRooms] = createSignal<RoomListEntry[]>([]);
+
+  async function refreshRoomList() {
+    const res = await emit("list_rooms", {});
+    if (res.ok) setRooms(res.data.rooms);
+  }
 
   onMount(() => {
     const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
     if (code) setRoomCode(code.toUpperCase());
+
+    refreshRoomList();
+    const interval = setInterval(refreshRoomList, ROOM_LIST_POLL_MS);
+    onCleanup(() => clearInterval(interval));
   });
 
   function validName(): boolean {
@@ -44,6 +56,20 @@ export function Home() {
     // On success, the server follows up with a room_snapshot which drives navigation.
   }
 
+  async function doJoin(code: string) {
+    setBusy(true);
+    setIdentity({ name: name().trim() });
+    const res = await emit("join_room", {
+      playerId: identity().playerId,
+      name: name().trim(),
+      roomCode: code.trim().toUpperCase(),
+    });
+    setBusy(false);
+    if (!res.ok) {
+      setErrorMessage({ code: res.code, message: res.message });
+    }
+  }
+
   async function joinRoom(e: Event) {
     e.preventDefault();
     let ok = validName();
@@ -54,17 +80,12 @@ export function Home() {
       setRoomCodeError(null);
     }
     if (!ok) return;
-    setBusy(true);
-    setIdentity({ name: name().trim() });
-    const res = await emit("join_room", {
-      playerId: identity().playerId,
-      name: name().trim(),
-      roomCode: roomCode().trim().toUpperCase(),
-    });
-    setBusy(false);
-    if (!res.ok) {
-      setErrorMessage({ code: res.code, message: res.message });
-    }
+    await doJoin(roomCode());
+  }
+
+  async function joinFromList(code: string) {
+    if (!validName()) return;
+    await doJoin(code);
   }
 
   return (
@@ -102,6 +123,24 @@ export function Home() {
           {t("home.createButton")}
         </button>
       </form>
+
+      <section class="card stack" aria-labelledby="room-list-heading" style={{ "margin-top": "16px" }}>
+        <h2 id="room-list-heading">{t("home.roomListHeading")}</h2>
+        <Show when={rooms().length > 0} fallback={<p class="text-muted">{t("home.roomListEmpty")}</p>}>
+          <ul class="player-list" aria-label={t("home.roomListHeading")}>
+            <For each={rooms()}>
+              {(room) => (
+                <li class="player-row">
+                  <span>{t("home.roomListEntry", { host: room.hostName, count: room.playerCount })}</span>
+                  <button type="button" disabled={busy()} onClick={() => joinFromList(room.code)}>
+                    {t("home.joinButton")}
+                  </button>
+                </li>
+              )}
+            </For>
+          </ul>
+        </Show>
+      </section>
 
       <form class="card stack" onSubmit={joinRoom} style={{ "margin-top": "16px" }}>
         <h2>{t("home.joinHeading")}</h2>

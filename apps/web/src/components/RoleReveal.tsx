@@ -6,6 +6,7 @@ const ROLE_ICON: Record<Role, string> = {
   mafia: "🔪",
   doctor: "💉",
   sheriff: "🕵️",
+  baker: "🥐",
   civilian: "🙂",
 };
 
