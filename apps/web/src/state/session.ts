@@ -98,3 +98,18 @@ export function resetSession() {
   clearRoomIdentity();
   setSnapshot(null);
 }
+
+/**
+ * Deliberate opt-out — distinct from a disconnect (refresh, lost connection),
+ * which always leaves the player's spot reconnectable. Tells the server to
+ * fully remove them, then resets local state regardless of the server's
+ * answer (if the room/player was already gone there's nothing left to do
+ * locally either way).
+ */
+export async function leaveGame(): Promise<void> {
+  const id = identity();
+  if (id.roomCode) {
+    await emit("leave_room", { playerId: id.playerId, roomCode: id.roomCode });
+  }
+  resetSession();
+}

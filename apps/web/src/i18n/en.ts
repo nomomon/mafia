@@ -121,6 +121,8 @@ export const en = {
     submit: "Submit",
     loading: "Loading...",
     connectionLost: "Connection lost. Reconnecting...",
+    leaveGame: "Leave game",
+    leaveGameConfirm: "Leave this game? If it's already in progress, you won't be able to rejoin it.",
   },
 
   errors: {

@@ -7,7 +7,7 @@ import { PlayerList } from "../components/PlayerList";
 import { NightActions } from "../components/NightActions";
 import { VotePanel } from "../components/VotePanel";
 import { emit } from "../socket";
-import { identity, resetSession, roleRevealDismissed, setRoleRevealDismissed, setErrorMessage } from "../state/session";
+import { identity, leaveGame, roleRevealDismissed, setRoleRevealDismissed, setErrorMessage } from "../state/session";
 
 export function Game(props: { snapshot: RoomSnapshot }) {
   const iAmReady = () => props.snapshot.players.some((p) => p.id === identity().playerId && p.ready);
@@ -57,7 +57,7 @@ export function Game(props: { snapshot: RoomSnapshot }) {
         <div class="card stack" role="alert">
           <h2>{t("gameOver.heading")}</h2>
           <p>{props.snapshot.winner === "town" ? t("gameOver.townWins") : t("gameOver.mafiaWins")}</p>
-          <button type="button" class="primary" onClick={resetSession}>
+          <button type="button" class="primary" onClick={leaveGame}>
             {t("gameOver.backToHome")}
           </button>
         </div>

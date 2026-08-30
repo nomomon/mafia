@@ -123,6 +123,8 @@ export const ru: TranslationDict = {
     submit: "Отправить",
     loading: "Загрузка...",
     connectionLost: "Соединение потеряно. Переподключение...",
+    leaveGame: "Покинуть игру",
+    leaveGameConfirm: "Покинуть эту игру? Если она уже началась, вернуться в неё будет нельзя.",
   },
 
   errors: {

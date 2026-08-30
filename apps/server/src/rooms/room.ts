@@ -123,6 +123,23 @@ export class Room {
     if (this.bakerVisit === playerId) this.bakerVisit = null;
   }
 
+  /**
+   * A player's own deliberate opt-out (as opposed to a mere disconnect, which
+   * always leaves their spot reconnectable). Fully removes them and, mid-game,
+   * rechecks the win condition since their departure can decide it outright
+   * (e.g. the only remaining mafia leaving).
+   */
+  leaveRoom(playerId: string): ActionResult {
+    if (!this.players.has(playerId)) {
+      return { ok: false, code: "PLAYER_NOT_FOUND", message: "You're not part of this room." };
+    }
+    this.removePlayer(playerId);
+    if (this.phase !== "lobby" && this.phase !== "game_over") {
+      this.checkAndApplyWinner();
+    }
+    return { ok: true, data: {} };
+  }
+
   /** Summary row for the Home screen's joinable-rooms list; only meaningful while phase === "lobby". */
   listInfo(): RoomListEntry {
     const host = [...this.players.values()].find((p) => p.isHost);

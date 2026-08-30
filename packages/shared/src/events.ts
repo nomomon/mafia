@@ -68,6 +68,18 @@ export const CastVotePayloadSchema = z.object({
 });
 export type CastVotePayload = z.infer<typeof CastVotePayloadSchema>;
 
+/**
+ * A deliberate, explicit opt-out — distinct from a disconnect (refresh, lost
+ * connection, closing the tab), which always keeps the player's spot and
+ * role reconnectable. Leaving fully removes them; mid-game there's no way
+ * back into that same room.
+ */
+export const LeaveRoomPayloadSchema = z.object({
+  roomCode: RoomCodeSchema,
+  playerId: PlayerIdSchema,
+});
+export type LeaveRoomPayload = z.infer<typeof LeaveRoomPayloadSchema>;
+
 export interface ClientToServerEvents {
   create_room: (payload: CreateRoomPayload, ack: (res: AckResponse<{ roomCode: string }>) => void) => void;
   join_room: (payload: JoinRoomPayload, ack: (res: AckResponse<{}>) => void) => void;
@@ -78,6 +90,7 @@ export interface ClientToServerEvents {
   night_action: (payload: NightActionPayload, ack: (res: AckResponse<{}>) => void) => void;
   set_ready: (payload: SetReadyPayload, ack: (res: AckResponse<{}>) => void) => void;
   cast_vote: (payload: CastVotePayload, ack: (res: AckResponse<{}>) => void) => void;
+  leave_room: (payload: LeaveRoomPayload, ack: (res: AckResponse<{}>) => void) => void;
 }
 
 // ---------- Server -> Client ----------

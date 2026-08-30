@@ -3,10 +3,14 @@ import { t } from "./i18n";
 import { Home } from "./pages/Home";
 import { Lobby } from "./pages/Lobby";
 import { Game } from "./pages/Game";
-import { snapshot, errorMessage, setErrorMessage, connectionStatus } from "./state/session";
+import { snapshot, errorMessage, setErrorMessage, connectionStatus, leaveGame } from "./state/session";
 
 export function App() {
   const currentSnapshot = snapshot;
+
+  function confirmLeave() {
+    if (window.confirm(t("common.leaveGameConfirm"))) leaveGame();
+  }
 
   return (
     <>
@@ -19,6 +23,11 @@ export function App() {
           <span class="status-row" role="status">
             🔌 {t("common.connectionLost")}
           </span>
+        </Show>
+        <Show when={currentSnapshot() && currentSnapshot()?.phase !== "game_over"}>
+          <button type="button" onClick={confirmLeave}>
+            {t("common.leaveGame")}
+          </button>
         </Show>
       </header>
       <div id="main-content">

@@ -3,6 +3,7 @@ import {
   CastVotePayloadSchema,
   CreateRoomPayloadSchema,
   JoinRoomPayloadSchema,
+  LeaveRoomPayloadSchema,
   NightActionPayloadSchema,
   RejoinRoomPayloadSchema,
   SetReadyPayloadSchema,
@@ -189,6 +190,26 @@ export function registerHandlers(io: IoServer, roomManager: RoomManager): void {
       const result = room.castVote(playerId, targetId);
       ack(result);
       if (result.ok) broadcastRoom(room.code);
+    });
+
+    socket.on("leave_room", (payload, ack) => {
+      const parsed = parse(LeaveRoomPayloadSchema, payload);
+      if (!parsed.ok) return ack(parsed.ack);
+      const { playerId, roomCode } = parsed.value;
+
+      const room = roomManager.get(roomCode);
+      if (!room) return ack(fail("ROOM_NOT_FOUND", "No room with that code."));
+
+      const result = room.leaveRoom(playerId);
+      if (!result.ok) return ack(result);
+
+      socket.leave(roomCode);
+      roomManager.clearPlayerRoom(playerId, roomCode);
+      data.playerId = undefined;
+      data.roomCode = undefined;
+
+      ack(result);
+      broadcastRoom(roomCode);
     });
 
     socket.on("disconnect", () => {
